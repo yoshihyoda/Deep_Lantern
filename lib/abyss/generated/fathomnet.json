@@ -1,0 +1,573 @@
+{
+  "snapshotRetrievedAt": "2026-09-08T20:06:01.253432+00:00",
+  "imageLicenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "annotationLicenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "sourceUrl": "https://www.fathomnet.org/terms",
+  "dataUseUrl": "https://www.fathomnet.org/datause",
+  "licenseStatement": "Images licensed as CC BY-NC-ND (https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode), annotations licensed as CC BY-NC (https://creativecommons.org/licenses/by-nc/4.0/legalcode)",
+  "images": [
+    {
+      "id": "00822929-b263-4407-9464-122e9e0bad38",
+      "imagePath": "/data/fathomnet/images/00822929-b263-4407-9464-122e9e0bad38.png",
+      "width": 1600,
+      "height": 900,
+      "longitude": -170.6477798,
+      "latitude": -14.32311318,
+      "depthMeters": 299.694,
+      "capturedAt": null,
+      "labels": [
+        "Seriola"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://oer.hpc.msstate.edu/FathomNet/BenthicAnimalGuide_training/Percoidei028_trimmed.png",
+      "sha256": "b326b5e056d547802a8b0b73a82885ed6accddaa2622458e63a2f8d0b939d42f",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA Ocean Exploration CAPSTONE",
+        "Okeanos Explorer Pacific Benthic Deepwater Animal Identification Guide V3 no header"
+      ],
+      "citation": [
+        "Kennedy, B. R., Cantwell, K., Malik, M., Kelley, C., Potter, J., Elliott, K., ... & Rotjan, R. D. (2019). The unknown and the unexplored: Insights into the Pacific deep-sea following NOAA CAPSTONE expeditions. Frontiers in Marine Science, 6, 480."
+      ],
+      "locationId": "capstone"
+    },
+    {
+      "id": "0113c320-b75b-45dd-a82f-11cfecac125c",
+      "imagePath": "/data/fathomnet/images/0113c320-b75b-45dd-a82f-11cfecac125c.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T19:59:32Z",
+      "labels": [
+        "crab"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T195500Z_ROVHD_frame008166.png",
+      "sha256": "4c98362e6d1b330cc30c7bd7a6dee1f140e24d7ac3543ec391fba8f55818ba27",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "011c8a36-60b5-4a0c-a5b4-994d84f6d6d8",
+      "imagePath": "/data/fathomnet/images/011c8a36-60b5-4a0c-a5b4-994d84f6d6d8.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T20:21:17Z",
+      "labels": [
+        "bony fish"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T202000Z_ROVHD_frame002312.png",
+      "sha256": "37e16dd0f1ed6e00a99b4cb28a02066083a318eded3a371a17aa752617793b5e",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "01380611-b0c2-4b8d-8d01-01b9b90d9e88",
+      "imagePath": "/data/fathomnet/images/01380611-b0c2-4b8d-8d01-01b9b90d9e88.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T23:50:49Z",
+      "labels": [
+        "bony fish"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART02/EX1702_VID_20170217T235000Z_ROVHD_frame001476.png",
+      "sha256": "83d0fd4dc446971d079a690b19110a3d8c1f7c9f0347ee3a7dc7b3d156338c8d",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 02"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "01a09349-12df-4eba-a944-9be093577b34",
+      "imagePath": "/data/fathomnet/images/01a09349-12df-4eba-a944-9be093577b34.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-18T02:09:16Z",
+      "labels": [
+        "bony fish"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART02/EX1702_VID_20170218T020500Z_ROVHD_frame007661.png",
+      "sha256": "18e656be197cfe56a8d8f86c186e4853a6bf438f149b55fb6d1d909fe86c462c",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 02"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "01f31c47-4e4e-45cc-b830-507dd4c9cd07",
+      "imagePath": "/data/fathomnet/images/01f31c47-4e4e-45cc-b830-507dd4c9cd07.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.05968,
+      "latitude": -14.2162,
+      "depthMeters": null,
+      "capturedAt": "2017-02-24T23:49:04Z",
+      "labels": [
+        "bony fish"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE09/EX1702_VID_20170224T234500Z_ROVHD_frame007326.png",
+      "sha256": "fec888da0ed6304500270948a74f5ecf68bce31c74088fe858d8a790abf26947",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 09 Vailulu'u Seamount"
+      ],
+      "citation": [],
+      "locationId": "vailuluu"
+    },
+    {
+      "id": "0262a1cc-7aed-43aa-8154-e0c2e56cb82e",
+      "imagePath": "/data/fathomnet/images/0262a1cc-7aed-43aa-8154-e0c2e56cb82e.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T21:05:51Z",
+      "labels": [
+        "actiniarian"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T210500Z_ROVHD_frame001533.png",
+      "sha256": "6b605167e5215582757171936e80d170b991f6dbc2d168a61b2451d2f5e44891",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "027581b4-b14d-4279-be2a-4bf568006043",
+      "imagePath": "/data/fathomnet/images/027581b4-b14d-4279-be2a-4bf568006043.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-18T02:00:28Z",
+      "labels": [
+        "sponge",
+        "coral"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART02/EX1702_VID_20170218T020000Z_ROVHD_frame000837.png",
+      "sha256": "a3cd200353a91f4cd75b3678f6968c18b8cb2390852e73bb0e70cff0dca42c4a",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 02"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "028a039d-3ca3-4d15-ba75-476ebe3bcf90",
+      "imagePath": "/data/fathomnet/images/028a039d-3ca3-4d15-ba75-476ebe3bcf90.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T21:21:05Z",
+      "labels": [
+        "feather star",
+        "benthic annelid"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T212000Z_ROVHD_frame001943.png",
+      "sha256": "bb0edc50d8957fe8fdf361cf771c0614df32ba226d1539005db44e859186efb8",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "0292d69d-94a8-41d8-9a5e-f775a7ec4198",
+      "imagePath": "/data/fathomnet/images/0292d69d-94a8-41d8-9a5e-f775a7ec4198.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T20:36:13Z",
+      "labels": [
+        "sea cucumber"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T203500Z_ROVHD_frame002187.png",
+      "sha256": "3f07ea12c6122bcfe405d8e70ef0d5cade159eb329578b32e7c6f3dd051d11c1",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "02e98fbb-1c84-4670-86a5-d0001a28662c",
+      "imagePath": "/data/fathomnet/images/02e98fbb-1c84-4670-86a5-d0001a28662c.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T21:50:16Z",
+      "labels": [
+        "brittle star"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T215000Z_ROVHD_frame000475.png",
+      "sha256": "8d4682392a7427dda5ad056fb3aa36050914dcfa5b7a7aaaf5ac0b54249643eb",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "03cebd99-b577-42eb-8289-8b79e4f7be39",
+      "imagePath": "/data/fathomnet/images/03cebd99-b577-42eb-8289-8b79e4f7be39.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.05968,
+      "latitude": -14.2162,
+      "depthMeters": null,
+      "capturedAt": "2017-02-24T23:32:04Z",
+      "labels": [
+        "marine organism",
+        "anemone+"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE09/EX1702_VID_20170224T233000Z_ROVHD_frame003702.png",
+      "sha256": "4d7f954a16abe977f5168d0b632a5959087031a1989c1bca63545a24c79a42a6",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 09 Vailulu'u Seamount"
+      ],
+      "citation": [],
+      "locationId": "vailuluu"
+    },
+    {
+      "id": "03db7b49-d632-427a-aab0-3aaf8a8b1f2f",
+      "imagePath": "/data/fathomnet/images/03db7b49-d632-427a-aab0-3aaf8a8b1f2f.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T22:58:58Z",
+      "labels": [
+        "bony fish",
+        "sponge"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T225500Z_ROVHD_frame007133.png",
+      "sha256": "ffffa6d9bcac74bf74536a1f7cfa8825b909450254829d233683e114c69cd17e",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "042eeeae-bc51-424e-a6dd-b3a8ac9315a5",
+      "imagePath": "/data/fathomnet/images/042eeeae-bc51-424e-a6dd-b3a8ac9315a5.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T20:01:38Z",
+      "labels": [
+        "hermit crab"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T200000Z_ROVHD_frame002930.png",
+      "sha256": "5c2d8c2d7302f0b7e77b6e49c9f494365b407142a90d9cb87b0b8a666930bce1",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "058da4d0-9c59-4e10-903d-11c8cfa51cfc",
+      "imagePath": "/data/fathomnet/images/058da4d0-9c59-4e10-903d-11c8cfa51cfc.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T23:11:08Z",
+      "labels": [
+        "marine organism",
+        "bony fish",
+        "echinoderm",
+        "squat lobster"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T231000Z_ROVHD_frame002030.png",
+      "sha256": "a2347b3a4eb8df28291692487d5ca8ae1493743c5d0e87b2349f6908c038fe40",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "069dfb0c-b73b-49b9-a67e-ba53fcbb58f9",
+      "imagePath": "/data/fathomnet/images/069dfb0c-b73b-49b9-a67e-ba53fcbb58f9.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T21:54:25Z",
+      "labels": [
+        "sea fan"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T215000Z_ROVHD_frame007936.png",
+      "sha256": "caa4debc1239b0b660f88167b16a8eb68eef87f2687e8ad4f4456148aa1e395d",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "071d3cba-a8d9-4bd6-a21b-04dbe3cbd7c5",
+      "imagePath": "/data/fathomnet/images/071d3cba-a8d9-4bd6-a21b-04dbe3cbd7c5.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T20:52:54Z",
+      "labels": [
+        "urchin"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T205000Z_ROVHD_frame005208.png",
+      "sha256": "fb7c09b2792ca4cb522e800af1d9e719cc627f8eaa7d5a952c8685583c249897",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "07f712fc-9ba6-45e2-93eb-9007ab53c3a7",
+      "imagePath": "/data/fathomnet/images/07f712fc-9ba6-45e2-93eb-9007ab53c3a7.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.05968,
+      "latitude": -14.2162,
+      "depthMeters": null,
+      "capturedAt": "2017-02-25T00:40:48Z",
+      "labels": [
+        "shrimp"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE09/EX1702_VID_20170225T004000Z_ROVHD_frame001442.png",
+      "sha256": "934b8033829ef6544ac324245f066fd3fd284bc7ebadfaeece199a5a114fa123",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 09 Vailulu'u Seamount"
+      ],
+      "citation": [],
+      "locationId": "vailuluu"
+    },
+    {
+      "id": "07f8740a-a451-4e92-9933-bbfe190f3227",
+      "imagePath": "/data/fathomnet/images/07f8740a-a451-4e92-9933-bbfe190f3227.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-18T02:29:33Z",
+      "labels": [
+        "actiniarian",
+        "zoanthid",
+        "anemone+"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART02/EX1702_VID_20170218T022500Z_ROVHD_frame008177.png",
+      "sha256": "9482560365c8ef841aad425350e62568fe118a3c59d45ac634cd4504959559fe",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 02"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "0839fcd0-0f42-4319-8ece-d374453e3d47",
+      "imagePath": "/data/fathomnet/images/0839fcd0-0f42-4319-8ece-d374453e3d47.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-18T01:23:35Z",
+      "labels": [
+        "octopus"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART02/EX1702_VID_20170218T012000Z_ROVHD_frame006438.png",
+      "sha256": "ee753f01cac882fbfca6d31e337ffacc675199111f5fe0d0cd1536fc938d56cd",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 02"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "0854f01b-3a5d-475b-b47f-3800f409884a",
+      "imagePath": "/data/fathomnet/images/0854f01b-3a5d-475b-b47f-3800f409884a.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.05968,
+      "latitude": -14.2162,
+      "depthMeters": null,
+      "capturedAt": "2017-02-24T23:33:11Z",
+      "labels": [
+        "hydroid"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE09/EX1702_VID_20170224T233000Z_ROVHD_frame005733.png",
+      "sha256": "86787cce6a7ce9f65e98499d18829a971e03fa435906007fc24d17baf91789b0",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 09 Vailulu'u Seamount"
+      ],
+      "citation": [],
+      "locationId": "vailuluu"
+    },
+    {
+      "id": "092e1b1e-47cc-4f75-ab22-b8a2d9533ef6",
+      "imagePath": "/data/fathomnet/images/092e1b1e-47cc-4f75-ab22-b8a2d9533ef6.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.05968,
+      "latitude": -14.2162,
+      "depthMeters": null,
+      "capturedAt": "2017-02-25T00:13:40Z",
+      "labels": [
+        "salp"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE09/EX1702_VID_20170225T001000Z_ROVHD_frame006593.png",
+      "sha256": "aa8a06af41a2763fa003c2e4595178dfb78243757ec8c53a208285e11f29679c",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 09 Vailulu'u Seamount"
+      ],
+      "citation": [],
+      "locationId": "vailuluu"
+    },
+    {
+      "id": "1255a495-cc95-493d-bcbc-59bd39588ce5",
+      "imagePath": "/data/fathomnet/images/1255a495-cc95-493d-bcbc-59bd39588ce5.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T20:45:29Z",
+      "labels": [
+        "stony coral"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART01/EX1702_VID_20170217T204500Z_ROVHD_frame000876.png",
+      "sha256": "cf2b912b52ce70e427967f1b9f99a9717d1124cf075df44ce672058afe859913",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 01"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    },
+    {
+      "id": "135b60de-3403-4991-b928-85fc01c0f79c",
+      "imagePath": "/data/fathomnet/images/135b60de-3403-4991-b928-85fc01c0f79c.png",
+      "width": 1920,
+      "height": 1080,
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "depthMeters": null,
+      "capturedAt": "2017-02-17T23:47:29Z",
+      "labels": [
+        "bony fish"
+      ],
+      "reviewState": "UNVERIFIED",
+      "sourceUrl": "https://d2l7vcm2vanphr.cloudfront.net/full_images/NOAA_OER_EX1702_DIVE02_PART02/EX1702_VID_20170217T234500Z_ROVHD_frame004474.png",
+      "sha256": "02bdedede0d913faca2042ae54e6e599ba94338949a35656617aaa3789db8cea",
+      "credit": "NOAA Ocean Exploration · via FathomNet",
+      "collectionNames": [
+        "NOAA EX1702 Dive 02 Ta'u Unit Part 02"
+      ],
+      "citation": [],
+      "locationId": "tau"
+    }
+  ],
+  "locations": [
+    {
+      "id": "tau",
+      "name": "Ta’u",
+      "longitude": -169.5,
+      "latitude": -14.298,
+      "imageCount": 18
+    },
+    {
+      "id": "vailuluu",
+      "name": "Vailulu’u",
+      "longitude": -169.05968,
+      "latitude": -14.2162,
+      "imageCount": 5
+    },
+    {
+      "id": "capstone",
+      "name": "CAPSTONE",
+      "longitude": -170.6477798,
+      "latitude": -14.32311318,
+      "imageCount": 1
+    }
+  ]
+}
