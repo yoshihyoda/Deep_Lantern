@@ -16,6 +16,7 @@ const tracks=(await json('noaa/tracks_bbox.geojson')).features as Track[],covera
 const grid=buildGrid(terrain,tracks,coverage);
 const sources:SourceRef[]=[{id:'gebco',provider:'GEBCO',dataset:'GEBCO_2026 Grid + TID',retrievedAt:g.retrievals[0].retrieved_at_utc,attribution:g.attribution,sourceUrl:(await json('gebco/tid_codes.json')).source_url,status:'snapshot',license:g.license,notes:g.notes,metadataUrl:'/data/snapshot/gebco/metadata.json'},{id:'noaa',provider:'NOAA Ocean Exploration',dataset:'EX1702 · Deep Discoverer',retrievedAt:n.sources[0].retrieved_at_utc,attribution:n.attribution,sourceUrl:n.discovery_url,status:'snapshot',license:n.license,notes:['DIVE01 did not reach bottom.','Paths are not verified bottom-phase-only tracks.','DIVE13 listed date conflicts with expedition overview.'],metadataUrl:'/data/snapshot/noaa/metadata.json'},{id:'obis',provider:'OBIS · IOC-UNESCO',dataset:'American Samoa occurrence coverage',retrievedAt:o.sources[0].retrieved_at_utc,attribution:o.attribution,sourceUrl:o.policy_url,status:'snapshot',license:o.license,notes:o.interpretation,metadataUrl:'/data/snapshot/obis/metadata.json'}];
 await mkdir('lib/abyss/generated',{recursive:true});
+await writeFile('lib/abyss/generated/tid-codes.json',JSON.stringify(await json('gebco/tid_codes.json')));
 await writeFile('public/data/terrain.json',JSON.stringify(terrain));
 await writeFile('lib/abyss/generated/grid.json',JSON.stringify(grid));
 await writeFile('lib/abyss/generated/sources.json',JSON.stringify(sources));

@@ -1,4 +1,4 @@
-import legend from '../../public/data/snapshot/gebco/tid_codes.json';
+import legend from './generated/tid-codes.json';
 import type {Provenance,GridMetrics,Candidate,Track,Terrain,Coverage,DiveBrief} from './types';
 export const BBOX=[-171,-15,-169,-14] as const;
 export const GRID_SIZE=16;
