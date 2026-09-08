@@ -24,3 +24,11 @@ Validated on 2026-09-08, using the supplied American Samoa snapshot.
 The hosted Responses API transport has not been tested with a live API credential. A deployed Worker cannot use the local Codex child process. Public scientific endpoints are intentionally not refreshed at runtime. FathomNet, protected areas, and true mid-turn steering remain optional future work.
 
 The build reports a large client chunk from the 3D application and an informational Vinext route-classification limitation. Neither prevents the validated application from running. React's server-component packages were patched to 19.2.8; transitive development/build-tool advisories remain in the starter toolchain and are not claimed to be fully resolved.
+
+## Local development connection fix
+
+Vite is pinned to 8.0.16 after a user reported `send was called before connect` at the console-forwarding handler. This matches [Vite issue 22407](https://github.com/vitejs/vite/issues/22407): when the development WebSocket disconnects, forwarding an unhandled error can itself reject and recursively trigger the same handler. The installed version includes [the upstream fix](https://github.com/vitejs/vite/commit/e8e9a34dcf2540139de558a10187630884d10217). HMR, error overlays and console forwarding remain enabled.
+
+The installed Vite client code was exercised with a disconnected transport: console logging, error events and unhandled-rejection events caused no secondary unhandled rejections; normal console output remained intact, and forwarding resumed after reconnection. Direct HMR WebSocket handshakes succeeded for both `localhost:3000` and `127.0.0.1:3000`. The 24 application tests, type checking, lint and production build passed after the update.
+
+A browser-level forced-offline probe was inconclusive because the testing session timed out reconnecting; it is not recorded as a passing browser reconnection test. The compiled-client lifecycle check and direct WebSocket checks above were used to validate the relevant behavior. The local application was reopened with the patched client for normal UI and Codex interaction checks.
