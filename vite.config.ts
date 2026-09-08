@@ -1,4 +1,5 @@
-import { codexAppServerPlugin } from './server/codex-app-server';
+import { tsImport } from 'tsx/esm/api';
+import path from 'node:path';
 import { sites } from '@openai/sites-vite-plugin';
 import tailwindcss from '@tailwindcss/postcss';
 import vinext from 'vinext';
@@ -35,7 +36,7 @@ const localBindingConfig = {
     : [],
 };
 
-export default defineConfig(async () => {
+export default defineConfig(async ({ command }) => {
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= 'false';
@@ -44,14 +45,32 @@ export default defineConfig(async () => {
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import('@cloudflare/vite-plugin');
+  // Load the local bridge outside Vite's config dependency graph. Shared data
+  // and UI edits must not restart the entire Cloudflare runtime during HMR.
+  const localPlugins =
+    command === 'serve'
+      ? [
+          (
+            await tsImport(
+              path.resolve('server/codex-app-server.ts'),
+              import.meta.url,
+            )
+          ).codexAppServerPlugin(),
+        ]
+      : [];
 
   return {
     css: { postcss: { plugins: [tailwindcss()] } },
-    server: isCodexSeatbeltSandbox
-      ? { watch: { useFsEvents: false, usePolling: true } }
-      : undefined,
+    server: {
+      host: '127.0.0.1',
+      port: 3000,
+      strictPort: true,
+      ...(isCodexSeatbeltSandbox
+        ? { watch: { useFsEvents: false, usePolling: true } }
+        : {}),
+    },
     plugins: [
-      codexAppServerPlugin(),
+      ...localPlugins,
       vinext(),
       sites(),
       cloudflare({

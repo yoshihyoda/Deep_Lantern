@@ -1,27 +1,302 @@
 import legend from './generated/tid-codes.json';
-import type {Provenance,GridMetrics,Candidate,Track,Terrain,Coverage,DiveBrief} from './types';
-export const BBOX=[-171,-15,-169,-14] as const;
-export const GRID_SIZE=16;
-export const EARTH_KM=6371.0088;
-export const NORMALIZATION={rovKm:5,records:10000,reliefM:2000,minSeparationKm:25} as const;
-export const WEIGHTS={visualGap:.30,biologicalGap:.25,boundary:.20,relief:.15,direct:.10} as const;
-const codes = new Map(legend.codes.map(c=>[c.code,c.source_category as Provenance]));
-export const clamp=(v:number)=>Number.isFinite(v)?Math.max(0,Math.min(1,v)):0;
-export const classifyTid=(code:number):Provenance=>codes.get(code)??'unknown';
-export function project(lon:number,lat:number):[number,number] {const k=EARTH_KM*Math.PI/180;return [(lon+170)*k*Math.cos(-14.5*Math.PI/180),-(lat+14.5)*k]}
-export function distance(a:[number,number],b:[number,number]) {const rad=Math.PI/180;const x=Math.sin((b[1]-a[1])*rad/2)**2+Math.cos(a[1]*rad)*Math.cos(b[1]*rad)*Math.sin((b[0]-a[0])*rad/2)**2;return EARTH_KM*2*Math.asin(Math.sqrt(clamp(x)))}
-export function percentile(values:number[],q:number) {if(!values.length)return 0;const sorted=[...values].sort((a,b)=>a-b);const p=clamp(q)*(sorted.length-1),i=Math.floor(p);return sorted[i]+(sorted[Math.min(i+1,sorted.length-1)]-sorted[i])*(p-i)}
-export const relief=(values:number[])=>Math.max(0,percentile(values,.95)-percentile(values,.05));
-export function fractions(tid:number[],elevation:number[]) {let direct=0,indirect=0,unknown=0;tid.forEach((t,i)=>{if(elevation[i]>=0||elevation[i]<=-32767)return;const c=classifyTid(t);if(c==='direct')direct++;else if(c==='indirect')indirect++;else unknown++});const n=direct+indirect+unknown;return {directFraction:n?direct/n:0,indirectFraction:n?indirect/n:0,mixedUnknownFraction:n?unknown/n:0}}
-export const visualGap=(km:number)=>1-clamp(Math.max(0,km)/NORMALIZATION.rovKm);
-export const biologicalGap=(records:number)=>1-clamp(Math.log1p(Math.max(0,records))/Math.log1p(NORMALIZATION.records));
-export const boundaryScore=(direct:number)=>clamp(1-Math.abs(clamp(direct)-.5)*2);
-export function components(c:GridMetrics) {return {visualGap:visualGap(c.rovTrackKm),biologicalGap:biologicalGap(c.obisRecords),boundary:boundaryScore(c.directFraction),relief:clamp(c.terrainRelief/NORMALIZATION.reliefM),direct:clamp(c.directFraction)}}
-export function dataGapScore(c:GridMetrics) {const s=components(c);return clamp(Object.entries(WEIGHTS).reduce((sum,[k,w])=>sum+w*s[k as keyof typeof s],0))}
-export function cellIndex(lon:number,lat:number) {if(lon<BBOX[0]||lon>BBOX[2]||lat<BBOX[1]||lat>BBOX[3])return -1;return Math.min(15,Math.floor((BBOX[3]-lat)*16))*16+Math.min(15,Math.floor((lon-BBOX[0])/2*16))}
+import type {
+  Provenance,
+  GridMetrics,
+  Candidate,
+  Track,
+  Terrain,
+  Coverage,
+  DiveBrief,
+} from './types';
+export const BBOX = [-171, -15, -169, -14] as const;
+export const GRID_SIZE = 16;
+export const EARTH_KM = 6371.0088;
+export const NORMALIZATION = {
+  rovKm: 5,
+  records: 10000,
+  reliefM: 2000,
+  minSeparationKm: 25,
+} as const;
+export const WEIGHTS = {
+  visualGap: 0.3,
+  biologicalGap: 0.25,
+  boundary: 0.2,
+  relief: 0.15,
+  direct: 0.1,
+} as const;
+const codes = new Map(
+  legend.codes.map((c) => [c.code, c.source_category as Provenance]),
+);
+export const clamp = (v: number) =>
+  Number.isFinite(v) ? Math.max(0, Math.min(1, v)) : 0;
+export const classifyTid = (code: number): Provenance =>
+  codes.get(code) ?? 'unknown';
+export function project(lon: number, lat: number): [number, number] {
+  const k = (EARTH_KM * Math.PI) / 180;
+  return [
+    (lon + 170) * k * Math.cos((-14.5 * Math.PI) / 180),
+    -(lat + 14.5) * k,
+  ];
+}
+export function distance(a: [number, number], b: [number, number]) {
+  const rad = Math.PI / 180;
+  const x =
+    Math.sin(((b[1] - a[1]) * rad) / 2) ** 2 +
+    Math.cos(a[1] * rad) *
+      Math.cos(b[1] * rad) *
+      Math.sin(((b[0] - a[0]) * rad) / 2) ** 2;
+  return EARTH_KM * 2 * Math.asin(Math.sqrt(clamp(x)));
+}
+export function percentile(values: number[], q: number) {
+  if (!values.length) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
+  const p = clamp(q) * (sorted.length - 1),
+    i = Math.floor(p);
+  return (
+    sorted[i] +
+    (sorted[Math.min(i + 1, sorted.length - 1)] - sorted[i]) * (p - i)
+  );
+}
+export const relief = (values: number[]) =>
+  Math.max(0, percentile(values, 0.95) - percentile(values, 0.05));
+export function fractions(tid: number[], elevation: number[]) {
+  let direct = 0,
+    indirect = 0,
+    unknown = 0;
+  tid.forEach((t, i) => {
+    if (elevation[i] >= 0 || elevation[i] <= -32767) return;
+    const c = classifyTid(t);
+    if (c === 'direct') direct++;
+    else if (c === 'indirect') indirect++;
+    else unknown++;
+  });
+  const n = direct + indirect + unknown;
+  return {
+    directFraction: n ? direct / n : 0,
+    indirectFraction: n ? indirect / n : 0,
+    mixedUnknownFraction: n ? unknown / n : 0,
+  };
+}
+export const visualGap = (km: number) =>
+  1 - clamp(Math.max(0, km) / NORMALIZATION.rovKm);
+export const biologicalGap = (records: number) =>
+  1 -
+  clamp(Math.log1p(Math.max(0, records)) / Math.log1p(NORMALIZATION.records));
+export const boundaryScore = (direct: number) =>
+  clamp(1 - Math.abs(clamp(direct) - 0.5) * 2);
+export function components(c: GridMetrics) {
+  return {
+    visualGap: visualGap(c.rovTrackKm),
+    biologicalGap: biologicalGap(c.obisRecords),
+    boundary: boundaryScore(c.directFraction),
+    relief: clamp(c.terrainRelief / NORMALIZATION.reliefM),
+    direct: clamp(c.directFraction),
+  };
+}
+export function dataGapScore(c: GridMetrics) {
+  const s = components(c);
+  return clamp(
+    Object.entries(WEIGHTS).reduce(
+      (sum, [k, w]) => sum + w * s[k as keyof typeof s],
+      0,
+    ),
+  );
+}
+export function cellIndex(lon: number, lat: number) {
+  if (lon < BBOX[0] || lon > BBOX[2] || lat < BBOX[1] || lat > BBOX[3])
+    return -1;
+  return (
+    Math.min(15, Math.floor((BBOX[3] - lat) * 16)) * 16 +
+    Math.min(15, Math.floor(((lon - BBOX[0]) / 2) * 16))
+  );
+}
 // Split each recorded segment at grid boundaries; allocate each subsegment once.
-export function trackDistances(tracks:Track[]) {const sums=Array<number>(256).fill(0);for(const t of tracks){if(t.properties.reached_bottom!==true)continue;const p=t.geometry.coordinates;for(let i=1;i<p.length;i++){const a=p[i-1],b=p[i],ts=[0,1];for(let k=0;k<=16;k++){for(const [axis,line] of [[0,-171+k/8],[1,-15+k/16]] as const){const d=b[axis]-a[axis];if(d!==0){const f=(line-a[axis])/d;if(f>0&&f<1)ts.push(f)}}}ts.sort((x,y)=>x-y);const total=distance(a,b);for(let j=1;j<ts.length;j++){const u=ts[j-1],v=ts[j],m=(u+v)/2;const idx=cellIndex(a[0]+(b[0]-a[0])*m,a[1]+(b[1]-a[1])*m);if(idx>=0)sums[idx]+=total*(v-u)}}}return sums}
-export function buildGrid(terrain:Terrain,tracks:Track[],coverage:Coverage[]):GridMetrics[] {const elevations:number[][]=Array.from({length:256},()=>[]),tids:number[][]=Array.from({length:256},()=>[]);for(let r=0;r<terrain.height;r++)for(let c=0;c<terrain.width;c++){const i=r*terrain.width+c,lon=-171+(c+.5)/terrain.width*2,lat=-14-(r+.5)/terrain.height;const g=cellIndex(lon,lat);elevations[g].push(terrain.elevation[i]);tids[g].push(terrain.tid[i])}const paths=trackDistances(tracks),records=Array<number>(256).fill(0);for(const f of coverage){const ring=f.geometry.coordinates[0],a=ring[0],b=ring[2];const i=cellIndex((a[0]+b[0])/2,(a[1]+b[1])/2);if(i>=0)records[i]+=f.properties.occurrence_count}return elevations.map((all,i)=>{const sea=all.filter(e=>e<0&&e>-32767),row=Math.floor(i/16),col=i%16;return {id:`cell-${row}-${col}`,row,col,centerLat:-14-(row+.5)/16,centerLon:-171+(col+.5)/8,meanDepth:sea.length?-sea.reduce((s,v)=>s+v,0)/sea.length:0,terrainRelief:relief(sea),...fractions(tids[i],all),rovTrackKm:paths[i],obisRecords:records[i],oceanFraction:sea.length/all.length,sourceIds:['gebco','noaa','obis']}})}
-export function candidates(grid:GridMetrics[],minDepth=2000):Candidate[] {const eligible=grid.filter(c=>c.meanDepth>=minDepth&&c.oceanFraction>.9);const selected:Candidate[]=[];const archetypes=[{archetype:'A',title:'Mapped, sparse public records',subtitle:'Direct terrain · sparse visual records',rank:(c:GridMetrics)=>.45*c.directFraction+.35*visualGap(c.rovTrackKm)+.2*clamp(c.terrainRelief/2000)},{archetype:'B',title:'Deep biological-record gap',subtitle:'Deep water · sparse public records',rank:(c:GridMetrics)=>.45*biologicalGap(c.obisRecords)+.3*clamp(c.meanDepth/5100)+.25*dataGapScore(c)},{archetype:'C',title:'At the knowledge frontier',subtitle:'Where source types meet',rank:(c:GridMetrics)=>.7*boundaryScore(c.directFraction)+.3*dataGapScore(c)}] as const;for(const a of archetypes){const c=eligible.filter(c=>(a.archetype!=='C'||boundaryScore(c.directFraction)>0)&&selected.every(p=>distance([c.centerLon,c.centerLat],[p.centerLon,p.centerLat])>=NORMALIZATION.minSeparationKm)).sort((x,y)=>a.rank(y)-a.rank(x)||x.id.localeCompare(y.id))[0];if(c)selected.push({...c,archetype:a.archetype,title:a.title,subtitle:a.subtitle,score:dataGapScore(c)})}return selected}
-export function makeBrief(c:Candidate):DiveBrief {const f=(x:number)=>x.toLocaleString('en-US',{maximumFractionDigits:0});return {candidateId:c.id,title:c.title,known:[{statement:`Mean seafloor depth ${f(c.meanDepth)} m; robust relief ${f(c.terrainRelief)} m within this grid cell.`,sourceIds:['gebco']},{statement:`${(100*c.directFraction).toFixed(1)}% of underwater raster cells have direct-measurement source types.`,sourceIds:['gebco']}],dataGaps:[{statement:`${c.rovTrackKm.toFixed(2)} km of recorded paths from bottom-reaching dives intersect this cell. These paths are not verified bottom-only survey coverage.`,sourceIds:['noaa']},{statement:`${f(c.obisRecords)} public occurrence records in the detailed cache are assigned here by cell center. Sparse records do not establish biological absence.`,sourceIds:['obis']}],whyExplore:[{statement:`Exploration heuristic ${(c.score*100).toFixed(0)}/100 combines public-data gaps, provenance boundaries and relief. This is not a scientific-value score.`,sourceIds:['gebco','noaa','obis']}],questions:['What habitats would a new visual transect document?','Would standardized sampling help distinguish a reporting gap from a sampling gap?'],caveats:['A virtual research discussion, not a navigational or operational dive plan.','GEBCO TID is provenance, not statistical confidence. Vertical geometry is exaggerated ×6.','DIVE01 did not reach the seafloor and is excluded from the path metric.','OBIS is an aggregate, time- and depth-unrestricted cache with mixed licenses, including CC-BY-NC.','These datasets do not cover all human observations of this area.'],evidenceSources:['gebco','noaa','obis']}}
-export function winners(votes:Record<string,number>) {const max=Math.max(0,...Object.values(votes));return max?Object.keys(votes).filter(k=>votes[k]===max):[]}
+export function trackDistances(tracks: Track[]) {
+  const sums = Array<number>(256).fill(0);
+  for (const t of tracks) {
+    if (t.properties.reached_bottom !== true) continue;
+    const p = t.geometry.coordinates;
+    for (let i = 1; i < p.length; i++) {
+      const a = p[i - 1],
+        b = p[i],
+        ts = [0, 1];
+      for (let k = 0; k <= 16; k++) {
+        for (const [axis, line] of [
+          [0, -171 + k / 8],
+          [1, -15 + k / 16],
+        ] as const) {
+          const d = b[axis] - a[axis];
+          if (d !== 0) {
+            const f = (line - a[axis]) / d;
+            if (f > 0 && f < 1) ts.push(f);
+          }
+        }
+      }
+      ts.sort((x, y) => x - y);
+      const total = distance(a, b);
+      for (let j = 1; j < ts.length; j++) {
+        const u = ts[j - 1],
+          v = ts[j],
+          m = (u + v) / 2;
+        const idx = cellIndex(
+          a[0] + (b[0] - a[0]) * m,
+          a[1] + (b[1] - a[1]) * m,
+        );
+        if (idx >= 0) sums[idx] += total * (v - u);
+      }
+    }
+  }
+  return sums;
+}
+export function buildGrid(
+  terrain: Terrain,
+  tracks: Track[],
+  coverage: Coverage[],
+): GridMetrics[] {
+  const elevations: number[][] = Array.from({ length: 256 }, () => []),
+    tids: number[][] = Array.from({ length: 256 }, () => []);
+  for (let r = 0; r < terrain.height; r++)
+    for (let c = 0; c < terrain.width; c++) {
+      const i = r * terrain.width + c,
+        lon = -171 + ((c + 0.5) / terrain.width) * 2,
+        lat = -14 - (r + 0.5) / terrain.height;
+      const g = cellIndex(lon, lat);
+      elevations[g].push(terrain.elevation[i]);
+      tids[g].push(terrain.tid[i]);
+    }
+  const paths = trackDistances(tracks),
+    records = Array<number>(256).fill(0);
+  for (const f of coverage) {
+    const ring = f.geometry.coordinates[0],
+      a = ring[0],
+      b = ring[2];
+    const i = cellIndex((a[0] + b[0]) / 2, (a[1] + b[1]) / 2);
+    if (i >= 0) records[i] += f.properties.occurrence_count;
+  }
+  return elevations.map((all, i) => {
+    const sea = all.filter((e) => e < 0 && e > -32767),
+      row = Math.floor(i / 16),
+      col = i % 16;
+    return {
+      id: `cell-${row}-${col}`,
+      row,
+      col,
+      centerLat: -14 - (row + 0.5) / 16,
+      centerLon: -171 + (col + 0.5) / 8,
+      meanDepth: sea.length ? -sea.reduce((s, v) => s + v, 0) / sea.length : 0,
+      terrainRelief: relief(sea),
+      ...fractions(tids[i], all),
+      rovTrackKm: paths[i],
+      obisRecords: records[i],
+      oceanFraction: sea.length / all.length,
+      sourceIds: ['gebco', 'noaa', 'obis'],
+    };
+  });
+}
+export function candidates(grid: GridMetrics[], minDepth = 2000): Candidate[] {
+  const eligible = grid.filter(
+    (c) => c.meanDepth >= minDepth && c.oceanFraction > 0.9,
+  );
+  const selected: Candidate[] = [];
+  const archetypes = [
+    {
+      archetype: 'A',
+      title: 'Mapped, sparse public records',
+      subtitle: 'Direct terrain · sparse visual records',
+      rank: (c: GridMetrics) =>
+        0.45 * c.directFraction +
+        0.35 * visualGap(c.rovTrackKm) +
+        0.2 * clamp(c.terrainRelief / 2000),
+    },
+    {
+      archetype: 'B',
+      title: 'Deep biological-record gap',
+      subtitle: 'Deep water · sparse public records',
+      rank: (c: GridMetrics) =>
+        0.45 * biologicalGap(c.obisRecords) +
+        0.3 * clamp(c.meanDepth / 5100) +
+        0.25 * dataGapScore(c),
+    },
+    {
+      archetype: 'C',
+      title: 'At the knowledge frontier',
+      subtitle: 'Where source types meet',
+      rank: (c: GridMetrics) =>
+        0.7 * boundaryScore(c.directFraction) + 0.3 * dataGapScore(c),
+    },
+  ] as const;
+  for (const a of archetypes) {
+    const c = eligible
+      .filter(
+        (c) =>
+          (a.archetype !== 'C' || boundaryScore(c.directFraction) > 0) &&
+          selected.every(
+            (p) =>
+              distance(
+                [c.centerLon, c.centerLat],
+                [p.centerLon, p.centerLat],
+              ) >= NORMALIZATION.minSeparationKm,
+          ),
+      )
+      .sort((x, y) => a.rank(y) - a.rank(x) || x.id.localeCompare(y.id))[0];
+    if (c)
+      selected.push({
+        ...c,
+        archetype: a.archetype,
+        title: a.title,
+        subtitle: a.subtitle,
+        score: dataGapScore(c),
+      });
+  }
+  return selected;
+}
+export function makeBrief(c: Candidate): DiveBrief {
+  const f = (x: number) =>
+    x.toLocaleString('en-US', { maximumFractionDigits: 0 });
+  return {
+    candidateId: c.id,
+    title: c.title,
+    known: [
+      {
+        statement: `Mean seafloor depth ${f(c.meanDepth)} m; robust relief ${f(c.terrainRelief)} m within this grid cell.`,
+        sourceIds: ['gebco'],
+      },
+      {
+        statement: `${(100 * c.directFraction).toFixed(1)}% of underwater raster cells have direct-measurement source types.`,
+        sourceIds: ['gebco'],
+      },
+    ],
+    dataGaps: [
+      {
+        statement: `${c.rovTrackKm.toFixed(2)} km of recorded paths from bottom-reaching dives intersect this cell. These paths are not verified bottom-only survey coverage.`,
+        sourceIds: ['noaa'],
+      },
+      {
+        statement: `${f(c.obisRecords)} public occurrence records in the detailed cache are assigned here by cell center. Sparse records do not establish biological absence.`,
+        sourceIds: ['obis'],
+      },
+    ],
+    whyExplore: [
+      {
+        statement: `Exploration heuristic ${(c.score * 100).toFixed(0)}/100 combines public-data gaps, provenance boundaries and relief. This is not a scientific-value score.`,
+        sourceIds: ['gebco', 'noaa', 'obis'],
+      },
+    ],
+    questions: [
+      'What habitats would a new visual transect document?',
+      'Would standardized sampling help distinguish a reporting gap from a sampling gap?',
+    ],
+    caveats: [
+      'A virtual research discussion, not a navigational or operational dive plan.',
+      'GEBCO TID is provenance, not statistical confidence. Vertical geometry is exaggerated ×6.',
+      'DIVE01 did not reach the seafloor and is excluded from the path metric.',
+      'OBIS is an aggregate, time- and depth-unrestricted cache with mixed licenses, including CC-BY-NC.',
+      'These datasets do not cover all human observations of this area.',
+    ],
+    evidenceSources: ['gebco', 'noaa', 'obis'],
+  };
+}
+export function winners(votes: Record<string, number>) {
+  const max = Math.max(0, ...Object.values(votes));
+  return max ? Object.keys(votes).filter((k) => votes[k] === max) : [];
+}

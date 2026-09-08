@@ -14,7 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'ABYSS COMMONS — Map the Unknown',
-  description: 'Explore real American Samoa seafloor data, provenance, and gaps in public observations.',
+  description:
+    'Explore real American Samoa seafloor data, provenance, and gaps in public observations.',
+  icons: { icon: '/favicon.svg' },
 };
 
 export default function RootLayout({
