@@ -1,0 +1,132 @@
+{
+  "source_url": "https://www.gebco.net/data-products-gridded-bathymetry-data/gebco2026-grid",
+  "codes": [
+    {
+      "code": 0,
+      "source_category": "land",
+      "label": "Land",
+      "bbox_cells": 450
+    },
+    {
+      "code": 10,
+      "source_category": "direct",
+      "label": "Singlebeam",
+      "bbox_cells": 0
+    },
+    {
+      "code": 11,
+      "source_category": "direct",
+      "label": "Multibeam",
+      "bbox_cells": 112351
+    },
+    {
+      "code": 12,
+      "source_category": "direct",
+      "label": "Seismic",
+      "bbox_cells": 0
+    },
+    {
+      "code": 13,
+      "source_category": "direct",
+      "label": "Isolated sounding",
+      "bbox_cells": 0
+    },
+    {
+      "code": 14,
+      "source_category": "direct",
+      "label": "ENC sounding",
+      "bbox_cells": 0
+    },
+    {
+      "code": 15,
+      "source_category": "direct",
+      "label": "Lidar",
+      "bbox_cells": 395
+    },
+    {
+      "code": 16,
+      "source_category": "direct",
+      "label": "Optical light sensor",
+      "bbox_cells": 8
+    },
+    {
+      "code": 17,
+      "source_category": "direct",
+      "label": "Combination of direct measurement methods",
+      "bbox_cells": 74
+    },
+    {
+      "code": 40,
+      "source_category": "indirect",
+      "label": "Satellite gravity guided prediction",
+      "bbox_cells": 1643
+    },
+    {
+      "code": 41,
+      "source_category": "indirect",
+      "label": "Algorithmic interpolation",
+      "bbox_cells": 0
+    },
+    {
+      "code": 42,
+      "source_category": "indirect",
+      "label": "Chart contours",
+      "bbox_cells": 0
+    },
+    {
+      "code": 43,
+      "source_category": "indirect",
+      "label": "ENC contours",
+      "bbox_cells": 0
+    },
+    {
+      "code": 44,
+      "source_category": "indirect",
+      "label": "Mixed measured and derived sources with gravity guided interpolation",
+      "bbox_cells": 167
+    },
+    {
+      "code": 45,
+      "source_category": "indirect",
+      "label": "Airborne gravity prediction",
+      "bbox_cells": 0
+    },
+    {
+      "code": 46,
+      "source_category": "indirect",
+      "label": "Grounded iceberg draft estimate",
+      "bbox_cells": 0
+    },
+    {
+      "code": 47,
+      "source_category": "indirect",
+      "label": "Grounded Argo float derived",
+      "bbox_cells": 0
+    },
+    {
+      "code": 48,
+      "source_category": "indirect",
+      "label": "Animal-borne data logger",
+      "bbox_cells": 0
+    },
+    {
+      "code": 70,
+      "source_category": "unknown",
+      "label": "Pre-generated mixed-source grid",
+      "bbox_cells": 112
+    },
+    {
+      "code": 71,
+      "source_category": "unknown",
+      "label": "Unknown source",
+      "bbox_cells": 0
+    },
+    {
+      "code": 72,
+      "source_category": "unknown",
+      "label": "Steering points",
+      "bbox_cells": 0
+    }
+  ],
+  "warning": "TID indicates input source type; it is neither a confidence score nor individual survey provenance. Do not interpolate TID codes; use nearest-neighbor."
+}

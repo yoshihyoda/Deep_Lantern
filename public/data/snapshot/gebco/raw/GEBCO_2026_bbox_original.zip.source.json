@@ -1,0 +1,15 @@
+{
+  "url": "https://download.gebco.net/api/queue/download/GEBCO_08_Sep_2026_9896d343ed1c",
+  "final_url": "https://download.gebco.net/api/queue/download/GEBCO_08_Sep_2026_9896d343ed1c",
+  "retrieved_at_utc": "2026-09-08T20:21:00.959169+00:00",
+  "path": "gebco/raw/GEBCO_2026_bbox_original.zip",
+  "bytes": 1146444,
+  "sha256": "609501552f08d80889b4b3babc3ff9d904e0bd99b5d2c17b327f3f6862ea4853",
+  "headers": {
+    "Date": "Tue, 08 Sep 2026 20:21:00 GMT",
+    "content-type": "application/zip",
+    "content-length": "1146444",
+    "last-modified": "Tue, 08 Sep 2026 20:19:23 GMT",
+    "etag": "9a95174818d77245f4a1de038066ba63"
+  }
+}

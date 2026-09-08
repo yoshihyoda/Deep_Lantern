@@ -1,0 +1,141 @@
+{
+  "status": "complete",
+  "release": "GEBCO_2026",
+  "bbox_west_south_east_north": [
+    -171,
+    -15,
+    -169,
+    -14
+  ],
+  "crs": "EPSG:4326",
+  "resolution_arcseconds": 15,
+  "registration": "pixel center",
+  "elevation_units": "m; negative below sea level",
+  "vertical_reference": "Mean sea level assumed; source vertical datums can differ in shallow water",
+  "source_mode": "Official 2026 release subset generated on demand; stored immutable local snapshot",
+  "api_live": false,
+  "retrieval_service_live": true,
+  "retrievals": [
+    {
+      "url": "https://download.gebco.net/api/queue/download/GEBCO_08_Sep_2026_9896d343ed1c",
+      "final_url": "https://download.gebco.net/api/queue/download/GEBCO_08_Sep_2026_9896d343ed1c",
+      "retrieved_at_utc": "2026-09-08T20:21:00.959169+00:00",
+      "path": "gebco/raw/GEBCO_2026_bbox_original.zip",
+      "bytes": 1146444,
+      "sha256": "609501552f08d80889b4b3babc3ff9d904e0bd99b5d2c17b327f3f6862ea4853",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:21:00 GMT",
+        "content-type": "application/zip",
+        "content-length": "1146444",
+        "last-modified": "Tue, 08 Sep 2026 20:19:23 GMT",
+        "etag": "9a95174818d77245f4a1de038066ba63"
+      }
+    },
+    {
+      "url": "https://www.gebco.net/data-products-gridded-bathymetry-data/gebco2026-grid",
+      "final_url": "https://www.gebco.net/data-products-gridded-bathymetry-data/gebco2026-grid",
+      "retrieved_at_utc": "2026-09-08T20:20:26.749237+00:00",
+      "path": "gebco/source_documentation.html",
+      "bytes": 69443,
+      "sha256": "226ebf8a62a89c5eeba53b4812ea4432208be6de087117bf221b9fdd3b128903",
+      "headers": {
+        "Content-Length": "69443",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Tue, 08 Sep 2026 20:20:27 GMT"
+      }
+    }
+  ],
+  "attribution": "GEBCO Bathymetric Compilation Group 2026 (2026). The GEBCO_2026 Grid - a continuous terrain model for oceans and land at 15 arc-second intervals. NERC EDS British Oceanographic Data Centre NOC. doi:10.5285/4f68d5c7-45eb-f999-e063-7086abc036fa",
+  "license": "Public domain, with GEBCO conditions of use and attribution; supplied terms PDF retained",
+  "terms_file": "data/GEBCO_Grid_terms_of_use.pdf",
+  "rasters": {
+    "elevation": {
+      "geotiff": "gebco/data/gebco_2026_n-14.0_s-15.0_w-171.0_e-169.0_geotiff.tif",
+      "netcdf": "gebco/data/gebco_2026_n-14.0_s-15.0_w-171.0_e-169.0.nc",
+      "shape_rows_cols": [
+        240,
+        480
+      ],
+      "bbox_actual": [
+        -171.0,
+        -15.000000000000002,
+        -169.0,
+        -13.999999999999998
+      ],
+      "pixel_size_degrees": [
+        0.004166666666666674,
+        0.004166666666666682
+      ],
+      "nodata": -32767,
+      "nodata_count": 0,
+      "min": -5083,
+      "max": 860,
+      "netcdf_variable": "elevation",
+      "netcdf_dimensions": [
+        "lat",
+        "lon"
+      ],
+      "netcdf_format": "NetCDF classic (CDF-1), delivered by official subset app",
+      "netcdf_latitude_order": "ascending",
+      "netcdf_geotiff_values_equal": true,
+      "geotiff_sample_format": [
+        2
+      ],
+      "geotiff_bits_per_sample": [
+        16
+      ]
+    },
+    "tid": {
+      "geotiff": "gebco/data/gebco_2026_tid_n-14.0_s-15.0_w-171.0_e-169.0_geotiff.tif",
+      "netcdf": "gebco/data/gebco_2026_tid_n-14.0_s-15.0_w-171.0_e-169.0.nc",
+      "shape_rows_cols": [
+        240,
+        480
+      ],
+      "bbox_actual": [
+        -171.0,
+        -15.000000000000002,
+        -169.0,
+        -13.999999999999998
+      ],
+      "pixel_size_degrees": [
+        0.004166666666666674,
+        0.004166666666666682
+      ],
+      "nodata": 127,
+      "nodata_count": 0,
+      "min": 0,
+      "max": 70,
+      "netcdf_variable": "tid",
+      "netcdf_dimensions": [
+        "lat",
+        "lon"
+      ],
+      "netcdf_format": "NetCDF classic (CDF-1), delivered by official subset app",
+      "netcdf_latitude_order": "ascending",
+      "netcdf_geotiff_values_equal": true,
+      "geotiff_sample_format": [
+        2
+      ],
+      "geotiff_bits_per_sample": [
+        8
+      ],
+      "code_counts": {
+        "0": 450,
+        "11": 112351,
+        "15": 395,
+        "16": 8,
+        "17": 74,
+        "40": 1643,
+        "44": 167,
+        "70": 112
+      }
+    }
+  },
+  "notes": [
+    "No login, CAPTCHA, or explicit terms-acceptance control was presented.",
+    "Global geospatial_* attributes remain in source files; derive subset extent from coordinate arrays or GeoTIFF transform.",
+    "TID is categorical source type, not certainty or full provenance.",
+    "Not for navigation or safety at sea."
+  ]
+}

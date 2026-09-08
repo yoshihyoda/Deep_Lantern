@@ -1,0 +1,2550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<!--base href="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/ex1702/" /-->
+<title>Okeanos Explorer (EX1702): CAPSTONE American Samoa Expedition: Suesuega o le Moana o Amerika Samoa (ROV/Mapping)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="X-UA-Compatible" content="IE=7.5;IE=8;IE=9" />
+<meta name="description" content="Website dedicated to NOAA Office of Ocean Exploration and Research" />
+<meta name="DC.keywords" content="ocean exploration research NOAA OER okeanos explorer ROV expeditions education marine archaeology geology geohazards canyons oceanexplorer systematic targeted technology telepresence information" />
+<meta name="DC.description" content="Website dedicated to NOAA Office of Ocean Exploration and Research" />
+<meta name="DC.subject" content="NOAA Office of Ocean Exploration and Research" />
+<meta name="DC.creator" content="NOAA National Centers for Environmental Information" />
+<meta name="DC.contributors" content="" />
+<meta name="DC.date.created" content="2013-04-16 10:58:00" />
+<meta name="DC.date.modified" content="2013-05-01 10:58:00" />
+<meta name="DC.date.reviewed" content="2013-05-01 10:58:00" />
+<meta name="DC.type" content="Document" />
+<meta name="DC.format" content="text/html" />
+<meta name="DC.language" content="en-US" />
+<meta name="ROBOTS" content="INDEX, NOFOLLOW" />
+<link rel="start" title="home"
+      href="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises" />
+<link rel="shortcut icon" type="image/x-icon"
+      href="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/icons/favicon.ico" />
+<link rel="home" href="http://oceanexplorer.noaa.gov" title="Front page" />
+<style type="text/css">@import url(https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/css/layout.css);</style>
+<style type="text/css">@import url(https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/css/template.css);</style>
+<style type="text/css">@import url(https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/css/menu.css);</style>
+<style type="text/css">@import url(https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/css/jquery-ui-1.8.16.redmond.css);</style>
+<script src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/js/menu.js"></script>
+<script src="https://www.ncei.noaa.gov/message-host/message/message.js"></script>
+
+
+<script type="text/javascript"
+     src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript"
+     src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/js/jquery-ui-1.8.16.min.js"></script>
+
+<!--
+map content starts here
+-->
+<style>
+    .mapDiv {
+        width: 100%;
+        height: 500px;
+    }
+    .tableCell1 {
+	   width: 60%;
+    }
+    .tableCell2 {
+	   width: 15%;
+    }
+    .tableCell3 {
+	   width: 25%;
+    }
+	.esri-coordinate-conversion {
+		width: 270px !important;
+	}
+	.esri-coordinate-conversion__select-row {
+		display: none !important;
+	}
+	.esri-coordinate-conversion__conversions-view {
+		margin: 0 !important;
+	}
+</style>
+<link
+    rel="stylesheet"
+    href="https://js.arcgis.com/4.18/esri/themes/light/main.css"
+/>
+<script>
+    var locationPath = location.pathname.replace(/\/[^\/]*$/, "");
+    window.dojoConfig = {
+        packages: [
+        {
+            name: "app",
+            location: locationPath + "/../js/app"
+        }
+        ]
+    };    
+</script>
+<script src="https://js.arcgis.com/4.18/"></script>
+<script>
+    require([
+    "app/AppLoader"
+    ],
+        function(AppLoader) {
+            var appLoader = new AppLoader();
+
+            //initialize the map
+            appLoader.init('EX1702');
+
+            $("#tab").tabs({
+                select: function(event, ui) {
+                    //Listen for active tab change
+                    if (ui.index === 0) {
+                        appLoader.zoomToCruise(true);
+                    } else {
+                        appLoader.zoomToDive(ui.index);
+                    }
+                },
+                history: true
+            });
+        }
+    );
+</script>
+<!--
+Map content ends here
+-->
+    
+<script type="text/javascript" src="http://www.ncei.noaa.gov/cdn/federated-analytics.js"></script>
+<script type="text/javascript">
+    systemMessage();
+</script>
+<script id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC%26subagency=NOAA"></script>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="border">
+		
+<div id="logoWrap">
+	<img src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/oer-banner.jpg"
+      width="960" height="75" alt="oer_banner.jpg">
+</div>
+
+<!--
+<map name="logo_map" id="logo_map">
+<area shape="circle" coords="37,37,35" href="http://www.noaa.gov" target="_self"
+      title="Link to NOAA website" alt="National Oceanic &amp; Atmospheric Administration website"/>
+<area shape="rect" coords="71,0,971,78" href="http://www.ncei.noaa.gov"
+      title="Link to home page" alt="National Centers for Environmental Information website"/>
+</map>
+<img src="" alt="" title="" height="76" width="972" usemap="#logo_map" tal:attributes="src python:here.rdnHost+'/media/icons/logo.jpg';"/>
+-->
+
+	<div id="site-message" class="message-style"></div>
+	</div>
+  
+<div class="breadcrumbs">
+    <span class="breadcrumbs-lead">You are here: </span>
+    <a href="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises">Okeanos Explorer Expeditions</a>
+    <span class="breadcrumbSeparator">&#8594;</span>
+    <a href="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/#2017">2017 Expeditions</a>
+    <span class="breadcrumbSeparator">&#8594;</span>
+    <span class="breadcrumbs-detail">Okeanos Explorer (EX1702): CAPSTONE American Samoa Expedition: Suesuega o le Moana o Amerika Samoa (ROV/Mapping)</span>
+</div>
+
+  	
+	<div class="innerWrapper">
+
+	<div id="mapDiv" class="mapDiv"></div>
+		
+	
+	<div id="tab">
+		
+	<ul>
+		<li><a href="#tab-0" title="Overview"><span class="dive-tab-labels">Overview</span></a></li>
+<li><a href="#tab-1" title ="Dive 1"><span class="dive-tab-labels">1</span></a></li>
+<li><a href="#tab-2" title ="Dive 2"><span class="dive-tab-labels">2</span></a></li>
+<li><a href="#tab-3" title ="Dive 3"><span class="dive-tab-labels">3</span></a></li>
+<li><a href="#tab-4" title ="Dive 4"><span class="dive-tab-labels">4</span></a></li>
+<li><a href="#tab-5" title ="Dive 5"><span class="dive-tab-labels">5</span></a></li>
+<li><a href="#tab-6" title ="Dive 6"><span class="dive-tab-labels">6</span></a></li>
+<li><a href="#tab-7" title ="Dive 7"><span class="dive-tab-labels">7</span></a></li>
+<li><a href="#tab-8" title ="Dive 8"><span class="dive-tab-labels">8</span></a></li>
+<li><a href="#tab-9" title ="Dive 9"><span class="dive-tab-labels">9</span></a></li>
+<li><a href="#tab-10" title ="Dive 10"><span class="dive-tab-labels">10</span></a></li>
+<li><a href="#tab-11" title ="Dive 11"><span class="dive-tab-labels">11</span></a></li>
+<li><a href="#tab-12" title ="Dive 12"><span class="dive-tab-labels">12</span></a></li>
+<li><a href="#tab-13" title ="Dive 13"><span class="dive-tab-labels">13</span></a></li>
+
+	</ul>
+
+		
+    <div id="tab-0">
+        <div>
+            <p style="font-size:130%;font-weight:bold;color:#0d688b;text-align:center;">
+                Okeanos Explorer (EX1702): CAPSTONE American Samoa Expedition: Suesuega o le Moana o Amerika Samoa (ROV/Mapping)
+            </p>
+		 <p style="font-size:95%;font-weight:italic;color:#0d688b;text-align:center;">
+			<b>Vessel:</b> NOAA Ship Okeanos Explorer; <b>Expedition Dates:</b> February 16 - March 1, 2017
+		 </p>
+
+		 <p style="font-size:95%;font-weight:italic;color:#0d688b;text-align:center;">
+			<b>Project Principals:</b> Kelley Elliott, NOAA/OAR/OER (Expedition Coordinator); Elizabeth Lobecker, NOAA/OAR/OER (Mapping Lead)
+		 </p>
+
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 Overview Map" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-overview-map.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     style="margin-top:2px;"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/thumbnail-250.jpg"
+                     title="Select to view the original version of the Okeanos Explorer (EX1702): CAPSTONE American Samoa Expedition: Suesuega o le Moana o Amerika Samoa (ROV/Mapping) Overview Map"
+                     alt="Okeanos Explorer (EX1702): CAPSTONE American Samoa Expedition: Suesuega o le Moana o Amerika Samoa (ROV/Mapping) Overview Map">
+            </a>
+
+            <p>
+                Operations for this cruise will be conducted 24 hours/day and consist of daily remotely operated vehicle (ROV), overnight mapping, CTD casts and full shore-based participation via telepresence. Operations will be conducted within several marine protected areas.  Operations are planned in the Rose Atoll Marine National Monument, National Marine Sanctuary of American Samoa, offshore (not within) of the National Park of American Samoa, and the waters of both American Samoa and Samoa.
+		 </p>
+		 
+
+<div style="padding-top:.5em;"><h3>
+              <span class="dive-details">Expedition Data and Resources</span></h3>
+              <table width="90%" style="border-spacing:.25em;">
+                <tr>
+                    <td class="tableCell1">
+                        Ship Navigation Data (ASCII) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-Ship-Nav-Data.zip " target="newWin" title=" ASCII Data from Ship Navigation Instruments"> Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Ship SCS/Sensor Data (ASCII) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-SCS-Data.zip " target="newWin" title=" ASCII Data from Ship Meteorological and Oceanographic Sensors"> Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Ship SCS/Sensor Data (NetCDF) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ncei.noaa.gov/thredds-coastal/catalog/ocean_exploration_research/catalog.html?dataset=ocean_exploration_research/EX1702_SCS.nc" target="newWin" title=" NetCDF file from Ship Meteorological and Oceanographic Sensors"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">NetCDF file format: Special software needed to read</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                        Shipboard CTDs 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-profile-data.zip" target="newWin" title="Zip file of Shipboard CTDs">Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                        Mapping Products 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-mappingsurvey.zip" target="newWin" title="Zip file of Mapping Products">Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                        GIS Products 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_GISData.zip" target="newWin" title="Zip file of GIS Products">Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+</table></div>
+<div style="padding-top:.5em;"><h3>
+              <span class="dive-details">Submersible Data and Resources</span></h3>
+              <table width="90%" style="border-spacing:.25em;">
+                <tr>
+                    <td class="tableCell1">
+                        Dive Track KMLs 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DiveTracks.zip" target="newWin" title="Click to download zip file of Dive Track kmls">Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Event Logs 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ncei.noaa.gov/archive/accession/0162490/data/0-data/submersible/Submersible_Multimedia_Data/Products/Eventlogs/ " target="newWin" title=" Access Event Logs"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open link</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Cruise Video Collection Self-Service Portal 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702 " target="newWin" title=" Open Video Portal"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open link</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Collected Specimens 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Cruise_Sampling_Log.csv " target="newWin" title=" Collected Specimens"> Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open link</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Submersible Navigation/Sensor Data (ASCII) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-Sub-Data.zip" target="newWin" title=" ASCII Data from Submersible Meteorological and Oceanographic Sensors"> Download
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Use zip utility to open file</span>
+                    </td>
+                </tr>
+</table></div>
+<div style="padding-top:.5em;"><h3>
+              <span class="dive-details">Collected Specimen Repositories</span></h3>
+              <table width="90%" style="border-spacing:.25em;">
+                <tr>
+                    <td class="tableCell1">
+                        Smithsonian Institution's National Museum of Natural History Research and Collections (Biological Samples) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" http://collections.nmnh.si.edu/search/iz/ " target="newWin" title=" Access Primary Biological Collection"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to visit repository website</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Ocean Genome Legacy Center (OGL) at Northeastern University 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.northeastern.edu/ogl/ " target="newWin" title=" Access Genomic DNA Catalogue"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to visit repository website</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Bernice Pauahi Bishop Museum's Marine Invertebrate Collection 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="http://www.bishopmuseum.org/collections-3/invertebrate-zoology/ " target="newWin" title=" Open Select Specimen Subsamples"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to visit repository website</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Oregon State University's Marine Geology Repository 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" http://osu-mgr.org/noaa-ex/" target="newWin" title=" Marine Geologic Sample Repository"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to visit repository website</span>
+                    </td>
+                </tr>
+</table></div>
+<div style="padding-top:.5em;"><h3>
+              <span class="dive-details">Educational Resources</span></h3>
+              <table width="90%" style="border-spacing:.25em;">
+                <tr>
+                    <td class="tableCell1">
+                        Expedition Education Module 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oceanexplorer.noaa.gov/okeanos/explorations/ex1702/background/edu/edu.html" target="newWin" title="Education Purpose, Lessons, Multimedia Discovery Missions, OceanAGE Career Connections, and Other Resources and Links">Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open Education Module</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                        Lesson Plans (K-12) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oceanexplorer.noaa.gov/okeanos/explorations/ex1702/background/edu/lessons.html" target="newWin" title="Link to Lesson Plans specifically designed by education professionals for different levels of instruction">Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open Lesson Plans</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                        Education Materials Collection 
+                    </td>
+                    <td class="tableCell2">
+                        <a href="https://oceanexplorer.noaa.gov/okeanos/edu/" target="newWin" title="Education Materials Collections are presented in two volumes: How Do We Explore? and Why Do We Explore?">Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open Education Materials</span>
+                    </td>
+                </tr>
+</table></div>
+<div style="padding-top:.5em;"><h3>
+              <span class="dive-details">Links to Archived Data and Resources</span></h3>
+              <table width="90%" style="border-spacing:.25em;">
+                <tr>
+                    <td class="tableCell1">
+                        Multibeam Archive Collection 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ngdc.noaa.gov/ships/okeanos_explorer/EX1702_mb.html " target="newWin" title=" Download Data from the Multibeam Viewer"> Get Data
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to Access Archive</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Water Column Sonar Archive Collection 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ncei.noaa.gov/maps/water-column-sonar/index.html?surveys=EX1702&instruments=EM302 " target="newWin" title=" Download Data from the Water Column Viewer"> Get Data
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to Access Archive</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Trackline Data (Single-beam and Sub-bottom) 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ngdc.noaa.gov/trackline/request/?surveyTypes=All%20Parameters&surveyIds=EX1702 " target="newWin" title=" Download Trackline Data"> Get Data
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to Access Archive</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Physical, Chemical, and Biological Archive Collection 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://www.ncei.noaa.gov/archive/accession/0162490 " target="newWin" title=" Oceanographic Data Archive Accession"> Get Data
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to Access Archive</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Collection of Documents 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://discover.library.noaa.gov/permalink/01NOAA_INST/1qbesct/alma991000964619707381
+ " target="newWin" title=" NOAA Central Library Cruise Catalog"> Get Data
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to Access Archive</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Expedition Metadata 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://data.noaa.gov/metaview/page?xml=NOAA/NESDIS/ncei/oer/iso/xml/EX1702_COLLECTION.xml&view=xml2text/xml-to-text-ISO" target="newWin" title=" Expedition Metadata"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to view Metadata in xml format</span>
+                    </td>
+                </tr>
+</table></div>
+<div style="padding-top:.5em;"><h3>
+              <span class="dive-details">Documents</span></h3>
+              <table width="90%" style="border-spacing:.25em;">
+                <tr>
+                    <td class="tableCell1">
+                        Cruise Plan 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://repository.library.noaa.gov/view/noaa/14336 " target="newWin" title=" Project Instructions"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open document</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Cruise Report 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://repository.library.noaa.gov/view/noaa/24948 " target="newWin" title=" Cruise Summary Report"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open document</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Mapping Report 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://repository.library.noaa.gov/view/noaa/22914 " target="newWin" title=" Mapping Data Acquisition and Processing Summary Report"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open document</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Dive Summaries 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://repository.library.noaa.gov/gsearch?collection=&terms=EX1702&x=0&y=0 " target="newWin" title=" NOAA Institutional Repository Search Results"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open document</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCell1">
+                         Publications 
+                    </td>
+                    <td class="tableCell2">
+                        <a href=" https://libguides.library.noaa.gov/oceanexplorationbib/2017" target="newWin" title=" NOAA Central Library Bibliography LibGuide"> Open
+                        </a>
+                    </td>
+                    <td valign="middle" class="tableCell3">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Click to open document</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-1">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">South coast of Tutuila Island, Nautilus exploration (250 - 500 m water depth)</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE01 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE01 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                South coast of Tutuila Island, Nautilus exploration (250 - 500 m water depth); North Pacific Ocean; Samoan region, South coast of Tutuila Island
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 16, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>526 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>n/a</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The dive was cancelled owing to equipment malfunction. The dive never reached bottom.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 770 KB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive01_Summary_20170216_Final.pdf" title="Select to view EX1702 Dive 1 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive01_Summary_20170216_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 30.3 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE01_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 761 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 1">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 821 KB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 836 KB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 1">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 1.62 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 7.23 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE01-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 1">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE01" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-2">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">South coast of Ta'u Island, Marine Sanctuary (500 - 350 m water depth)</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE02 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE02 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                South coast of Ta'u Island, Marine Sanctuary (500 - 350 m water depth); Samoan region, South coast of Ta'u (Ta'u Unit)
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 17, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>504.9 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>7 Hours 29 Minutes 38 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive is to generate baseline information on deep sea habitats and biological communities to better understand their diversity and distribution and support management needs of the National Marine Sanctuary of American Samoa, and scientific interests. The dive will begin around 500 m on the southern face of the ridge shown in the bathymetry map. We will climb on the ridge and then continue moving upslope along the crest of the ridge reaching the end of the dive. The dive will begin in precious coral depths and at the lower limit of the bottomfish fishery, then move up into more of the prime depths for bottomfish. A submersible dive was made on the north side of the island in 2005. New species/records of organisms and basalt rock samples from a new dive on the south side of the island may be useful to trace the history of the island.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.59 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive02_Summary_20170217_Final.pdf" title="Select to view EX1702 Dive 2 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive02_Summary_20170217_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 279 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE02_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 2.03 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 2">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 6.12 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 5.86 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 2">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 11.4 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 233 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE02-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 2">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE02" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-3">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">Rose Atoll Marine Sanctuary Deep (ROV on bottom at 2528 m water depth)</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE03 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE03 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                Rose Atoll Marine Sanctuary Deep (ROV on bottom at 2528 m water depth); Samoan region, Rose Atoll (East-flanking ridge extending to east of Rose Atoll)
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 18, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>2528 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>5 Hours 13 Minutes 7 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on deep sea habitats and biological communities, particularly deep-sea coral communities, to better understand their diversity and distribution and support management needs of the Rose Atoll Marine National Monument.
+
+From a geological standpoint, Rose Atoll is thought to be an older seamount linked to the Cook-Austral Islands instead of Samoa. Malulu to the west (to be sampled in a later dive during this cruise) and Rose Atoll are key in defining the Cook-Austral hotspot tracks back in time, and as such an age on a volcanic rock is needed from Rose Atoll. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.35 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive03_Summary_20170218_Final.pdf" title="Select to view EX1702 Dive 3 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive03_Summary_20170218_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 104 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE03_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.73 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 3">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 5.65 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 5.28 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 3">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 11 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 114 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE03-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 3">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE03" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-4">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">"Governor Lolo" Seamount (formerly "Seamount D")</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE04 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE04 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                "Governor Lolo" Seamount (formerly "Seamount D"); Samoan region, eastern portion of Am. Samoa EEZ
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 19, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>439 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>n/a</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The dive was cancelled owing to inclement weather conditions.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 732 KB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive04_Summary_20170219_Final.pdf" title="Select to view EX1702 Dive 4 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive04_Summary_20170219_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 4.2 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE04_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 682 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 4">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 614 KB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 607 KB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 4">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 1.35 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 7.62 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE04-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 4">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE04" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-5">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">"Leoso" seamount, ROV on bottom at 3770 m (-12.64986505, -167.27212505)</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE05 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE05 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                "Leoso" seamount, ROV on bottom at 3770 m (-12.64986505, -167.27212505); North Samoan region, Near southern margin of Manihiki Plateau
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 20, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>3771.8 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>2 Hours 49 Minutes 18 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on geology and geochemistry of this unexplored (and largely unmapped) seamount. There is also significant interest in understanding the deep sea habitats and biological communities on the seamount to better understand their diversity and distribution.
+
+Maps of the seamount were generated the night before. From a geological standpoint, this seamount may be an older seamount linked to the Society hotspot, not Samoa. Samples from this seamount are key in defining the Society hotspot tracks back in time, and as such an age on a volcanic rock is needed from this seamount. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+
+From the biological perspective this dive has the potential to provide new depth records for several species as well the discovery of new species. Very little work has been done in the Central Pacific at these depths on seamounts. We aimed to collect information that will inform the biogeographic identity of the communities at abyssal depths in this region.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.29 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive05_Summary_20170220_Final.pdf" title="Select to view EX1702 Dive 5 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive05_Summary_20170220_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 42.8 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE05_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.55 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 5">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 4.87 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 4.66 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 5">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 9.58 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 119 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE05-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 5">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE05" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-6">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">"Utu" seamount, ROV on bottom at ~3043 m</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE06 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE06 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                "Utu" seamount, ROV on bottom at ~3043 m; North Samoan region, Near southern margin of Manihiki Plateau
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 21, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>3037 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>4 Hours 38 Minutes 49 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on geology and geochemistry of this unexplored (and largely unmapped) seamount. There is also significant interest in understanding the deep sea habitats and biological communities on the seamount to better understand their diversity and distribution.
+
+Maps of the seamount were generated the night before. From a geological standpoint, this seamount may be an older seamount linked to the Society hotspot, not Samoa. Samples from this seamount are key in defining the Society hotspot tracks back in time, and as such an age on a volcanic rock is needed from this seamount. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+
+From the biological perspective this dive has the potential to provide new depth records for several species as well the discovery of new species. Very little work has been done in the Central Pacific at these depths on seamounts. We aimed to collect information that will inform the biogeographic identity of the communities at abyssal depths in this region.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.45 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive06_Summary_20170221_Final.pdf" title="Select to view EX1702 Dive 6 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive06_Summary_20170221_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 80.2 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE06_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.79 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 6">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 6.71 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 6.1 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 6">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 11.9 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 118 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE06-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 6">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE06" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-7">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">"Moki" seamount, ROV on bottom at ~2200 m</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE07 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE07 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                "Moki" seamount, ROV on bottom at ~2200 m; North Samoan region, Near southern margin of Manihiki Plateau
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 22, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>2116.3 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>3 Hours 34 Minutes 37 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on geology and geochemistry of this unexplored (and largely unmapped) seamount. There is also significant interest in understanding the deep sea habitats and biological communities on the seamount to better understand their diversity and distribution.
+
+Maps of the seamount were generated the night before. From a geological standpoint, this seamount may be an older seamount linked to the Society hotspot, not Samoa. Samples from this seamount are key in defining the Society hotspot tracks back in time, and as such an age on a volcanic rock is needed from this seamount. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+
+From the biological perspective this dive has the potential to provide new depth records for several species as well the discovery of new species. Very little work has been done in the Central Pacific at these depths on seamounts. We aimed to collect information that will inform the biogeographic identity of the communities at abyssal depths in this region.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.35 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive07_Summary_20170222_Final.pdf" title="Select to view EX1702 Dive 7 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive07_Summary_20170222_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 101 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE07_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.69 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 7">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 3.94 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 5.77 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 7">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 10.9 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 136 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE07-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 7">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE07" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-8">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">Deeper dive on "Utu" seamount</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE08 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE08 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                Deeper dive on "Utu" seamount; North Samoan region, Near southern margin of Manihiki Plateau
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 23, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>3931.9 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>3 Hours 52 Minutes 24 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on geology and geochemistry of this unexplored (and largely unmapped) seamount. There is also significant interest in understanding the deep sea habitats and biological communities on the seamount to better understand their diversity and distribution.
+
+Maps of the seamount were generated two days before this dive for preparation for the first dive on this seamount; the first dive (Dive 6) was in the crater on the summit of the seamount. This dive (Dive 8) targets the deeper flanks of the volcano, and focuses on the the volcanic platform upon which the volcano is constructed. From a geological standpoint, this seamount may be an older seamount linked to the Society hotspot, not Samoa. Samples from this seamount are key in defining the Society hotspot tracks back in time, and as such an age on a volcanic rock is needed from this seamount. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+
+From the biological perspective this dive has the potential to provide new depth records for several species as well the discovery of new species. Very little work has been done in the Central Pacific at these depths on seamounts. We aimed to collect information that will inform the biogeographic identity of the communities at abyssal depths in this region.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.27 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive08_Summary_20170223_Final.pdf" title="Select to view EX1702 Dive 8 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive08_Summary_20170223_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 61.2 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE08_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.63 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 8">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 6.96 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 6.25 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 8">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 12 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 114 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE08-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 8">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE08" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-9">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">"Vailulu'u" seamount crater</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE09 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE09 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                "Vailulu'u" seamount crater; Eastern Samoan region
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 24, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>928.5 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>8 Hours 22 Minutes 26 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to explore the volcanically active crater of Vailulu'u seamount. The dive planned to target a location previously know to be the locus of hydrothermal venting, which is located near a plume in the water column (extending above the crater) that was detected to emanate for a region of the crater that is near the site of previously-observed hydrothermal venting. There is also significant interest in understanding the deep sea habitats and biological communities associated with the hydrothermal activity and the hardsubstrate areas on the volcano to better understand their diversity and distribution.
+
+From a geological standpoint, this seamount is volcanically active and is likely the youngest volcano in the Samoan region. Therefore, further data on this seamount provides a critical window into the geochemistry and volcanology of the early stages of the evolution of a Samoan volcano.
+
+From the biological perspective this dive provides information about the successional changes in the biological communities associated with changes in the environmental setting product of active volcanism. We aim to collect information that will inform the biogeographic identity of the hydrothermal and hardsubstrate communities at bathyal depths in this region.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.42 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive09_Summary_20170224_Final.pdf" title="Select to view EX1702 Dive 9 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive09_Summary_20170224_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 281 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE09_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.94 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 9">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 8.7 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 8.17 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 9">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 14.5 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 163 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE09-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 9">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE09" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-10">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">Rose Atoll (shallow dive on east flank)</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE10 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE10 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                Rose Atoll (shallow dive on east flank); Eastern Samoan region (easternmost island in American Samoa)
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 25, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>678.4 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>6 Hours 47 Minutes 35 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on deep biological communities, including bottom fish and precious corals habitats, to better understand their diversity and structure with the goal of supporting management needs of the Rose Atoll Marine National Monument.
+
+The dive began around 700 m deep on a prominent ridge extending from the eastern region of the Rose Atoll, as shown in the bathymetry map. We started on the ridge crest, and then continued moving upslope to a depth of ~250 m.
+
+From a geological standpoint, Rose Atoll is thought to be an older seamount linked to the Cook-Austral Islands instead of Samoa. Malulu to the west (to be sampled in a later dive during this cruise) and Rose Atoll are key in defining the Cook-Austral hotspot tracks back in time, and as such an age on a volcanic rock is needed from Rose Atoll. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.45 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive10_Summary_20170225_Final.pdf" title="Select to view EX1702 Dive 10 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive10_Summary_20170225_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 245 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE10_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.85 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 10">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 6.82 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 6.74 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 10">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 11.6 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 197 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE10-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 10">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE10" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-11">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">"Governor Lolo" Seamount (formerly referenced as "Seamount D")</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE11 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE11 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                "Governor Lolo" Seamount (formerly referenced as "Seamount D"); Eastern American Samoa EEZ
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 26, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>3005.3 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>4 Hours 6 Minutes 55 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive was to generate baseline information on geology and geochemistry of this unexplored (and largely unmapped) seamount. There was also significant interest in understanding the deep sea habitats and biological communities on the seamount to better understand their diversity and distribution. American Samoa's Division of Marine and Wildlife Resources have expressed an interest in the seamounts in this region as long-line fishing activities are conducted in the area.
+
+From a geological standpoint, this seamount may be an older seamount linked to the Cook-Austral Islands, not Samoa. Samples from this seamount are key in defining the Cook-Austral hotspot tracks back in time, and as such an age on a volcanic rock is needed from this seamount. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+
+From the biological perspective this dive had the potential to provide new depth records for several species as well the discovery of new species. Very little work has been done in the Central Pacific at these depths on seamounts. We aim to collect information that will inform the biogeographic identity of the communities at abyssal depths in this region.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.51 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive11_Summary_20170226_Final.pdf" title="Select to view EX1702 Dive 11 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive11_Summary_20170226_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 78.9 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE11_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.81 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 11">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 6.33 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 5.63 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 11">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 10.3 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 74.5 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE11-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 11">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE11" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-12">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">Malulu seamount</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE12 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE12 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                Malulu seamount; Eastern American Samoa (between Vailulu'u seamount and Rose atoll)
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>February 27, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>2469.9 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>4 Hours 58 Minutes 11 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			The goal of this dive is to generate baseline information on deep sea habitats and biological communities, particularly deep-sea coral communities, to better understand their diversity and distribution and support management needs of the Rose Atoll Marine National Monument. Water column transects are also planned during this dive to obtain information on animals living in the largest unexplored biome on the planet.
+
+The dive will begin around 2500 m, near the summit of Malulu seamount, as shown in the bathymetry map. The ROV will climb to the summit and then continue moving along the flat top of the summit. After the ROV comes off bottom at approximately 2430m, the ROV will ascend to 2000 m to start the water column exploration portion of the dive. A 10-minute transect will be conducted at each of the following depths, while moving the ROV at 0.1 knots: 2000m, 1500m, 1200m, 900m, 700m, 500m and the depth of the scattering layer identified in EK60 data. The EK60 sonar will be on for the duration of these transects, and the 38 kHz ADCP will also be run if it does not cause interference.
+
+From a geological standpoint, Malulu seamount is thought to be an older seamount linked to another, non-Samoa hotspot. Rose Atoll to the east (sampled in an earlier dive during this cruise) and Malulu seamount are key in defining the Cook-Austral hotspot tracks back in time, and as such an age on a volcanic rock is needed from Malulu seamount. Without an age, it is not possible to truly define plate motion for the time frame represented by this volcano.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.66 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive12_Summary_20170227_Final.pdf" title="Select to view EX1702 Dive 12 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive12_Summary_20170227_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 99.4 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE12_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 2.05 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 12">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 8.01 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 7.8 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 12">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 13.6 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 146 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE12-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 12">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE12" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+		
+    <div id="tab-13">
+        <div>
+
+            <p class="diveTitle add-shadow round-top-corners">Tutuila (Nautilus dive)</p>
+            <a href="javascript: void(0)" title="Select to view enlarged version of the EX1702 DIVE13 Track" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-DiveTrack.jpg','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                <img class="float-right add-shadow"
+                     src="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-DiveTrack-sm.jpg"
+                     title="Select to view enlarged version of the EX1702 DIVE13 Track"
+                     alt="Dive Track">
+            </a>
+
+            <h3><span class="dive-details">Area</span></h3>
+
+            <p>
+                Tutuila (Nautilus dive); American Samoa (south side of Tutuila, near Pago Pago harbor)
+            </p>
+
+            <h3><span class="dive-details">Overview</span></h3>
+            <table width="40%" style="border-spacing:.25em;">
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>March 07, 2017</td>
+                </tr>
+                <tr>
+                    <td><strong>Max Depth:</strong></td>
+                    <td>460.7 Meters</td>
+                </tr>
+                <tr>
+                    <td><strong>Bottom Time:</strong></td>
+                    <td>6 Hours 12 Minutes 15 Seconds</td>
+                </tr>
+            </table>
+            <h3><span class="dive-details">Purpose</span></h3>
+
+            <p>
+			This dive sought to characterize a population of protected Nautili that has been observed using baited cameras in the Taena Bank area, at depths between 300 and 400 meters, near the harbor of Pago Pago, American Samoa. This is also the depth range for bottomfish and precious corals. From a geologic standpoint, this dive presented an important opportunity to sample the shallow volcanic stratigraphy of Tutuila island.
+		  </p>
+            <div style="padding-top:2em;">
+            <h3><span class="dive-details">Download &amp; View Files</span></h3>
+            <table width="95%" style="border-spacing:.25em;">
+                                
+
+		
+                <tr>
+                    <td>
+                        Dive Summary Report (PDF - 1.08 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive13_Summary_20170307_Final.pdf" title="Select to view EX1702 Dive 13 Summary Report" onclick="window.open('https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_Dive13_Summary_20170307_Final.pdf','reportWin','width=800,height=600,toolbar=0,scrollbars,resizable').focus(); return false;">
+                            View/Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Requires Adobe Acrobat Reader to view the Dive Summary Report</span>
+                    </td>
+                </tr>
+		<tr>
+               <td>
+                    Dive Track (KML - 253 KB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE13_Path.kml" target="reportWin" title="Select to load the Dive Track into Google Earth">
+                            View/Download
+                        </a>
+                </td>
+                <td valign="middle">
+                  <span style="color:red;font-weight:bold;font-size:70%;">Requires Google Earth or equivalent client to view the Dive Track</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROV Ancillary Data (Zip - 1.47 MB)
+                </td>
+                <td>
+                    <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-ancillary-data.zip" target="newWin" title="Select to download the ROV Ancillary Data archive for dive 13">Download
+                        </a>
+                </td>
+                <td valign="middle">
+                    <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                </td>
+            </tr>
+			<tr>
+                    <td>
+                        ROV CTD/Sensor Data (Zip - 6.6 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-ROV-CTD.zip" target="newWin" title="Select to download the ROV CTD/Sensor Data archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Camera Platform Sensor Data (Zip - 6.88 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-CP-CTD.zip" target="newWin" title="Select to download the Camera Platform CTD/Sensor Data archive for dive 13">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Low-Resolution Video Clips (Zip - 10.7 GB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-videos.zip" target="newWin" title="Select to download the Low-Resolution Video Clips archive for dive DiveNum">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Underwater Still Images (Zip - 133 MB)
+                    </td>
+                    <td>
+                        <a href="https://oer.hpc.msstate.edu/okeanos/ex1702/ex1702-DIVE13-images.zip" target="newWin" title="Select to download the archive of frame grabs from the underwater video for dive 13">Download
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to a public FTP server</span>
+                    </td>
+                </tr>
+			<tr>
+                    <td>
+                        Dive Video Collection Self-Service Portal
+                    </td>
+                    <td>
+                        <a href="https://www.ncei.noaa.gov/access/ocean-exploration/video/?cruiseId=EX1702&oerkey=DIVE13" target="newWin" title="Open Video Portal">Open
+                        </a>
+                    </td>
+                    <td valign="middle">
+                        <span style="color:red;font-weight:bold;font-size:70%;">Link takes you to an online video discovery and access tool</span>
+                    </td>
+                </tr>
+</table></div></div></div>
+</div>
+	<div id="footer">
+		<div id="footerleft">
+			<a title="National Oceanic and Atmospheric Administration (NOAA)" href="http://www.noaa.gov/">
+				<img style="margin-right:10px"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/noaa.png"
+         title="National Oceanic and Atmospheric Administration (NOAA)"
+         alt="National Oceanic and Atmospheric Administration (NOAA)">
+			</a>
+			<a title="Department of Commerce" href="http://www.commerce.gov/">
+				<img src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/doc.png"
+         title="Department of Commerce"
+         alt="Department of Commerce"></a>
+		</div>
+		<div id="footermid">
+			<p>
+				<a href="http://www.noaa.gov/disclaimer.html" title="Disclaimer">Disclaimer</a> |
+				<a href="http://www.noaa.gov/privacy.html" title="Privacy Policy">Privacy Policy</a> |
+				<a href="http://www.copyright.gov/title17/92chap4.html#403" title="Copyright Notice">Copyright Notice</a>
+				<br />
+				<a href="http://www.usa.gov/" title="USA.gov website">USA.gov</a> |
+				<a href="http://www.corporateservices.noaa.gov/~foia/" title="Link to Freedom of Information Act">FOIA</a> |
+				<a href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html" title="Information Quality">Information	Quality</a>
+			</p>
+            <p style="line-height:0; margin-bottom: 10px;">
+                <span style="margin-left:12px;">
+               Revised: September 24, 2020at 4:30 PM Central
+                </span>
+          	</p>
+		</div>
+		<div id="footerright">
+			<p style="margin: 0; text-align: center;">
+				STAY <span style="font-weight: bold;">CONNECTED</span>
+			</p>
+			<a title="OER Facebook" href="http://www.facebook.com/OceanExplorationResearch">
+				<img src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/icon-facebook.png"
+         title="OER Facebook" alt="OER Facebook">
+			</a>
+			<a href="http://twitter.com/oceanexplorer" title="OER's Twitter Account">
+				<img alt="OER Twitter" title="OER Twitter"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/icon-twitter.png" />
+			</a>
+			<a href="http://oceanexplorer.noaa.gov/explorations/rss/explorations.xml" title="RSS Feed for oceanexplorer.noaa.gov">
+				<img alt="RSS Feed for oceanexplorer.noaa.gov"
+         title="RSS Feed for oceanexplorer.noaa.gov"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/icon-rss.png" />
+			</a>
+			<a href="mailto:oer.info.mgmt@noaa.gov" title="Email Us">
+				<img alt="Email Us" title="Email Us"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/icon-email.png" />
+			</a>
+			<a href="http://www.flickr.com/photos/oceanexplorergov" title="OER's Flickr Feed">
+				<img alt="OER's Flickr Feed" title="OER's Flickr Feed"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/media/misc/icon-flickr.png" />
+			</a>
+		</div>
+	</div>
+
+
+	</div>
+</div>
+
+	<script src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/js/menu.js"></script>
+	<script src="https://www.ncei.noaa.gov/message-host/message/message.js"></script>
+
+
+	<script type="text/javascript"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript"
+         src="https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/js/jquery-ui-1.8.16.min.js"></script>
+	<script type="text/javascript">
+        $(function(){
+               $("#tab").tabs({ history: true });
+       	});
+	</script>
+
+	
+<!--script type="text/javascript" src="http://www.ncei.noaa.gov/cdn/federated-analytics.js"></script>
+<script type="text/javascript">
+	systemMessage();
+</script>
+<script id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC%26subagency=NOAA"></script--><script id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script></body>
+</html>

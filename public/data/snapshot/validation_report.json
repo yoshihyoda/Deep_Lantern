@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "elevation_raster_bounds_shape_no_nodata_nc_equal": true,
+    "tid_raster_bounds_shape_no_nodata_nc_equal": true,
+    "noaa_all_kml_parsed_and_bbox_selection_verified": true,
+    "obis_grids_counts_equal_statistics": true,
+    "obis_dataset_count_matches": true,
+    "obis_derived_geometries_within_bbox": true
+  },
+  "statistics": {
+    "gebco_cells": 115200,
+    "noaa_bbox_dives": 4,
+    "noaa_bbox_vertices": 21074,
+    "obis": {
+      "records": 323640,
+      "species": 2246,
+      "taxa": 4025,
+      "datasets": 65,
+      "specieslevel": 173465,
+      "yearrange": [
+        1849,
+        2026
+      ]
+    },
+    "obis_coverage": {
+      "5": {
+        "cells": 151,
+        "records_sum": 323640,
+        "geometry_clipped_cells": 9
+      },
+      "8": {
+        "cells": 4099,
+        "records_sum": 323640,
+        "geometry_clipped_cells": 4
+      }
+    }
+  },
+  "validated_at_utc": "2026-09-08T20:24:16.279267+00:00"
+}

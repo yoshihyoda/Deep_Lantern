@@ -1,0 +1,84 @@
+{
+  "elevation": {
+    "geotiff": "gebco/data/gebco_2026_n-14.0_s-15.0_w-171.0_e-169.0_geotiff.tif",
+    "netcdf": "gebco/data/gebco_2026_n-14.0_s-15.0_w-171.0_e-169.0.nc",
+    "shape_rows_cols": [
+      240,
+      480
+    ],
+    "bbox_actual": [
+      -171.0,
+      -15.000000000000002,
+      -169.0,
+      -13.999999999999998
+    ],
+    "pixel_size_degrees": [
+      0.004166666666666674,
+      0.004166666666666682
+    ],
+    "nodata": -32767,
+    "nodata_count": 0,
+    "min": -5083,
+    "max": 860,
+    "netcdf_variable": "elevation",
+    "netcdf_dimensions": [
+      "lat",
+      "lon"
+    ],
+    "netcdf_format": "NetCDF classic (CDF-1), delivered by official subset app",
+    "netcdf_latitude_order": "ascending",
+    "netcdf_geotiff_values_equal": true,
+    "geotiff_sample_format": [
+      2
+    ],
+    "geotiff_bits_per_sample": [
+      16
+    ]
+  },
+  "tid": {
+    "geotiff": "gebco/data/gebco_2026_tid_n-14.0_s-15.0_w-171.0_e-169.0_geotiff.tif",
+    "netcdf": "gebco/data/gebco_2026_tid_n-14.0_s-15.0_w-171.0_e-169.0.nc",
+    "shape_rows_cols": [
+      240,
+      480
+    ],
+    "bbox_actual": [
+      -171.0,
+      -15.000000000000002,
+      -169.0,
+      -13.999999999999998
+    ],
+    "pixel_size_degrees": [
+      0.004166666666666674,
+      0.004166666666666682
+    ],
+    "nodata": 127,
+    "nodata_count": 0,
+    "min": 0,
+    "max": 70,
+    "netcdf_variable": "tid",
+    "netcdf_dimensions": [
+      "lat",
+      "lon"
+    ],
+    "netcdf_format": "NetCDF classic (CDF-1), delivered by official subset app",
+    "netcdf_latitude_order": "ascending",
+    "netcdf_geotiff_values_equal": true,
+    "geotiff_sample_format": [
+      2
+    ],
+    "geotiff_bits_per_sample": [
+      8
+    ],
+    "code_counts": {
+      "0": 450,
+      "11": 112351,
+      "15": 395,
+      "16": 8,
+      "17": 74,
+      "40": 1643,
+      "44": 167,
+      "70": 112
+    }
+  }
+}

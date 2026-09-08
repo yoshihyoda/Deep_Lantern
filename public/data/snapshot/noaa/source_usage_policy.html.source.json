@@ -1,0 +1,12 @@
+{
+  "url": "https://oceanexplorer.noaa.gov/faqs/",
+  "final_url": "https://oceanexplorer.noaa.gov/faqs/",
+  "retrieved_at_utc": "2026-09-08T20:20:26.749216+00:00",
+  "path": "noaa/source_usage_policy.html",
+  "bytes": 55657,
+  "sha256": "ec4a7b4d0167c3de00739a98338f30d470a940324dab717100d0eaaa9e9589a4",
+  "headers": {
+    "Content-Type": "text/html; charset=UTF-8",
+    "Date": "Tue, 08 Sep 2026 20:20:27 GMT"
+  }
+}

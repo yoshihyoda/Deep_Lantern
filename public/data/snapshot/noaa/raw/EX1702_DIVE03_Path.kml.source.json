@@ -1,0 +1,15 @@
+{
+  "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE03_Path.kml",
+  "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE03_Path.kml",
+  "retrieved_at_utc": "2026-09-08T20:19:04.684218+00:00",
+  "path": "noaa/raw/EX1702_DIVE03_Path.kml",
+  "bytes": 106886,
+  "sha256": "937843f452461e6806e8594607709ba6f2bbd143819a5c6ec45d8dea8728bac7",
+  "headers": {
+    "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+    "Last-Modified": "Thu, 19 Apr 2018 13:14:54 GMT",
+    "ETag": "\"1a186-56a335b77af80\"",
+    "Content-Length": "106886",
+    "Content-Type": "application/vnd.google-earth.kml+xml"
+  }
+}

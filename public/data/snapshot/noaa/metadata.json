@@ -1,0 +1,260 @@
+{
+  "status": "complete",
+  "bbox_west_south_east_north": [
+    -171,
+    -15,
+    -169,
+    -14
+  ],
+  "crs": "EPSG:4326; GeoJSON order longitude, latitude",
+  "source_mode": "Archived official expedition KML; static local snapshot",
+  "api_live": false,
+  "sources": [
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE01_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE01_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:04.683834+00:00",
+      "path": "noaa/raw/EX1702_DIVE01_Path.kml",
+      "bytes": 31077,
+      "sha256": "3a55331036d992aec7a14d32df33c37e12894183f8c14130601ea72ad2254f78",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:53 GMT",
+        "ETag": "\"7965-56a335b686d40\"",
+        "Content-Length": "31077",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE02_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE02_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:04.684084+00:00",
+      "path": "noaa/raw/EX1702_DIVE02_Path.kml",
+      "bytes": 285851,
+      "sha256": "2fc8cfe2546fe5eb51cc4f2a8b352daae391df7fc3f2cba9f959dc25c38bcbf9",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:53 GMT",
+        "ETag": "\"45c9b-56a335b686d40\"",
+        "Content-Length": "285851",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE03_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE03_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:04.684218+00:00",
+      "path": "noaa/raw/EX1702_DIVE03_Path.kml",
+      "bytes": 106886,
+      "sha256": "937843f452461e6806e8594607709ba6f2bbd143819a5c6ec45d8dea8728bac7",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:54 GMT",
+        "ETag": "\"1a186-56a335b77af80\"",
+        "Content-Length": "106886",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE04_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE04_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:04.684240+00:00",
+      "path": "noaa/raw/EX1702_DIVE04_Path.kml",
+      "bytes": 4304,
+      "sha256": "c5b594adecc79d3a3632c6702d0fafbfd8891c204726c9552f8041419fd787ca",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:55 GMT",
+        "ETag": "\"10d0-56a335b86f1c0\"",
+        "Content-Length": "4304",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE05_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE05_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:04.941913+00:00",
+      "path": "noaa/raw/EX1702_DIVE05_Path.kml",
+      "bytes": 43869,
+      "sha256": "356aa19ec2d8e9f44aaa43363e7d96d8509f2b15c340d2dde9c073ff54c9db48",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:55 GMT",
+        "ETag": "\"ab5d-56a335b86f1c0\"",
+        "Content-Length": "43869",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE06_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE06_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.026905+00:00",
+      "path": "noaa/raw/EX1702_DIVE06_Path.kml",
+      "bytes": 82204,
+      "sha256": "c6e57eb5394a63973bf34f944a5a0581b295eb5c844f45dcef45128e43054926",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:56 GMT",
+        "ETag": "\"1411c-56a335b963400\"",
+        "Content-Length": "82204",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE07_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE07_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.145635+00:00",
+      "path": "noaa/raw/EX1702_DIVE07_Path.kml",
+      "bytes": 104180,
+      "sha256": "9492dbfe2ff3397a830c8b82598be41a9d51365ee7c0eaa9fe08bb2188b2cd20",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:56 GMT",
+        "ETag": "\"196f4-56a335b963400\"",
+        "Content-Length": "104180",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE08_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE08_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.250207+00:00",
+      "path": "noaa/raw/EX1702_DIVE08_Path.kml",
+      "bytes": 62770,
+      "sha256": "8a1b64dd848e036447595c4add81421393cc5633e014394e426f9e741ab87ee5",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:57 GMT",
+        "ETag": "\"f532-56a335ba57640\"",
+        "Content-Length": "62770",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE09_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE09_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.323229+00:00",
+      "path": "noaa/raw/EX1702_DIVE09_Path.kml",
+      "bytes": 288639,
+      "sha256": "1c0c65edf3df6a2f94b9782f72f7c504c08aeee709c62ff79f5ae7ab18daa97b",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:57 GMT",
+        "ETag": "\"4677f-56a335ba57640\"",
+        "Content-Length": "288639",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE10_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE10_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.449374+00:00",
+      "path": "noaa/raw/EX1702_DIVE10_Path.kml",
+      "bytes": 251575,
+      "sha256": "47a65142570876c70255c41bf255892925f40279ba1dd216318c847365423cfa",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:58 GMT",
+        "ETag": "\"3d6b7-56a335bb4b880\"",
+        "Content-Length": "251575",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE11_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE11_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.630078+00:00",
+      "path": "noaa/raw/EX1702_DIVE11_Path.kml",
+      "bytes": 80810,
+      "sha256": "70c159442a1ec80a68ea758c4eec7ec4193056557eb9bd3d71feb0aaed55f384",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:05 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:59 GMT",
+        "ETag": "\"13baa-56a335bc3fac0\"",
+        "Content-Length": "80810",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE12_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE12_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.666584+00:00",
+      "path": "noaa/raw/EX1702_DIVE12_Path.kml",
+      "bytes": 101802,
+      "sha256": "73ef4e81c88ed0e0c1276c73c35b945893b0b8461138177e5344a1a187bdb55b",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:06 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:14:59 GMT",
+        "ETag": "\"18daa-56a335bc3fac0\"",
+        "Content-Length": "101802",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE13_Path.kml",
+      "final_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE13_Path.kml",
+      "retrieved_at_utc": "2026-09-08T20:19:05.877025+00:00",
+      "path": "noaa/raw/EX1702_DIVE13_Path.kml",
+      "bytes": 259119,
+      "sha256": "a449cec1b0bb61821bcc299c4d2623a8d5f77fcaf1f64c35bcda94708b8ad2be",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:06 GMT",
+        "Last-Modified": "Thu, 19 Apr 2018 13:15:00 GMT",
+        "ETag": "\"3f42f-56a335bd33d00\"",
+        "Content-Length": "259119",
+        "Content-Type": "application/vnd.google-earth.kml+xml"
+      }
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/ex1702/",
+      "final_url": "https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/ex1702/",
+      "retrieved_at_utc": "2026-09-08T20:20:26.749110+00:00",
+      "path": "noaa/source_expedition.html",
+      "bytes": 139759,
+      "sha256": "e6f5e38d76f468d661764c78a6e2106495e73a88be11dbb3d8ef907ed3a1f13e",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:20:27 GMT",
+        "Last-Modified": "Fri, 28 Apr 2023 00:45:24 GMT",
+        "ETag": "\"22153-5fa5ac9ddc047\"",
+        "Content-Type": "text/html"
+      }
+    },
+    {
+      "url": "https://oceanexplorer.noaa.gov/faqs/",
+      "final_url": "https://oceanexplorer.noaa.gov/faqs/",
+      "retrieved_at_utc": "2026-09-08T20:20:26.749216+00:00",
+      "path": "noaa/source_usage_policy.html",
+      "bytes": 55657,
+      "sha256": "ec4a7b4d0167c3de00739a98338f30d470a940324dab717100d0eaaa9e9589a4",
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Tue, 08 Sep 2026 20:20:27 GMT"
+      }
+    }
+  ],
+  "discovery_url": "https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/ex1702/",
+  "hosting": "NOAA NCEI official archive page links the Mississippi State NOAA data mirror (oer.hpc.msstate.edu)",
+  "license": "NOAA public-domain policy unless otherwise noted; no restrictive notice found in supplied track KML",
+  "license_url": "https://oceanexplorer.noaa.gov/faqs/",
+  "attribution": "NOAA Office of Ocean Exploration and Research, NOAA Ship Okeanos Explorer, ROV Deep Discoverer, EX1702 (2017); hosted by NOAA NCEI / NOAA data mirror at Mississippi State University. GeoJSON conversion and bbox selection by ABYSS COMMONS data preparation.",
+  "raw_dive_count": 13,
+  "bbox_dive_count": 4,
+  "bbox_vertex_count": 21074,
+  "bbox_dives": [
+    "EX1702_DIVE01",
+    "EX1702_DIVE02",
+    "EX1702_DIVE09",
+    "EX1702_DIVE13"
+  ],
+  "processing": [
+    "Converted original KML LineString geometry to 2D GeoJSON, retaining every vertex in source order.",
+    "All four matching dives are wholly inside bbox; no coordinate interpolation or clipping was necessary.",
+    "KML z=0 is a rendering placeholder, not seafloor depth; omitted from 2D output. No per-vertex time or depth is supplied.",
+    "Cruise archive is a selected real track source, not an exhaustive inventory of every American Samoa ROV dive."
+  ],
+  "cautions": [
+    "DIVE01 never reached bottom. Exclude it from seafloor exploration coverage.",
+    "Even successful dive tracks are not verified bottom-only tracks or measured survey swaths.",
+    "DIVE13 date inconsistency with expedition overview is preserved in dive_index.json."
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "status": "complete_aggregate_cache",
+  "bbox_west_south_east_north": [
+    -171,
+    -15,
+    -169,
+    -14
+  ],
+  "crs": "EPSG:4326",
+  "source_mode": "Live OBIS API v3 queried with bbox WKT; saved as a local snapshot, not automatically refreshed",
+  "api_live": true,
+  "stored_data": "snapshot",
+  "query": {
+    "geometry": "POLYGON((-171 -15,-169 -15,-169 -14,-171 -14,-171 -15))",
+    "other_filters": "API defaults; no depth, time, taxon, or marine=true filter applied. OBIS is the marine biodiversity source; individual habitat status was not independently filtered."
+  },
+  "statistics": {
+    "records": 323640,
+    "species": 2246,
+    "taxa": 4025,
+    "datasets": 65,
+    "specieslevel": 173465,
+    "yearrange": [
+      1849,
+      2026
+    ]
+  },
+  "coverage": {
+    "5": {
+      "cells": 151,
+      "records_sum": 323640,
+      "geometry_clipped_cells": 9
+    },
+    "8": {
+      "cells": 4099,
+      "records_sum": 323640,
+      "geometry_clipped_cells": 4
+    }
+  },
+  "raw_occurrence_rows_downloaded": 0,
+  "raw_location_multipoInt_count": 4099,
+  "raw_location_centers_outside_bbox": 4,
+  "sources": [
+    {
+      "url": "https://api.obis.org/v3/occurrence/grid/5?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "final_url": "https://api.obis.org/v3/occurrence/grid/5?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "retrieved_at_utc": "2026-09-08T20:19:05.982436+00:00",
+      "path": "obis/raw/coverage_grid_geohash5.geojson",
+      "bytes": 36952,
+      "sha256": "b15463b14fb25d2d5e99468a0fbae5970f717e49b5654c0b4bc57d6a2a1bbf72",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:07 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "36952",
+        "ETag": "W/\"9058-eFdn/MkgxMyt4M+tCQ0socB8hrw\""
+      }
+    },
+    {
+      "url": "https://api.obis.org/v3/occurrence/grid/8?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "final_url": "https://api.obis.org/v3/occurrence/grid/8?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "retrieved_at_utc": "2026-09-08T20:20:26.748800+00:00",
+      "path": "obis/raw/coverage_grid_geohash8.geojson",
+      "bytes": 1211760,
+      "sha256": "0a3531e59f181859da4833e627f157d1a4ec5cdd2ec249cf857456b0b0c4b2a2",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:20:27 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1211760",
+        "ETag": "W/\"127d70-TmVeuxGO9ZGFwn9nkqAO+iuL8nA\""
+      }
+    },
+    {
+      "url": "https://api.obis.org/v3/dataset?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "final_url": "https://api.obis.org/v3/dataset?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "retrieved_at_utc": "2026-09-08T20:19:06.126136+00:00",
+      "path": "obis/raw/datasets.json",
+      "bytes": 274474,
+      "sha256": "89dbfd121d43598cda3b42572658f977a33b1b9b6c5fad75f246907b31460823",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:08 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "274474",
+        "ETag": "W/\"4302a-5xgGIrnhSjhrpBhwZ59ErPfTyqM\""
+      }
+    },
+    {
+      "url": "https://api.obis.org/v3/occurrence/points?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "final_url": "https://api.obis.org/v3/occurrence/points?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "retrieved_at_utc": "2026-09-08T20:19:06.394633+00:00",
+      "path": "obis/raw/locations_geohash8.geojson",
+      "bytes": 170604,
+      "sha256": "63b4ee70a661fb0744f7059179e67fdf4a637482a43ce656f31df7a4f7689ce3",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:07 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "170604",
+        "ETag": "W/\"29a6c-bgBgejXCFdMzRUK4YeDOdNM+xTQ\""
+      }
+    },
+    {
+      "url": "https://api.obis.org/v3/statistics?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "final_url": "https://api.obis.org/v3/statistics?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+      "retrieved_at_utc": "2026-09-08T20:19:06.058571+00:00",
+      "path": "obis/raw/statistics.json",
+      "bytes": 105,
+      "sha256": "cfe773799dfdf1ac804480c2daf641d8e1076c31991fd49cfb6cb74a86c91565",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:19:07 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "105",
+        "ETag": "W/\"69-vj1lL9nJCEO6enDkJlMyDHy5koY\""
+      }
+    },
+    {
+      "url": "https://portal.obis.org/data/datapolicy/",
+      "final_url": "https://portal.obis.org/data/datapolicy/",
+      "retrieved_at_utc": "2026-09-08T20:20:27.348523+00:00",
+      "path": "obis/source_data_policy.html",
+      "bytes": 15718,
+      "sha256": "307dd9f31d24771632c9c231b46e29eda0e5d4d90d46d28c7f77164c62b8ed4c",
+      "headers": {
+        "Date": "Tue, 08 Sep 2026 20:20:28 GMT",
+        "Content-Type": "text/html",
+        "Content-Length": "15718",
+        "Last-Modified": "Sun, 06 Sep 2026 08:30:38 GMT",
+        "ETag": "\"6a9d24ae-3d66\""
+      }
+    }
+  ],
+  "attribution": "Ocean Biodiversity Information System (OBIS), IOC-UNESCO; accessed 2026-09-08. Cite original datasets as listed in dataset_licenses_and_citations.json.",
+  "license": "Mixed source-dataset licenses; preserve original intellectualrights and citations. Includes CC-BY-NC; do not assume commercially unrestricted.",
+  "license_summary": {
+    "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)": 12,
+    "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License": 15,
+    "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License": 32,
+    "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY) 4.0 License": 2,
+    "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC 4.0) License": 1,
+    "This work is licensed under a \n                     https://creativecommons.org/publicdomain/zero/1.0/": 1,
+    "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the ": 1,
+    "Unrestricted": 1
+  },
+  "license_details": "dataset_licenses_and_citations.json",
+  "policy_url": "https://portal.obis.org/data/datapolicy/",
+  "processing": [
+    "Queried only target bbox; no worldwide occurrence download.",
+    "Two source geohash grids plus raw MultiPoint locations and statistics retained without alteration.",
+    "Derived GeoJSON/CSV clips rectangular cell boundaries to bbox while retaining original occurrence counts.",
+    "Grid8 is approximately tens of metres in cell size, NOT reported measurement accuracy. Raw MultiPoint centroids are quantized and four lie just outside bbox; use clipped polygon outputs for spatial overlay."
+  ],
+  "interpretation": [
+    "Occurrence counts are records, not independent surveys, individuals, abundance, or true species distribution.",
+    "Sampling bias, repeated sampling, coordinate uncertainty, and uneven depth coverage remain.",
+    "No records means no indexed public observation in this cache, not biological absence or proof an area has never been explored.",
+    "65 dataset records include global metadata extents/statistics; those are not bbox totals. Use statistics.json for bbox totals.",
+    "All counts match across both grids and the statistics response; requests are not an atomic database snapshot."
+  ]
+}

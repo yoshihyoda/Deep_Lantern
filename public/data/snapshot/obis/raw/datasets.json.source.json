@@ -1,0 +1,14 @@
+{
+  "url": "https://api.obis.org/v3/dataset?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+  "final_url": "https://api.obis.org/v3/dataset?geometry=POLYGON%28%28-171+-15%2C-169+-15%2C-169+-14%2C-171+-14%2C-171+-15%29%29",
+  "retrieved_at_utc": "2026-09-08T20:19:06.126136+00:00",
+  "path": "obis/raw/datasets.json",
+  "bytes": 274474,
+  "sha256": "89dbfd121d43598cda3b42572658f977a33b1b9b6c5fad75f246907b31460823",
+  "headers": {
+    "Date": "Tue, 08 Sep 2026 20:19:08 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "274474",
+    "ETag": "W/\"4302a-5xgGIrnhSjhrpBhwZ59ErPfTyqM\""
+  }
+}

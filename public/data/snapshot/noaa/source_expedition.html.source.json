@@ -1,0 +1,14 @@
+{
+  "url": "https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/ex1702/",
+  "final_url": "https://www.ncei.noaa.gov/waf/okeanos-rov-cruises/ex1702/",
+  "retrieved_at_utc": "2026-09-08T20:20:26.749110+00:00",
+  "path": "noaa/source_expedition.html",
+  "bytes": 139759,
+  "sha256": "e6f5e38d76f468d661764c78a6e2106495e73a88be11dbb3d8ef907ed3a1f13e",
+  "headers": {
+    "Date": "Tue, 08 Sep 2026 20:20:27 GMT",
+    "Last-Modified": "Fri, 28 Apr 2023 00:45:24 GMT",
+    "ETag": "\"22153-5fa5ac9ddc047\"",
+    "Content-Type": "text/html"
+  }
+}

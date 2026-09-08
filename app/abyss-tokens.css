@@ -1,0 +1,349 @@
+/* ===== tokens/fonts.css ===== */
+/* Webfonts — Google Fonts. Zen Kaku Gothic New: UI / headings / body. IBM Plex Mono: numbers, measurements, code.
+ Local ttf/woff2 files are not bundled (served via the @import below). For offline use, place the fonts in assets/fonts/ and swap in @font-face rules. */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+/* ===== tokens/colors.css ===== */
+:root {
+ /* ── Depth scale: backgrounds and surfaces. Higher = deeper, darker ── */
+ --abyss-1000: #02060D; /* hadal — deepest ground */
+ --abyss-900: #050D1A; /* page background */
+ --abyss-800: #08162A; /* surface-1: panels, cards */
+ --abyss-700: #0D213B; /* surface-2: raised surface, hover */
+ --abyss-600: #132E4D; /* surface-3: active, selected row */
+ --abyss-500: #1B3D60;
+ --abyss-400: #285478;
+ --abyss-300: #3F7295;
+ --abyss-200: #6F9DBB;
+ --abyss-100: #A9C6DA;
+ --abyss-50: #E3EEF5;
+
+ /* ── Bioluminescence: accent. The only light in the deep ── */
+ --lumen-300: #B3F7EF;
+ --lumen-400: #7BF0E4; /* hover */
+ --lumen-500: #3EE6D6; /* primary accent */
+ --lumen-600: #22B8AA; /* active / pressed */
+ --lumen-700: #158C82;
+
+ --jelly-400: #CDB2FF;
+ --jelly-500: #B48CFF; /* info / series 2 */
+ --jelly-600: #8E63E0;
+
+ --plankton-400: #A7EDAE;
+ --plankton-500: #7FE08A; /* success / series 3 */
+ --plankton-600: #4FBF5E;
+
+ --angler-400: #FFD494;
+ --angler-500: #FFC26B; /* warning / series 4 */
+ --angler-600: #E0A048;
+
+ --coral-400: #FF95A0;
+ --coral-500: #FF6B7A; /* danger / series 5 */
+ --coral-600: #D94F5E;
+
+ /* ── Ink (text) ── */
+ --ink-100: #EAF2F8;
+ --ink-70: #A9BFD0;
+ --ink-50: #6E88A2;
+ --ink-30: #40586F;
+ --ink-on-lumen: #03141A; /* text on lumen fills */
+
+ /* ── Semantic: surfaces ── */
+ --bg-base: var(--abyss-1000);
+ --bg-page: var(--abyss-900);
+ --surface-1: var(--abyss-800);
+ --surface-2: var(--abyss-700);
+ --surface-3: var(--abyss-600);
+ --surface-input: var(--abyss-900);
+ --surface-overlay: rgba(5, 13, 26, 0.72);
+ --surface-tooltip: var(--abyss-600);
+
+ /* ── Semantic: borders ── */
+ --border-hairline: rgba(111, 157, 187, 0.16);
+ --border-strong: rgba(111, 157, 187, 0.32);
+ --border-focus: var(--lumen-500);
+ --border-danger: var(--coral-500);
+
+ /* ── Semantic: text ── */
+ --text-primary: var(--ink-100);
+ --text-secondary: var(--ink-70);
+ --text-tertiary: var(--ink-50);
+ --text-disabled: var(--ink-30);
+ --text-link: var(--lumen-400);
+ --text-link-hover: var(--lumen-300);
+ --text-on-accent: var(--ink-on-lumen);
+
+ /* ── Semantic: accent ── */
+ --accent: var(--lumen-500);
+ --accent-hover: var(--lumen-400);
+ --accent-active: var(--lumen-600);
+ --accent-soft: rgba(62, 230, 214, 0.12);
+ --accent-soft-hover: rgba(62, 230, 214, 0.20);
+ --accent-glow: rgba(62, 230, 214, 0.35);
+
+ /* ── Semantic: status ── */
+ --status-success: var(--plankton-500);
+ --status-success-soft: rgba(127, 224, 138, 0.14);
+ --status-warning: var(--angler-500);
+ --status-warning-soft: rgba(255, 194, 107, 0.14);
+ --status-danger: var(--coral-500);
+ --status-danger-soft: rgba(255, 107, 122, 0.14);
+ --status-info: var(--jelly-500);
+ --status-info-soft: rgba(180, 140, 255, 0.14);
+
+ /* ── Ocean zones: fixed colors per depth band ── */
+ --zone-epipelagic: #3F7295; /* 0–200 m epipelagic */
+ --zone-mesopelagic: #285478; /* 200–1,000 m mesopelagic */
+ --zone-bathypelagic: #1B3D60; /* 1,000–4,000 m bathypelagic */
+ --zone-abyssopelagic:#0D213B; /* 4,000–6,000 m abyssopelagic */
+ --zone-hadal: #050D1A; /* 6,000 m– hadal */
+
+ /* ── Data viz: categorical (series colors, fixed order) ── */
+ --viz-1: var(--lumen-500);
+ --viz-2: var(--jelly-500);
+ --viz-3: var(--plankton-500);
+ --viz-4: var(--angler-500);
+ --viz-5: var(--coral-500);
+ --viz-6: var(--abyss-200);
+
+ /* ── Data viz: sequential (low→high, deep→glowing) ── */
+ --viz-seq-1: #0D213B;
+ --viz-seq-2: #143A5C;
+ --viz-seq-3: #1B5A7A;
+ --viz-seq-4: #1F7F93;
+ --viz-seq-5: #22A7A6;
+ --viz-seq-6: #3EE6D6;
+ --viz-seq-7: #B3F7EF;
+
+ /* ── Data viz: chrome ── */
+ --viz-grid: rgba(111, 157, 187, 0.12);
+ --viz-axis: var(--ink-50);
+ --viz-label: var(--ink-70);
+ --viz-area-fill: rgba(62, 230, 214, 0.10);
+
+ /* ── Gradients ── */
+ --gradient-depth: linear-gradient(180deg, var(--abyss-700) 0%, var(--abyss-900) 55%, var(--abyss-1000) 100%);
+ --gradient-lumen-veil: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(62, 230, 214, 0.10), transparent 70%);
+ --gradient-surface-fade: linear-gradient(180deg, rgba(5, 13, 26, 0) 0%, var(--bg-page) 100%);
+}
+
+/* ===== tokens/typography.css ===== */
+:root {
+ /* ── Families ── */
+ --font-sans: "Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+ --font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+
+ /* ── Weights ── */
+ --fw-regular: 400;
+ --fw-medium: 500;
+ --fw-bold: 700;
+
+ /* ── Sizes ── */
+ --fs-display: 48px;
+ --fs-h1: 32px;
+ --fs-h2: 24px;
+ --fs-h3: 18px;
+ --fs-body-lg: 16px;
+ --fs-body: 14px;
+ --fs-caption: 12px;
+ --fs-overline: 11px;
+ --fs-data-xl: 40px;
+ --fs-data-lg: 24px;
+ --fs-data: 14px;
+ --fs-data-sm: 12px;
+
+ /* ── Line heights (body 1.7, headings tight) ── */
+ --lh-display: 1.15;
+ --lh-heading: 1.3;
+ --lh-body: 1.7;
+ --lh-caption: 1.5;
+ --lh-data: 1.1;
+
+ /* ── Letter spacing ── */
+ --ls-tight: -0.01em;
+ --ls-normal: 0;
+ --ls-body: 0.02em; /* body text */
+ --ls-button: 0.02em;
+ --ls-overline: 0.12em; /* uppercase labels */
+
+ /* ── Semantic composites (font: shorthand) ── */
+ --text-display: var(--fw-bold) var(--fs-display) / var(--lh-display) var(--font-sans);
+ --text-h1: var(--fw-bold) var(--fs-h1) / var(--lh-heading) var(--font-sans);
+ --text-h2: var(--fw-bold) var(--fs-h2) / var(--lh-heading) var(--font-sans);
+ --text-h3: var(--fw-medium) var(--fs-h3) / var(--lh-heading) var(--font-sans);
+ --text-body-lg: var(--fw-regular) var(--fs-body-lg) / var(--lh-body) var(--font-sans);
+ --text-body: var(--fw-regular) var(--fs-body) / var(--lh-body) var(--font-sans);
+ --text-body-strong: var(--fw-medium) var(--fs-body) / var(--lh-body) var(--font-sans);
+ --text-caption: var(--fw-regular) var(--fs-caption) / var(--lh-caption) var(--font-sans);
+ --text-overline: var(--fw-medium) var(--fs-overline) / 1.4 var(--font-sans);
+ --text-button-sm: var(--fw-medium) 12px / 1 var(--font-sans);
+ --text-button-md: var(--fw-medium) 13px / 1 var(--font-sans);
+ --text-button-lg: var(--fw-medium) 14px / 1 var(--font-sans);
+ --text-data-xl: var(--fw-medium) var(--fs-data-xl) / var(--lh-data) var(--font-mono);
+ --text-data-lg: var(--fw-medium) var(--fs-data-lg) / var(--lh-data) var(--font-mono);
+ --text-data: var(--fw-regular) var(--fs-data) / 1.4 var(--font-mono);
+ --text-data-sm: var(--fw-regular) var(--fs-data-sm) / 1.4 var(--font-mono);
+
+ /* numbers are always tabular */
+ --font-numeric: "tnum" 1, "lnum" 1;
+}
+
+/* ===== tokens/spacing.css ===== */
+:root {
+ /* ── Spacing (4px base) ── */
+ --space-0: 0;
+ --space-0-5: 2px;
+ --space-1: 4px;
+ --space-2: 8px;
+ --space-3: 12px;
+ --space-4: 16px;
+ --space-5: 20px;
+ --space-6: 24px;
+ --space-8: 32px;
+ --space-10: 40px;
+ --space-12: 48px;
+ --space-16: 64px;
+ --space-20: 80px;
+
+ /* ── Radii (restrained — instrument-like) ── */
+ --radius-xs: 2px; /* data chips, swatches */
+ --radius-sm: 4px; /* tags, badges, checkboxes */
+ --radius-md: 6px; /* buttons, inputs, selects */
+ --radius-lg: 10px; /* cards, panels */
+ --radius-xl: 16px; /* dialogs */
+ --radius-full: 999px; /* pill, switch */
+
+ /* ── Control heights ── */
+ --control-sm: 28px;
+ --control-md: 36px;
+ --control-lg: 44px;
+
+ /* ── Control paddings (horizontal) ── */
+ --control-px-sm: 10px;
+ --control-px-md: 14px;
+ --control-px-lg: 20px;
+
+ /* ── Icon sizes ── */
+ --icon-sm: 14px;
+ --icon-md: 16px;
+ --icon-lg: 20px;
+ --icon-xl: 24px;
+
+ /* ── Borders ── */
+ --border-width: 1px;
+ --border-width-focus: 2px;
+
+ /* ── Layout ── */
+ --sidebar-w: 240px;
+ --sidebar-w-collapsed: 64px;
+ --topbar-h: 56px;
+ --content-max: 1440px;
+ --panel-gap: var(--space-4);
+ --card-padding: var(--space-5);
+ --page-padding: var(--space-6);
+
+ /* ── Z-index ── */
+ --z-dropdown: 100;
+ --z-sticky: 200;
+ --z-overlay: 300;
+ --z-dialog: 400;
+ --z-toast: 500;
+ --z-tooltip: 600;
+}
+
+/* ===== tokens/effects.css ===== */
+:root {
+ /* ── Elevation: no drop shadows in the deep. Height = surface lightness + hairline; emphasis = glow ── */
+ --shadow-none: none;
+ --shadow-cavern: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 -1px 0 rgba(0, 0, 0, 0.40); /* carved inset */
+ --shadow-overlay: 0 24px 64px rgba(2, 6, 13, 0.70); /* dialogs, popovers only */
+
+ /* ── Glow ── */
+ --glow-accent: 0 0 0 1px rgba(62, 230, 214, 0.40), 0 0 24px rgba(62, 230, 214, 0.25);
+ --glow-accent-strong: 0 0 0 1px rgba(62, 230, 214, 0.60), 0 0 32px rgba(62, 230, 214, 0.45);
+ --glow-jelly: 0 0 0 1px rgba(180, 140, 255, 0.40), 0 0 24px rgba(180, 140, 255, 0.25);
+ --glow-danger: 0 0 0 1px rgba(255, 107, 122, 0.40), 0 0 24px rgba(255, 107, 122, 0.25);
+ --glow-text: 0 0 12px rgba(62, 230, 214, 0.45); /* for text-shadow; emphasized numbers only */
+
+ /* ── Focus ring (keyboard only) ── */
+ --ring-focus: 0 0 0 2px var(--bg-page), 0 0 0 4px var(--lumen-500);
+ --ring-focus-danger: 0 0 0 2px var(--bg-page), 0 0 0 4px var(--coral-500);
+
+ /* ── Blur ── */
+ --blur-overlay: 12px; /* blur only overlays and the top bar */
+ --blur-glass: 20px;
+
+ /* ── Opacity ── */
+ --opacity-disabled: 0.4;
+ --opacity-muted: 0.64;
+ --opacity-hover-overlay: 0.06;
+}
+
+/* ===== tokens/motion.css ===== */
+:root {
+ /* ── Durations ── */
+ --dur-instant: 80ms;
+ --dur-fast: 160ms; /* hover, color change */
+ --dur-base: 240ms; /* show, hide */
+ --dur-slow: 480ms; /* panels, dialogs */
+ --dur-drift: 8s; /* ambient drift */
+ --dur-pulse: 2.4s; /* glow pulse */
+
+ /* ── Easings ── */
+ --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* enter */
+ --ease-in: cubic-bezier(0.7, 0, 0.84, 0); /* exit */
+ --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* move */
+ --ease-drift: ease-in-out; /* drift */
+}
+
+/* enter: rise from below */
+@keyframes ac-rise {
+ from { opacity: 0; transform: translateY(8px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+/* exit */
+@keyframes ac-sink {
+ from { opacity: 1; transform: translateY(0); }
+ to { opacity: 0; transform: translateY(6px); }
+}
+/* loading spinner */
+@keyframes ac-spin { to { transform: rotate(360deg); } }
+/* glow pulse (live, connected) */
+@keyframes ac-pulse {
+ 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(62, 230, 214, 0.45); }
+ 50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(62, 230, 214, 0); }
+}
+/* drift (decoration only) */
+@keyframes ac-drift {
+ 0%, 100% { transform: translateY(0); }
+ 50% { transform: translateY(-6px); }
+}
+/* skeleton */
+@keyframes ac-shimmer {
+ 0% { background-position: -200% 0; }
+ 100% { background-position: 200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+ :root { --dur-fast: 0ms; --dur-base: 0ms; --dur-slow: 0ms; --dur-drift: 0ms; --dur-pulse: 0ms; }
+}
+
+/* ===== tokens/base.css ===== */
+/* Base reset — linking styles.css alone gives consumers the abyss background, text and link colors */
+html { color-scheme: dark; }
+body {
+ margin: 0;
+ background: var(--bg-page);
+ color: var(--text-primary);
+ font: var(--text-body);
+ letter-spacing: var(--ls-body);
+ -webkit-font-smoothing: antialiased;
+ text-rendering: optimizeLegibility;
+}
+a { color: var(--text-link); text-decoration: none; text-underline-offset: 3px; }
+a:hover { color: var(--text-link-hover); text-decoration: underline; }
+::selection { background: var(--accent-soft-hover); color: var(--text-primary); }
+* { scrollbar-width: thin; scrollbar-color: var(--abyss-500) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--abyss-500); border-radius: var(--radius-full); }
+*::-webkit-scrollbar-track { background: transparent; }

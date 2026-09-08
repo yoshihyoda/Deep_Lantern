@@ -1,0 +1,304 @@
+[
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE01",
+    "date_as_listed_by_noaa": "2017-02-16",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 754,
+    "within_priority_bbox": true,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE01_Path.kml",
+    "reached_bottom": false,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "note": "Cancelled due to equipment malfunction; never reached bottom. Do not count as seafloor exploration coverage.",
+    "bbox": [
+      -170.6462165,
+      -14.3267543333333,
+      -170.645413,
+      -14.3250476666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE01_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE02",
+    "date_as_listed_by_noaa": "2017-02-17",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 6968,
+    "within_priority_bbox": true,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE02_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -169.5007565,
+      -14.2955501666667,
+      -169.495642,
+      -14.2901836666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE02_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE03",
+    "date_as_listed_by_noaa": "2017-02-18",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 2603,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE03_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -168.0840996666667,
+      -14.5408141666667,
+      -168.0795961666667,
+      -14.5291641666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE03_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE04",
+    "date_as_listed_by_noaa": "2017-02-19",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 101,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE04_Path.kml",
+    "reached_bottom": false,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "note": "Cancelled owing to inclement weather.",
+    "bbox": [
+      -167.2353185,
+      -15.8016523333333,
+      -167.2343241666667,
+      -15.7989843333333
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE04_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE05",
+    "date_as_listed_by_noaa": "2017-02-20",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 1066,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE05_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -167.2816681666667,
+      -12.6525816666667,
+      -167.2713708333333,
+      -12.6399021666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE05_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE06",
+    "date_as_listed_by_noaa": "2017-02-21",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 2001,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE06_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -168.3251191666667,
+      -12.2821846666667,
+      -168.313457,
+      -12.2703533333333
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE06_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE07",
+    "date_as_listed_by_noaa": "2017-02-22",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 2537,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE07_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -169.9022101666667,
+      -11.1749743333333,
+      -169.8918315,
+      -11.166375
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE07_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE08",
+    "date_as_listed_by_noaa": "2017-02-23",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 1527,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE08_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -168.3708703333333,
+      -12.2763896666667,
+      -168.3662558333333,
+      -12.2644731666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE08_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE09",
+    "date_as_listed_by_noaa": "2017-02-24",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 7036,
+    "within_priority_bbox": true,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE09_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -169.0623106666667,
+      -14.218346,
+      -169.0566625,
+      -14.2083256666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE09_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE10",
+    "date_as_listed_by_noaa": "2017-02-25",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 6132,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE10_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -168.1327198333333,
+      -14.5483805,
+      -168.1272638333333,
+      -14.5418088333333
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE10_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE11",
+    "date_as_listed_by_noaa": "2017-02-26",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 1967,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE11_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -167.2658596666667,
+      -15.7362761666667,
+      -167.2569748333333,
+      -15.7323618333333
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE11_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE12",
+    "date_as_listed_by_noaa": "2017-02-27",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 2479,
+    "within_priority_bbox": false,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE12_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "bbox": [
+      -168.6410518333333,
+      -14.4722636666667,
+      -168.6321093333333,
+      -14.4652631666667
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE12_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  },
+  {
+    "cruise_id": "EX1702",
+    "dive_id": "EX1702_DIVE13",
+    "date_as_listed_by_noaa": "2017-03-07",
+    "platform": "ROV Deep Discoverer",
+    "vertex_count": 6316,
+    "within_priority_bbox": true,
+    "source_url": "https://oer.hpc.msstate.edu/okeanos/ex1702/EX1702_DIVE13_Path.kml",
+    "reached_bottom": true,
+    "track_includes_only_bottom_phase": null,
+    "time_per_vertex_available": false,
+    "depth_per_vertex_available": false,
+    "note": "NOAA dive date and linked summary filename indicate 2017-03-07, outside the overview expedition range (2017-02-16 to 2017-03-01); preserved as published.",
+    "bbox": [
+      -170.649362,
+      -14.3253666666667,
+      -170.6460425,
+      -14.3218398333333
+    ],
+    "raw_kml": "noaa/raw/EX1702_DIVE13_Path.kml",
+    "raw_z_values": [
+      0.0
+    ]
+  }
+]

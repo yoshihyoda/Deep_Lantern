@@ -1,0 +1,652 @@
+[
+  {
+    "id": "2ae2a2bd-8412-405b-8a9f-b71adc41d4c5",
+    "title": "NOAA Pacific Islands Fisheries Science Center, Ecosystem Sciences Division, National Coral Reef Monitoring Program: Stratified random surveys (StRS) of reef fish in the U.S. Pacific Islands",
+    "citation": "Williams I, DesRochers A (2020). NOAA Pacific Islands Fisheries Science Center, Ecosystem Sciences Division, National Coral Reef Monitoring Program: Stratified random surveys (StRS) of reef fish in the U.S. Pacific Islands. Version 1.2. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/tk1hwm",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://ipt-obis.gbif.us/resource?r=ncrmp_nspc_fish_pacific",
+    "archive": "https://ipt-obis.gbif.us/archive.do?r=ncrmp_nspc_fish_pacific",
+    "published": "2021-08-25T16:46:53.000Z",
+    "updated": "2025-11-14T12:21:27.504Z"
+  },
+  {
+    "id": "efa02fe9-6b5b-4173-85e7-912f71921fe7",
+    "title": "Marine Microbes from RV Investigator voyage IN2016_V03, 170W, Pacific Ocean (2016)",
+    "citation": "When using Australian Microbiome Initiative data, please acknowledge the Consortium and Bioplatforms Australia support using the following wording:\n\nWe would like to acknowledge the contribution of the Marine Microbes (MM) and Biomes of Australian Soil Environments (BASE) projects, through the Australian Microbiome Initiative in the generation of data used in this publication. The Australian Microbiome Initiative is supported by funding from Bioplatforms Australia through the Australian Government National Collaborative Research Infrastructure Strategy (NCRIS).",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=bioplatforms_mm_in2016_v03",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=bioplatforms_mm_in2016_v03",
+    "published": "2022-08-09T05:46:18.000Z",
+    "updated": "2025-09-14T07:59:43.212Z"
+  },
+  {
+    "id": "a54a77db-7b42-4101-8d71-1adec3dd4ed5",
+    "title": "NOAA Pacific Islands Fisheries Science Center, Ecosystem Science Division Coral Reef Ecosystem Program, Rapid Ecological Assessments of Fish Belt Transect Surveys (BLT) at Coral Reef Sites across the Pacific Ocean from 2000 to 2009",
+    "citation": "Coral Reef Ecosystem Program; Pacific Islands Fisheries Science Center (2017). Pacific Reef Assessment and Monitoring Program: Rapid Ecological Assessments of Fish Belt Transect Surveys (BLT) in the Pacific Ocean from 2000-09-09 to 2009-05-05 (NCEI Accession 0162462). NOAA National Centers for Environmental Information. Dataset. https://accession.nodc.noaa.gov/0162462",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://ipt-obis.gbif.us/resource?r=ncrmp_blt_fish_pacific",
+    "archive": "https://ipt-obis.gbif.us/archive.do?r=ncrmp_blt_fish_pacific",
+    "published": "2023-01-27T21:04:45.000Z",
+    "updated": "2025-11-12T15:12:51.273Z"
+  },
+  {
+    "id": "b508f7bc-8708-43d5-b940-e44f2765d1af",
+    "title": "Australian Microbiome 18S (Eukaryote) Dataset of Aquatic Samples",
+    "citation": null,
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=am_18sv4_aquatic",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=am_18sv4_aquatic",
+    "published": "2025-12-23T16:15:21.000Z",
+    "updated": "2026-05-24T23:16:06.949Z"
+  },
+  {
+    "id": "6c813a6c-86f7-4d45-beb5-33eebd8de938",
+    "title": "Vulnerable marine ecosystems in the South Pacific Ocean region",
+    "citation": "NIWA (2016). Vulnerable marine ecosystems in the South Pacific Ocean region. National Institute of Water and Atmospheric Research (NIWA), Wellington, New Zealand, 202873 records, Online http://nzobisipt.niwa.co.nz/resource.do?r=vme_inverts released on February 3, 2016.",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=vme_inverts",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=vme_inverts",
+    "published": "2024-05-01T00:48:30.000Z",
+    "updated": "2025-11-10T22:59:00.776Z"
+  },
+  {
+    "id": "518c8422-0a94-4926-9e7a-42aaf70002f4",
+    "title": "CRED Rapid Ecological Assessments of Coral Population in the Pacific Ocean 2007-2010",
+    "citation": "Coral Reef Ecosystem Division (CRED), Pacific Island Fisheries Sciences Center, NOAA National Marine Fisheries Service. 2011. CRED Rapid Ecological Assessments of Coral Population in the Pacific Ocean 2007-2010. Coral Reef Ecosystem Division, Honolulu, HI.Retrieved from http://www.usgs.gov/obis-usa/.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=cred_benthic_rea_belt",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=cred_benthic_rea_belt",
+    "published": null,
+    "updated": "2025-11-13T09:18:55.412Z"
+  },
+  {
+    "id": "5422689c-d83d-44e8-87f4-a4b0a5117181",
+    "title": "Australian Microbiome 16S (Bacteria) Dataset of Aquatic Samples",
+    "citation": null,
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=am_16s_aquatic",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=am_16s_aquatic",
+    "published": "2025-12-25T14:58:51.000Z",
+    "updated": null
+  },
+  {
+    "id": "607ae951-2e66-47d4-9f87-4e05dc528125",
+    "title": "Marine metagenomes Metagenome",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY) 4.0 License",
+    "url": "https://hosted-datasets.gbif.org/mgnify/MGYS00003194.zip",
+    "archive": "https://hosted-datasets.gbif.org/mgnify/MGYS00003194.zip",
+    "published": "2022-09-20T12:42:00.000Z",
+    "updated": "2026-05-23T01:22:13.400Z"
+  },
+  {
+    "id": "f5a4799e-dc24-4807-89d9-01da47d52e3b",
+    "title": "NOAA, Deep-Sea Coral Research and Technology Program",
+    "citation": "National Oceanic and Atmospheric Administration (NOAA), Deep Sea Coral Research and Technology Program (DSCRTP), 2026. Observations of Deep-Sea Coral and Sponge Occurrences from NOAA's National Database for Deep-sea Corals and Sponges, 1842-Present, version 20260416-1. [indicate subset used]. NOAA National Centers for Environmental Information. Archived data: https://www.ncei.noaa.gov/archive/accession/0145037. Access portal: https://www.ncei.noaa.gov/maps/deep-sea-corals-portal/.  Accessed [date accessed as YYYY-MM-DD].\nNote: Character strings in [brackets] should be overwritten with appropriate values and leave out the brackets.\nNote: Database version can be found in the ‘DatabaseVersion’ variable in the database.",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://ipt-obis.gbif.us/resource?r=noaa_dsc_rtp",
+    "archive": "https://ipt-obis.gbif.us/archive.do?r=noaa_dsc_rtp",
+    "published": "2026-04-22T16:43:46.000Z",
+    "updated": "2026-05-23T16:49:32.248Z"
+  },
+  {
+    "id": "aa60750c-4921-43e1-8146-7b16aad675ac",
+    "title": "CRED Rapid Ecological Assessment of Benthic Habitat Cover in the Pacific Ocean 2005-2010",
+    "citation": "Coral Reef Ecosystem Division (CRED), Pacific Island Fisheries Sciences Center, NOAA National Marine Fisheries Service. 2011. CRED Rapid Ecological Assessment of Benthic Habitat Cover in the Pacific Ocean 2005-2010. Coral Reef Ecosystem Division, Honolulu, HI.Retrieved from http://www.usgs.gov/obis-usa/.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=cred_benthic_rea_lpi",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=cred_benthic_rea_lpi",
+    "published": null,
+    "updated": "2025-11-10T14:59:59.978Z"
+  },
+  {
+    "id": "5ea4f836-9e28-4542-ac4a-af10630fbb7a",
+    "title": "CRED REA Algal Quadrate Images in the Pacific Ocean 2002-2008",
+    "citation": "Coral Reef Ecosystem Division (CRED), Pacific Island Fisheries Sciences Center, NOAA National Marine Fisheries Service. 2011. CRED REA Algal Quadrate Images in the Pacific Ocean 2002-2008. Coral Reef Ecosystem Division, Honolulu, HI.Retrieved from http://www.usgs.gov/obis-usa/.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=cred_benthic_algae_photoquad",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=cred_benthic_algae_photoquad",
+    "published": null,
+    "updated": "2025-11-05T17:30:28.375Z"
+  },
+  {
+    "id": "c5687a17-e454-40f9-9a4b-d04b2c812d74",
+    "title": "UF Invertebrate Zoology",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://ipt.floridamuseum.ufl.edu/ipt/resource?r=invertebratezoology",
+    "archive": "https://ipt.floridamuseum.ufl.edu/ipt/archive.do?r=invertebratezoology",
+    "published": "2026-08-31T04:00:52.000Z",
+    "updated": "2026-08-31T05:37:51.861Z"
+  },
+  {
+    "id": "36693923-2abf-4237-8154-8016f32844a0",
+    "title": "Pacific Reef Assessment and Monitoring Program: Rapid Ecological Assessments of Fish Large-Area Stationary Point Count Surveys (SPC) at Coral Reef Sites across the Pacific Ocean from 2000 to 2007",
+    "citation": "Coral Reef Ecosystem Program; Pacific Islands Fisheries Science Center (2017). Pacific Reef Assessment and Monitoring Program: Rapid Ecological Assessments of Fish Large-Area Stationary Point Count Surveys (SPC) in the Pacific Ocean from 2000-09-09 to 2007-06-08 (NCEI Accession 0162466). NOAA National Centers for Environmental Information. Dataset.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://ipt-obis.gbif.us/resource?r=pifsc_spc_fish_pacific",
+    "archive": "https://ipt-obis.gbif.us/archive.do?r=pifsc_spc_fish_pacific",
+    "published": "2021-08-25T16:50:22.000Z",
+    "updated": "2025-11-08T01:14:01.937Z"
+  },
+  {
+    "id": "1d3d2e69-3256-44c4-af75-ca6491f795c6",
+    "title": "CRED Towed-Diver Fish Biomass Surveys in the Pacific Ocean 2000-2010",
+    "citation": "Coral Reef Ecosystem Division (CRED), Pacific Island Fisheries Sciences Center, NOAA National Marine Fisheries Service. 2011. CRED Towed-Diver Fish Biomass Surveys in the Pacific Ocean 2000-2010. Coral Reef Ecosystem Division, Honolulu, HI.Retrieved from http://www.usgs.gov/obis-usa/.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=cred_fish_tds",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=cred_fish_tds",
+    "published": null,
+    "updated": "2025-11-09T03:11:02.990Z"
+  },
+  {
+    "id": "eaea291a-1e1d-4382-b86f-ac3cc15b8d5a",
+    "title": "iNaturalist Research-grade Observations Marine Subset",
+    "citation": "iNaturalist contributors, iNaturalist (2026). iNaturalist Research-grade Observations Marine Subset. Version 2.0. Marine Biological Association. Occurrence dataset. https://doi.org/10.17031/0bbcjx",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC 4.0) License",
+    "url": "https://www.dassh.ac.uk/ipt/resource?r=inaturalist-marine",
+    "archive": "https://www.dassh.ac.uk/ipt/archive.do?r=inaturalist-marine",
+    "published": "2026-09-01T10:28:08.000Z",
+    "updated": "2026-09-03T01:05:19.398Z"
+  },
+  {
+    "id": "da77ef95-bff6-43f9-8af8-2a1dfa400ba8",
+    "title": "CRED Rapid Ecological Assessment of Invertebrate in the Pacific Ocean",
+    "citation": "Coral Reef Ecosystem Division (CRED), NOAA Pacific Island Fisheries Science Center, 2008-05-08, CRED Rapid Ecological Assessment of Invertebrate in the Pacific Ocean, from 2002 to 2008",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=cred_rea_inverts",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=cred_rea_inverts",
+    "published": null,
+    "updated": "2025-11-10T05:43:48.396Z"
+  },
+  {
+    "id": "acf75b45-f320-4a58-a648-fbe2c87dd1be",
+    "title": "Reef Life Survey (RLS) around New Zealand region: Reef fish dataset",
+    "citation": "Edgar, GJ and Stuart-Smith, RD (2017): Reef Life Survey (RLS): Reef Fish. v1.0. Southwestern Pacific Ocean Biogeographic Information System (OBIS) Node. Dataset/Occurrence. https://nzobisipt.niwa.co.nz/resource?r=reef_life_fish&amp;v=1.0",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=reef_life_fish",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=reef_life_fish",
+    "published": "2018-08-08T21:15:36.000Z",
+    "updated": "2026-09-08T18:04:06.573Z"
+  },
+  {
+    "id": "2891a788-9f30-4413-8f73-9e7686890e9d",
+    "title": "FishNet2 Marine Data",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://fishnet.tulane.edu/ipt/resource?r=fishnet2_obis",
+    "archive": "https://fishnet.tulane.edu/ipt/archive.do?r=fishnet2_obis",
+    "published": "2023-12-19T06:44:43.000Z",
+    "updated": "2025-11-13T09:10:56.446Z"
+  },
+  {
+    "id": "10b213e6-a9c4-459e-a40c-ef9edc461b97",
+    "title": "Marine data from the Bernice P. Bishop Museum",
+    "citation": "Pyle R (2016). Bernice P. Bishop Museum. Version 8.1. Bernice Pauahi Bishop Museum. Occurrence dataset https://doi.org/10.15468/s6ctus accessed via GBIF.org on 2018-11-16.",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=bernicepbishopmuseum",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=bernicepbishopmuseum",
+    "published": "2023-03-20T17:02:07.000Z",
+    "updated": "2025-11-11T02:00:49.186Z"
+  },
+  {
+    "id": "d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+    "title": "CAS Ichthyology (ICH)",
+    "citation": "Fong J (2026). CAS Ichthyology (ICH). Version 150.539. California Academy of Sciences. Occurrence dataset. http://ipt.calacademy.org:8080/resource?r=ich&amp;v=150.539",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "http://ipt.calacademy.org:8080/resource?r=ich",
+    "archive": "http://ipt.calacademy.org:8080/archive.do?r=ich",
+    "published": "2026-09-07T22:37:33.000Z",
+    "updated": "2026-09-08T17:28:03.613Z"
+  },
+  {
+    "id": "98f8137f-5524-4eea-8ea0-984f81a5153f",
+    "title": "CRED Rapid Ecological Assessments of Coral Health and Disease in the Pacific Ocean 2005-2008",
+    "citation": "Coral Reef Ecosystem Division (CRED), Pacific Island Fisheries Sciences Center, NOAA National Marine Fisheries Service. 2011. CRED Rapid Ecological Assessments of Coral Health and Disease in the Pacific Ocean 2005-2008. Coral Reef Ecosystem Division Honolulu, HI.Retrieved from http://www.usgs.gov/obis-usa/.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=cred_benthic_rea_dz",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=cred_benthic_rea_dz",
+    "published": null,
+    "updated": "2025-11-12T22:29:07.807Z"
+  },
+  {
+    "id": "e4273d22-20ad-4234-a9d7-43fcccd88317",
+    "title": "Australian Microbiome 16S (Archaea) Dataset of Aquatic Samples",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a \n                     https://creativecommons.org/publicdomain/zero/1.0/",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=am_a16s_aquatic",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=am_a16s_aquatic",
+    "published": "2025-12-23T08:03:01.000Z",
+    "updated": "2026-05-29T21:54:52.100Z"
+  },
+  {
+    "id": "aa16d305-d413-4c4a-90be-b1ec3298d58d",
+    "title": "CAS Invertebrate Zoology (IZ)",
+    "citation": null,
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "http://ipt.calacademy.org:8080/resource?r=invz",
+    "archive": "http://ipt.calacademy.org:8080/archive.do?r=invz",
+    "published": "2026-09-07T22:53:16.000Z",
+    "updated": "2026-09-01T01:28:09.116Z"
+  },
+  {
+    "id": "c04414fb-9ac0-42d2-be21-f0754f416e04",
+    "title": "Diversity of the Indo-Pacific (DIPnet)",
+    "citation": "Deck J, Gaither MR, Ewing R, Davies N, Meyer C, Riginos C, Toonen R, Crandall E. The Genomic Observatories Metadatabase (GeOMe): A new repository for field and sampling event metadata associated with genetic samples. Plos Biology In review.",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://ipt.geome-db.org/resource?r=dipnet",
+    "archive": "https://ipt.geome-db.org/archive.do?r=dipnet",
+    "published": null,
+    "updated": "2025-11-10T02:26:57.242Z"
+  },
+  {
+    "id": "c1ff4b0e-7ab8-417d-b79b-9166b07a83f6",
+    "title": "Contributions to the knowledge of the alpheid Shrimp of the Pacific Ocean: Collections from Fiji, Tonga, and Samoa.",
+    "citation": "Banner A H, Banner D M (2026). Contributions to the knowledge of the alpheid Shrimp of the Pacific Ocean: Collections from Fiji, Tonga, and Samoa.. Version 1.1. Southwestern Pacific Ocean Biogeographic Information System (OBIS) Node. Occurrence dataset. https://nzobisipt.niwa.co.nz/resource?r=obisschema_alpheid_pacific&amp;v=1.1",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=obisschema_alpheid_pacific",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=obisschema_alpheid_pacific",
+    "published": "2026-08-17T05:06:46.000Z",
+    "updated": "2026-08-17T05:26:54.318Z"
+  },
+  {
+    "id": "58bb5aa2-2939-48d5-9015-b18706e26425",
+    "title": "Australian Museum Malacology Collection - Marine records",
+    "citation": "Reid M (2022): Australian Museum Malacology Collection - Marine records. v1.10. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=am_malacology&amp;v=1.10",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=am_malacology",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=am_malacology",
+    "published": "2022-06-08T05:30:18.000Z",
+    "updated": "2025-11-06T16:00:49.216Z"
+  },
+  {
+    "id": "caa36842-9b98-4518-8565-40304e16710c",
+    "title": "Latitudinal diversity patterns of pelagic copepods in the Pacific using metagenetic analysis",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY) 4.0 License",
+    "url": "https://hosted-datasets.gbif.org/mgnify/MGYS00002764.zip",
+    "archive": "https://hosted-datasets.gbif.org/mgnify/MGYS00002764.zip",
+    "published": "2022-09-20T12:42:00.000Z",
+    "updated": "2025-10-02T20:55:05.789Z"
+  },
+  {
+    "id": "c380d2c9-98b3-48cf-af6c-56a88b81f1a4",
+    "title": "Hexacorallians of the world",
+    "citation": "Fautin, Daphne G. (2013). Hexacorallians of the World.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.iobis.org/caribbeanobis/resource?r=hexacoralliansoftheworld",
+    "archive": "https://ipt.iobis.org/caribbeanobis/archive.do?r=hexacoralliansoftheworld",
+    "published": "2020-06-09T01:36:40.000Z",
+    "updated": "2025-11-09T11:30:03.948Z"
+  },
+  {
+    "id": "97a463ca-88d1-4a69-86cc-7ef98bfda4f3",
+    "title": "Reef Life Survey (RLS) around New Zealand region: Invertebrates",
+    "citation": "Edgar G and Stuart-Smith, RD (2017): Reef Life Survey (RLS): Invertebrates. v1. No organisation. Dataset/Occurrence. https://nzobisipt.niwa.co.nz/resource?r=reef_life_inverts",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=reef_life_inverts",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=reef_life_inverts",
+    "published": "2018-08-08T21:13:55.000Z",
+    "updated": "2026-09-08T18:11:13.536Z"
+  },
+  {
+    "id": "6078be2d-e1af-47b3-bd70-3956dd95f664",
+    "title": "Queensland Museum Corals",
+    "citation": "Muir P (2023): Queensland Museum Corals. v1.12. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=qm_corals&amp;v=1.12",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=qm_corals",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=qm_corals",
+    "published": "2023-06-28T03:18:57.000Z",
+    "updated": "2025-11-11T04:17:56.888Z"
+  },
+  {
+    "id": "0ff2a317-589a-4a3c-8f87-cd37173da0d6",
+    "title": "Museum and Art Gallery of the Northern Territory Crustacean Collection",
+    "citation": "Dally G (2023): Museum and Art Gallery of the Northern Territory Crustacean Collection. v1.10. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=ala_co206&amp;v=1.10",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=ala_co206",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=ala_co206",
+    "published": "2023-06-28T04:39:52.000Z",
+    "updated": "2025-11-10T11:42:22.572Z"
+  },
+  {
+    "id": "8ea620e9-37d5-4ff6-9a02-0bc94356c2d5",
+    "title": "Malacology Collection at the Academy of Natural Sciences of Philadelphia",
+    "citation": null,
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the ",
+    "url": "https://invertebase.org/portal/content/dwca/ANSP-MAL_DwC-A.zip",
+    "archive": "https://invertebase.org/portal/content/dwca/ANSP-MAL_DwC-A.zip",
+    "published": null,
+    "updated": "2025-09-17T01:36:52.698Z"
+  },
+  {
+    "id": "a0737a06-66ef-41e7-9458-9c05f53340b5",
+    "title": "Australian Museum Ichthyology Collection",
+    "citation": "McGrouther M (2022): Australian Museum Ichthyology Collection. v1.11. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=am_ichthyology&amp;v=1.11",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=am_ichthyology",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=am_ichthyology",
+    "published": "2022-06-08T05:32:20.000Z",
+    "updated": "2025-11-10T22:12:09.729Z"
+  },
+  {
+    "id": "e00e2de4-7e7a-4fae-a1da-d3b49aefbf08",
+    "title": "Museum and Art Gallery of the Northern Territory Coelenterate Collection, Australia (1924 - 2013)",
+    "citation": "Dally G (2023): Museum and Art Gallery of the Northern Territory Coelenterate Collection, Australia (1924 - 2013). v1.10. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=ala_co207&amp;v=1.10",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=ala_co207",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=ala_co207",
+    "published": "2023-06-28T04:35:03.000Z",
+    "updated": "2025-11-10T06:24:56.191Z"
+  },
+  {
+    "id": "8bd1c7c0-717d-4a4e-8b1c-9ff3c5698067",
+    "title": "A Biotic Database of Indo-Pacific Marine Mollusks",
+    "citation": "Rosenberg et al. A Biotic Database of Indo-Pacific Marine Mollusks. Morris, P., Pennsylvania, USA. http://clade.acnatsci.org/obis/",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.iobis.org/obis-malaysia/resource?r=indopacific_molluscs_v1",
+    "archive": "https://ipt.iobis.org/obis-malaysia/archive.do?r=indopacific_molluscs_v1",
+    "published": "2018-11-12T15:22:17.000Z",
+    "updated": "2025-11-13T05:35:14.204Z"
+  },
+  {
+    "id": "476b8eb8-7cb7-4d5b-a0c0-6d003b19045c",
+    "title": "PIFSC & HIHWNMS, Cetacean Surveys, Visual and genetic surveys for odontocete cetaceans in American Samoa 2003-06",
+    "citation": "Hill, M. 2008. PIFSC &amp; HIHWNMS, Cetacean Surveys, Visual and genetic surveys for odontocete cetaceans in American Samoa 2003-06. Version 1.0.0. Dataset published in OBIS-SEAMAP. https://doi.org/10.82144/52b46fa6.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "http://ipt.env.duke.edu/resource?r=zd_466",
+    "archive": "https://ipt.env.duke.edu/archive.do?r=zd_466",
+    "published": "2025-10-07T22:44:34.000Z",
+    "updated": "2025-10-10T01:38:16.443Z"
+  },
+  {
+    "id": "9fd109f3-079f-4836-80df-7848ddeecd47",
+    "title": "Marine Organisms of American Samoa (Bernice P. Bishop Museum)",
+    "citation": "Montgomery A (2023): Marine Organisms of American Samoa (Bernice P. Bishop Museum). v1.4. Southwestern Pacific Ocean Biogeographic Information System (OBIS) Node. Dataset/Occurrence. 10.15468/mqt4kb",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=amsam",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=amsam",
+    "published": "2023-03-22T06:46:17.000Z",
+    "updated": "2025-11-10T19:55:06.244Z"
+  },
+  {
+    "id": "89e23fc8-3f61-4480-9de3-358fe6eefe0b",
+    "title": "National Museum of Natural History Invertebrate Zoology Collections",
+    "citation": "National Museum of Natural History, Smithsonian Institution NMNH Invertebrate Zoology Collection Database. National Museum of Natural History, Smithsonian Institution, 10th and Constitution Ave. N.W., Washington, DC 20560-0193, 2001, Version 3.2.04 (0802221).",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=nmnh-iz",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=nmnh-iz",
+    "published": null,
+    "updated": "2025-11-08T23:16:48.355Z"
+  },
+  {
+    "id": "4a606f86-2e7b-44a3-b50d-3d55a887a11f",
+    "title": "DMNS Marine Invertebrate Collection (Arctos)",
+    "citation": "Denver Museum of Nature &amp; Science Marine Invertebrate Collection",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://ipt.vertnet.org/resource?r=dmns_inv",
+    "archive": "https://ipt.vertnet.org/archive.do?r=dmns_inv",
+    "published": "2026-09-02T00:09:46.000Z",
+    "updated": "2026-09-03T01:10:57.868Z"
+  },
+  {
+    "id": "817bd199-eae1-4290-a031-92831ab75753",
+    "title": "Reef Life Survey (RLS) around New Zealand region: Cryptic Fish",
+    "citation": "Edgar, GJ and Stuart-Smith, RD (2017): Reef Life Survey (RLS): Cryptic Fish. v1.0. Southwestern Pacific Ocean Biogeographic Information System (OBIS) Node. Dataset/Occurrence. https://nzobisipt.niwa.co.nz/resource?r=reef_life_cryptic",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=reef_life_cryptic",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=reef_life_cryptic",
+    "published": "2018-08-08T21:14:15.000Z",
+    "updated": "2026-09-08T18:08:20.138Z"
+  },
+  {
+    "id": "517ac935-af0f-4358-88fb-7093015182af",
+    "title": "Australian Museum Marine Invertebrate Collection",
+    "citation": "Keable S (2023): Australian Museum Marine Invertebrate Collection. v1.10. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=am_marine_inverts&amp;v=1.10",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=am_marine_inverts",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=am_marine_inverts",
+    "published": "2023-06-28T04:41:36.000Z",
+    "updated": "2025-11-09T10:10:10.258Z"
+  },
+  {
+    "id": "d6d6fe4c-425f-4ce7-bf28-7a6befaeb413",
+    "title": "National Museum of Natural History Vertebrate Zoology Fishes Collections",
+    "citation": "National Museum of Natural History, Smithsonian Institution NMNH Fishes Collection Database. National Museum of Natural History, Smithsonian Institution, 10th and Constitution Ave. N.W., Washington, DC 20560-0193, 2007.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=nmnh-vzfishes",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=nmnh-vzfishes",
+    "published": null,
+    "updated": "2025-11-09T12:56:56.604Z"
+  },
+  {
+    "id": "5b235cbe-37fb-400a-bd59-d03aad7c8fc4",
+    "title": "Queensland Museum Other Invertebrates - marine records",
+    "citation": "Adlard R (2023): Queensland Museum Other Invertebrates - marine records. v1.11. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=ala_co201&amp;v=1.11",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=ala_co201",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=ala_co201",
+    "published": "2023-06-28T04:40:32.000Z",
+    "updated": "2025-10-27T21:11:49.946Z"
+  },
+  {
+    "id": "b74b429a-4052-4f5b-bff3-fe0b5a2e8669",
+    "title": "Type locality distributions from the World Register of Marine Species",
+    "citation": "WoRMS Editorial Board (2021). Type locality distributions from the World Register of Marine Species. Available from http://www.marinespecies.org at VLIZ. Accessed on YYYY-MM-DD.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+    "archive": "https://ipt.vliz.be/eurobis/archive.do?r=worms_type_localities",
+    "published": "2026-08-23T10:00:30.000Z",
+    "updated": "2026-08-23T15:11:01.676Z"
+  },
+  {
+    "id": "9d629feb-ba03-4a83-908c-794d94d30531",
+    "title": "Ocean Genome Legacy Collection",
+    "citation": "Accession ID OGL-#####. The Ocean Genome Legacy Center. Northeastern University. Published on the web at ogl.northeastern.edu/catalog.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://ipt-obis.gbif.us/resource?r=ogl_msc_northeasternuniversity",
+    "archive": "https://ipt-obis.gbif.us/archive.do?r=ogl_msc_northeasternuniversity",
+    "published": "2022-08-15T18:21:48.000Z",
+    "updated": "2025-11-07T22:17:45.378Z"
+  },
+  {
+    "id": "6d842380-1cf0-4a1b-9b12-f6d1a8d892b2",
+    "title": "An Indo-Pacific coral spawning database",
+    "citation": "Baird, A.H., Guest, J.R., Edwards, A.J. et al. An Indo-Pacific coral spawning database. Sci Data 8, 35 (2021). https://doi.org/10.1038/s41597-020-00793-8",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=indo_pacific_coral_spawning_database",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=indo_pacific_coral_spawning_database",
+    "published": "2022-06-08T01:52:31.000Z",
+    "updated": "2025-11-11T02:31:08.159Z"
+  },
+  {
+    "id": "7e2053af-4cbc-4dca-ab94-6733ca52e4ad",
+    "title": "RBINS Mollusc collection",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://ipt.naturalsciences.be/resource?r=be_rbins_invertebrates_mollusca",
+    "archive": "https://ipt.naturalsciences.be/archive.do?r=be_rbins_invertebrates_mollusca",
+    "published": "2025-03-13T14:36:39.000Z",
+    "updated": "2026-05-22T15:01:39.370Z"
+  },
+  {
+    "id": "c80e637a-8cf3-484a-b6b0-587b1a7893e9",
+    "title": "Global benthic biogeographical regions and macroecological drivers for ophiuroids [Data set]",
+    "citation": "Lissette Victorero. (2023). Global benthic biogeographical regions and macroecological drivers for ophiuroids [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7656699",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=ophiuroids_database",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=ophiuroids_database",
+    "published": "2023-11-30T04:16:41.000Z",
+    "updated": "2025-11-09T15:28:34.193Z"
+  },
+  {
+    "id": "7671ae8a-9202-459d-9afe-4c1e12db6916",
+    "title": "A global, historical database of tuna, billfish, and saury larval distributions (1956-1981)",
+    "citation": "Buenafe, K.C.V., Everett, J.D., Dunn, D.C. et al. A global, historical database of tuna, billfish, and saury larval distributions. Sci Data 9, 423 (2022). https://doi.org/10.1038/s41597-022-01528-7",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=nishikawa_larval_distributions",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=nishikawa_larval_distributions",
+    "published": "2022-08-10T00:33:03.000Z",
+    "updated": "2025-11-10T16:18:37.735Z"
+  },
+  {
+    "id": "f072e2e5-6b80-4eb4-9806-0f4c3d2fe3b4",
+    "title": "Australian Museum Mel Ward’s Crustaceans - Cabinets 2 to 7, (1896 - 1988)",
+    "citation": "Flemons P (2023): Australian Museum Mel Ward’s Crustaceans - Cabinets 2 to 7, (1896 - 1988). v1.11. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=ala_ward_crustaceans&amp;v=1.11",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=ala_ward_crustaceans",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=ala_ward_crustaceans",
+    "published": "2023-06-28T03:56:12.000Z",
+    "updated": "2025-11-10T10:24:31.389Z"
+  },
+  {
+    "id": "01930fb1-4d33-4d75-af8d-19481a9c153d",
+    "title": "Extensive sympatry, cryptic diversity and introgression throughout the Indo-Pacific distribution of two coral species complexes",
+    "citation": "Southwestern Pacific OBIS (2015). Extensive sympatry, cryptic diversity and introgression throughout the geographic distribution of two coral species complexes. Southwestern Pacific OBIS, National Institute of Water and Atmospheric Research (NIWA), Wellington, New Zealand, 20 records, Online http://nzobisipt.niwa.co.nz/resource.do?r=smpatry_of_coral released on April 7, 2015.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=smpatry_of_coral",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=smpatry_of_coral",
+    "published": "2019-07-25T06:01:45.000Z",
+    "updated": "2025-11-09T13:45:10.973Z"
+  },
+  {
+    "id": "2c6db58f-ae91-4a17-9f0f-7db28506b94f",
+    "title": "Earth Sciences New Zealand National Invertebrate Collection (NIC)",
+    "citation": "Earth Sciences New Zealand (2025). Earth Sciences New Zealand National Invertebrate Collection (NIC). Version 1.6. Occurrence dataset. https://nzobisipt.niwa.co.nz/resource?r=obisspecify&amp;v=1.6",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=obisspecify",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=obisspecify",
+    "published": "2026-05-25T00:13:24.000Z",
+    "updated": "2026-05-25T00:38:35.801Z"
+  },
+  {
+    "id": "f17d8dae-4125-4a45-a491-81f8d018e19c",
+    "title": "Museum and Art Gallery of the Northern Territory Ichthyology Collection - Marine records",
+    "citation": "Dally G (2023): Museum and Art Gallery of the Northern Territory Ichthyology Collection - Marine records. v1.9. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=magnt_ichthyology&amp;v=1.9",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=magnt_ichthyology",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=magnt_ichthyology",
+    "published": "2023-06-28T03:28:54.000Z",
+    "updated": "2025-11-09T09:50:51.086Z"
+  },
+  {
+    "id": "63cb90c7-6607-46b6-8472-d6d7b14a95a5",
+    "title": "Queensland Museum Molluscs - Marine records",
+    "citation": "Healy J (2022): Queensland Museum Molluscs - Marine records. v1.9. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=qm_molluscs&amp;v=1.9",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=qm_molluscs",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=qm_molluscs",
+    "published": "2022-06-07T06:04:37.000Z",
+    "updated": "2025-11-09T19:21:36.219Z"
+  },
+  {
+    "id": "9b787218-7138-4ffa-8ba6-36d63d391f8c",
+    "title": "FishBase Database",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+    "archive": "https://www.gbif.se/ipt/archive.do?r=fishbase",
+    "published": "2023-03-23T10:44:06.000Z",
+    "updated": "2025-11-12T14:43:56.466Z"
+  },
+  {
+    "id": "a9848680-b804-455a-b6b5-2c5c1d0dbcde",
+    "title": "Historical distribution of whales shown by logbook records 1785-1913",
+    "citation": "Woolmer, G. 2013. Historical distribution of whales shown by logbook records 1785-1913. Version 1.6.0. Dataset published in OBIS-SEAMAP. https://doi.org/10.82144/f3b623de.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.env.duke.edu/resource?r=zd_885",
+    "archive": "https://ipt.env.duke.edu/archive.do?r=zd_885",
+    "published": "2025-10-08T00:34:08.000Z",
+    "updated": "2025-10-09T22:50:38.054Z"
+  },
+  {
+    "id": "b8617377-eb1c-4db2-baa6-8788a632e810",
+    "title": "Ichthyology Collection - Royal Ontario Museum",
+    "citation": null,
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=fishes",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=fishes",
+    "published": null,
+    "updated": "2025-11-06T07:06:18.191Z"
+  },
+  {
+    "id": "c24bf1c2-2c62-4056-a841-56d94e6e876a",
+    "title": "Fish specimens",
+    "citation": "ROM Fish Collection (accessed through GBIF data portal, http://data.gbif.org/datasets/resource/660, 2012-01-20) http://doi.org/10.15468/syisbx",
+    "intellectualrights": "Unrestricted",
+    "url": "http://ipt.obis.org/nonode/resource?r=fb660",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=fb660",
+    "published": null,
+    "updated": "2025-11-09T05:46:28.613Z"
+  },
+  {
+    "id": "49bbc435-2bff-432c-8dd4-b2e7b514ada3",
+    "title": "Cold water corals",
+    "citation": "Rogers, A. and J. Hall-Spencer. Cold-water Corals. UNEP World Conservation Monitoring Centre (UNEP-WCMC), 2005, Version 2.0.",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.vliz.be/eurobis/resource?r=obis_corals",
+    "archive": "https://ipt.vliz.be/eurobis/archive.do?r=obis_corals",
+    "published": "2025-09-17T08:30:59.000Z",
+    "updated": "2026-05-23T20:30:29.115Z"
+  },
+  {
+    "id": "4e88f9c8-868e-4b0a-bc48-3d409a5448fe",
+    "title": "UWFC Ichthyology Collection",
+    "citation": "University of Washington Ichthyology Collection (UWFC)",
+    "intellectualrights": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "url": "https://ipt.vertnet.org/resource?r=uwfc_fish",
+    "archive": "https://ipt.vertnet.org/archive.do?r=uwfc_fish",
+    "published": "2019-03-15T20:53:54.000Z",
+    "updated": "2025-11-09T05:13:26.596Z"
+  },
+  {
+    "id": "705770e5-3474-4e69-be8b-3107a0c5610a",
+    "title": "The fishes collection (IC) of the Muséum national d'Histoire naturelle (MNHN - Paris)",
+    "citation": "Gicim data base, Pruvost P. Causse R., 2009 http://doi.org/10.15468/tm7whu",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "http://ipt.obis.org/nonode/resource?r=fb1507",
+    "archive": "http://ipt.obis.org/nonode/archive.do?r=fb1507",
+    "published": null,
+    "updated": "2025-11-10T08:53:19.785Z"
+  },
+  {
+    "id": "a5f015fd-b53f-43f6-a8b6-f725775e4845",
+    "title": "Marine invertebrate collection NTNU University Museum",
+    "citation": "Bakken T, Hårsaker K, Daverdin M (2026). Marine invertebrate collection NTNU University Museum. Version 1.2358. Norwegian University of Science and Technology. Occurrence dataset. https://ipt.gbif.no/resource?r=trh_marine_invertebrate_collection&amp;v=1.2358",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://ipt.gbif.no/resource?r=trh_marine_invertebrate_collection",
+    "archive": "https://ipt.gbif.no/archive.do?r=trh_marine_invertebrate_collection",
+    "published": "2026-09-08T12:01:23.000Z",
+    "updated": "2026-09-07T12:39:07.654Z"
+  },
+  {
+    "id": "d104db68-63cf-4f34-b92a-54bd55a07394",
+    "title": "Museums Victoria Marine Invertebrates Collection",
+    "citation": "Jo Taylor J (2023): Museums Victoria Marine Invertebrates Collection. v1.12. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=nmv_marine_inverts&amp;v=1.12",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=nmv_marine_inverts",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=nmv_marine_inverts",
+    "published": "2023-06-28T03:27:49.000Z",
+    "updated": "2025-11-12T13:20:37.679Z"
+  },
+  {
+    "id": "d1277b79-1ca6-49d5-ab3c-2f7346a97e0e",
+    "title": "Amphiprion barberi, a new species of anemonefish (Pomacentridae) from Fiji, Tonga, and Samoa",
+    "citation": "Allen, G.R.; Drew, J.; Kaufman, L. (2008). Data from: Amphiprion barberi, a new species of anemonefish (Pomacentridae) from Fiji, Tonga, and Samoa. Southwestern Pacific OBIS, National Institute of Water and Atmospheric Research (NIWA), Wellington, New Zealand, 8 records, Online http://nzobisipt.niwa.co.nz/resource.do?r=amphiprionbarberi",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://nzobisipt.niwa.co.nz/resource?r=amphiprionbarberi",
+    "archive": "https://nzobisipt.niwa.co.nz/archive.do?r=amphiprionbarberi",
+    "published": "2018-08-08T08:55:28.000Z",
+    "updated": "2025-11-10T15:57:45.769Z"
+  },
+  {
+    "id": "f8c046f0-e8ae-49f5-b94c-f78809a8b7dc",
+    "title": "Western Australian Museum Fish Collection - Marine records",
+    "citation": "Moore G (2023): Western Australian Museum Fish Collection - Marine records. v1.10. CSIRO National Collections and Marine Infrastructure (NCMI) Information and Data Centre (IDC). Dataset/Occurrence. https://www.marine.csiro.au/ipt/resource?r=wam_ichthyology&amp;v=1.10",
+    "intellectualrights": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "url": "https://www.marine.csiro.au/ipt/resource?r=wam_ichthyology",
+    "archive": "https://www.marine.csiro.au/ipt/archive.do?r=wam_ichthyology",
+    "published": "2023-06-28T03:23:19.000Z",
+    "updated": "2025-11-10T19:53:00.858Z"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "url": "https://www.gebco.net/data-products-gridded-bathymetry-data/gebco2026-grid",
+  "final_url": "https://www.gebco.net/data-products-gridded-bathymetry-data/gebco2026-grid",
+  "retrieved_at_utc": "2026-09-08T20:20:26.749237+00:00",
+  "path": "gebco/source_documentation.html",
+  "bytes": 69443,
+  "sha256": "226ebf8a62a89c5eeba53b4812ea4432208be6de087117bf221b9fdd3b128903",
+  "headers": {
+    "Content-Length": "69443",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Date": "Tue, 08 Sep 2026 20:20:27 GMT"
+  }
+}
