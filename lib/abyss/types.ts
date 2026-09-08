@@ -83,5 +83,10 @@ export interface Coverage {
   type: 'Feature';
   id: string;
   geometry: { type: 'Polygon'; coordinates: [number, number][][] };
-  properties: { occurrence_count: number };
+  properties: {
+    occurrence_count: number;
+    geohash_precision?: number;
+    original_cell_bbox?: [number, number, number, number];
+    clipped_to_query_bbox?: boolean;
+  };
 }
