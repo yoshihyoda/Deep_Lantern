@@ -1,4 +1,6 @@
-# ABYSS COMMONS — Map the Unknown
+# DEEP LANTERN
+
+_Explore the ocean through real data._
 
 A working American Samoa exploration workspace built from verified GEBCO 2026, NOAA EX1702, and OBIS snapshots. The map distinguishes source provenance from public observation coverage; an exploration heuristic proposes three spatially separated candidates.
 

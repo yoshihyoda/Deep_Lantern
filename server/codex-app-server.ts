@@ -93,8 +93,8 @@ export class CodexAppServer {
     this.child.on('exit', () => this.failAll());
     await this.rpc('initialize', {
       clientInfo: {
-        name: 'abyss_commons',
-        title: 'ABYSS COMMONS',
+        name: 'deep_lantern',
+        title: 'DEEP LANTERN',
         version: '0.1.0',
       },
       capabilities: { experimentalApi: true, requestAttestation: false },
@@ -181,7 +181,7 @@ export class CodexAppServer {
           id: message.id,
           error: {
             code: -32601,
-            message: 'Only ABYSS scientific data tools are available.',
+            message: 'Only DEEP LANTERN scientific data tools are available.',
           },
         });
       }
@@ -265,7 +265,7 @@ export class CodexAppServer {
         ephemeral: true,
         baseInstructions: SYSTEM_RULES,
         developerInstructions:
-          'This is a scientific visualization session. Only use the supplied ABYSS data tools. Do not access files, shell commands, external services, or developer workflows. Respond in the language of the user. The UI executes your tools and displays their effects immediately.',
+          'This is a scientific visualization session. Only use the supplied DEEP LANTERN data tools. Do not access files, shell commands, external services, or developer workflows. Respond in the language of the user. The UI executes your tools and displays their effects immediately.',
         dynamicTools: toolDefinitions.map((t) => ({
           type: 'function',
           name: t.name,

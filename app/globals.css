@@ -2795,8 +2795,10 @@ a {
   letter-spacing: 0.13em;
 }
 .immersive-app .brand > span {
-  font-size: 9px;
-  letter-spacing: 0.2em;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .immersive-app .header-actions {
   gap: 9px;

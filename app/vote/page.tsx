@@ -12,7 +12,7 @@ export default function VotePage() {
   }, []);
   return (
     <main className="vote-page">
-      <Link href="/">← ABYSS COMMONS</Link>
+      <Link href="/">← DEEP LANTERN</Link>
       <span className="eyebrow">A COMMUNITY QUESTION</span>
       <h1>60 ROV minutes.</h1>
       <p>Where would you look next?</p>

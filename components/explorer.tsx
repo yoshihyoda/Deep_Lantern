@@ -325,7 +325,7 @@ export default function Explorer() {
     a.href = URL.createObjectURL(
       new Blob([JSON.stringify(brief, null, 2)], { type: 'application/json' }),
     );
-    a.download = `abyss-dive-brief-${brief.candidateId}.json`;
+    a.download = `deep-lantern-dive-brief-${brief.candidateId}.json`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
@@ -371,8 +371,8 @@ export default function Explorer() {
       <header className="topbar">
         <div className="brand">
           <Waves />
-          <strong>ABYSS COMMONS</strong>
-          <span>MAP THE UNKNOWN</span>
+          <strong>DEEP LANTERN</strong>
+          <span>Explore the ocean through real data.</span>
         </div>
         <div className="header-actions">
           <button
