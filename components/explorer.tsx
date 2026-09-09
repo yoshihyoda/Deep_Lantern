@@ -2,11 +2,11 @@
 /* oxlint-disable react/react-compiler */
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import {
   Waves,
   Layers as LayerIcon,
   ArrowUpRight,
-  Sparkles,
   ArrowUp,
   FileText,
   ExternalLink,
@@ -16,6 +16,14 @@ import {
   Download,
   Check,
   Square,
+  Route,
+  Fish,
+  ScanSearch,
+  X,
+  Maximize2,
+  Minimize2,
+  ChevronDown,
+  Camera,
 } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
@@ -26,6 +34,14 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 import Ocean from '@/components/ocean';
+import OpenAILogo from '@/components/openai-logo';
+import ReferenceGallery from '@/components/reference-gallery';
+import {
+  referenceImages,
+  referenceLocations,
+  imageLicenseUrl,
+  annotationLicenseUrl,
+} from '@/lib/abyss/fathomnet';
 import ChatText from '@/components/chat-text';
 import {
   candidates as compute,
@@ -54,7 +70,7 @@ const prompts = [
   {
     id: 'rov',
     label: 'Show recorded ROV activity',
-    full: 'Show recorded ROV survey activity.',
+    full: 'Show recorded ROV survey activity. Explain in English.',
   },
   {
     id: 'discover',
@@ -80,6 +96,7 @@ export default function Explorer() {
     [list, setList] = useState(initial),
     [selected, setSelected] = useState<string | null>(initial[0]?.id ?? null),
     [focusKey, setFocusKey] = useState(0),
+    [overviewKey, setOverviewKey] = useState(0),
     [minDepth, setMinDepth] = useState(2000),
     [brief, setBrief] = useState<DiveBrief | null>(null),
     [sourceOpen, setSourceOpen] = useState(false),
@@ -94,7 +111,57 @@ export default function Explorer() {
     [messages, setMessages] = useState<
       { role: 'user' | 'assistant'; content: string }[]
     >([]),
-    [voteOpen, setVoteOpen] = useState(false);
+    [voteOpen, setVoteOpen] = useState(false),
+    [drawer, setDrawer] = useState<'layers' | 'astra' | null>(null),
+    [focused, setFocused] = useState(false),
+    [journeysOpen, setJourneysOpen] = useState(true),
+    [photosOpen, setPhotosOpen] = useState(false),
+    [photosVisible, setPhotosVisible] = useState(true),
+    [photoLocationId, setPhotoLocationId] = useState<string | null>(null),
+    [photoFocus, setPhotoFocus] = useState<{ id: string; key: number } | null>(
+      null,
+    );
+  function openPhotos(locationId: string | null = null) {
+    setPhotoLocationId(locationId);
+    setPhotosOpen(true);
+    setDrawer(null);
+    setFocused(false);
+  }
+  const layerButton = useRef<HTMLButtonElement>(null),
+    astraButton = useRef<HTMLButtonElement>(null);
+  function closeDrawer() {
+    (drawer === 'layers' ? layerButton : astraButton).current?.focus();
+    setDrawer(null);
+  }
+  useEffect(() => {
+    const escape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (drawer)
+          (drawer === 'layers' ? layerButton : astraButton).current?.focus();
+        setDrawer(null);
+        setFocused(false);
+      }
+    };
+    window.addEventListener('keydown', escape);
+    return () => window.removeEventListener('keydown', escape);
+  }, [drawer]);
+  function explore(mode: 'rov' | 'obis' | 'discover') {
+    setJourneysOpen(false);
+    setDrawer(null);
+    setLayers((p) => ({
+      ...p,
+      terrain: true,
+      rov: mode === 'rov' || mode === 'obis',
+      obis: mode === 'obis',
+      grid: mode === 'discover',
+    }));
+    if (mode === 'discover' && list[1]) select(list[1].id);
+    else setOverviewKey((k) => k + 1);
+    if (mode === 'obis') {
+      setPhotosVisible(true);
+      openPhotos();
+    }
+  }
   const abort = useRef<AbortController | null>(null),
     chatEnd = useRef<HTMLDivElement>(null);
   const active = list.find((c) => c.id === selected) ?? null;
@@ -127,6 +194,13 @@ export default function Explorer() {
     setSelected(id);
     setFocusKey((n) => n + 1);
     setBrief(makeBrief(c));
+    if (window.scrollY > 160)
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'instant'
+          : 'smooth',
+      });
   }
   function apply(e: UiEvent) {
     switch (e.type) {
@@ -275,14 +349,14 @@ export default function Explorer() {
     },
     {
       key: 'rov',
-      name: 'ROV activity',
-      note: 'NOAA · 4 recorded paths',
+      name: 'Robot dive paths',
+      note: 'NOAA · 4 paths to replay',
       color: '#3ee6d6',
     },
     {
       key: 'obis',
-      name: 'Biological records',
-      note: 'OBIS · public occurrences',
+      name: 'Traces of life',
+      note: 'OBIS · click a purple cell',
       color: '#b69bea',
     },
     {
@@ -293,7 +367,7 @@ export default function Explorer() {
     },
   ];
   return (
-    <main className="abyss-app">
+    <main className={`abyss-app immersive-app ${focused ? 'is-focused' : ''}`}>
       <header className="topbar">
         <div className="brand">
           <Waves />
@@ -301,6 +375,51 @@ export default function Explorer() {
           <span>MAP THE UNKNOWN</span>
         </div>
         <div className="header-actions">
+          <button
+            ref={layerButton}
+            aria-label="Layers"
+            className="header-tool"
+            aria-expanded={drawer === 'layers'}
+            aria-controls="evidence-drawer"
+            onClick={() => {
+              setFocused(false);
+              setDrawer((v) => (v === 'layers' ? null : 'layers'));
+            }}
+          >
+            <LayerIcon size={16} />
+            <span>Layers</span>
+          </button>
+          <button
+            ref={astraButton}
+            aria-label="Ask Astra"
+            className="header-tool astra-launch"
+            aria-expanded={drawer === 'astra'}
+            aria-controls="astra-drawer"
+            onClick={() => {
+              setFocused(false);
+              setDrawer((v) => (v === 'astra' ? null : 'astra'));
+            }}
+          >
+            <OpenAILogo size={16} />
+            <span>Ask Astra</span>
+            <i
+              className={
+                connected ? 'connection-dot connected' : 'connection-dot'
+              }
+            />
+          </button>
+          <button
+            className="header-tool focus-toggle"
+            aria-label={focused ? 'Exit focus view' : 'Enter focus view'}
+            aria-pressed={focused}
+            title={focused ? 'Exit focus view' : 'Focus on the ocean'}
+            onClick={() => {
+              setFocused((v) => !v);
+              setDrawer(null);
+            }}
+          >
+            {focused ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+          </button>
           <div className="snapshot-badge">
             <i /> SNAPSHOT · 08 SEP 2026
           </div>
@@ -309,12 +428,29 @@ export default function Explorer() {
           </button>
         </div>
       </header>
-      <div className="workspace">
-        <aside className="layers-panel">
+      <div className={`workspace ${journeysOpen ? 'journeys-open' : ''}`}>
+        <aside
+          id="evidence-drawer"
+          className="layers-panel ocean-drawer"
+          aria-label="Evidence layers"
+          hidden={drawer !== 'layers'}
+        >
+          <button
+            className="drawer-close"
+            aria-label="Close evidence layers"
+            onClick={closeDrawer}
+          >
+            <X size={18} />
+          </button>
           <div className="eyebrow">
             <LayerIcon size={15} /> EVIDENCE LAYERS
           </div>
-          <h2>How we know.</h2>
+          <h2>Layers of discovery.</h2>
+          <p className="panel-intro">
+            Terrain, expeditions, life.
+            <br />
+            Bring the evidence together.
+          </p>
           {labels.map((l) => (
             <div className="layer" key={l.key}>
               <div>
@@ -334,6 +470,58 @@ export default function Explorer() {
               />
             </div>
           ))}
+          <div className="layer">
+            <div>
+              <label htmlFor="layer-photos">
+                <i style={{ background: '#f1b8cb' }} /> Reference photos
+              </label>
+              <small>FathomNet · 3 registered locations</small>
+              <button
+                className="text-button photo-layer-link"
+                onClick={() => openPhotos()}
+              >
+                Browse {referenceImages.length} real images{' '}
+                <ArrowUpRight size={13} />
+              </button>
+            </div>
+            <Switch
+              id="layer-photos"
+              checked={photosVisible}
+              onCheckedChange={setPhotosVisible}
+              aria-label="Reference photo locations"
+            />
+          </div>
+          <div className="truth-panel">
+            <div className="truth-header">
+              <span className="eyebrow">REVEAL THE EVIDENCE</span>
+              <span className="truth-state">
+                {truth === 0
+                  ? 'DIRECT ONLY'
+                  : truth === 100
+                    ? 'ALL SOURCE TYPES'
+                    : 'FILTERED'}
+              </span>
+            </div>
+            <div className="truth-labels">
+              <b>Measured</b>
+              <span>Include inferred</span>
+            </div>
+            <span id="provenance-label" className="sr-only">
+              Data provenance
+            </span>
+            <Slider
+              value={[truth]}
+              onValueChange={(v) => {
+                setTruth(Array.isArray(v) ? v[0] : v);
+                setLayers((l) => ({ ...l, provenance: true }));
+              }}
+              aria-labelledby="provenance-label"
+            />
+            <p>
+              Filter by how the terrain was mapped, not its statistical
+              confidence.
+            </p>
+          </div>
           <div className="legend">
             <div className="eyebrow">SOURCE TYPES</div>
             <p>
@@ -363,8 +551,20 @@ export default function Explorer() {
         </aside>
         <section className="ocean-panel">
           <div className="map-heading">
-            <span className="eyebrow">SOUTH PACIFIC / 01</span>
-            <h1>American Samoa</h1>
+            <div className="map-heading-top">
+              <span className="eyebrow">SOUTH PACIFIC / 01</span>
+              <button
+                className="photo-gallery-launch"
+                onClick={() => openPhotos()}
+                aria-label="View real dive photos"
+              >
+                <Camera size={13} /> Real dive photos{' '}
+                <span>{referenceImages.length}</span>
+              </button>
+            </div>
+            <h1>
+              American Samoa<span>Follow the evidence into the deep.</span>
+            </h1>
             <p>14°–15° S · 169°–171° W</p>
           </div>
           <Ocean
@@ -373,14 +573,22 @@ export default function Explorer() {
             candidates={list}
             selected={selected}
             focusKey={focusKey}
+            overviewKey={overviewKey}
+            photosVisible={photosVisible}
+            photoFocus={photoFocus}
+            onPhotoLocation={openPhotos}
+            photoGalleryOpen={photosOpen}
             onSelect={select}
             onTrack={setTrack}
             onStatus={setStatus}
+            onLayers={(v) => setLayers((p) => ({ ...p, ...v }))}
+            onInspect={() => setFocused(false)}
+            onSwimStart={() => {
+              setDrawer(null);
+              setJourneysOpen(false);
+              setFocused(true);
+            }}
           />
-          <div className="map-scale">
-            <span>Vertical exaggeration ×6</span>
-            <span>Drag to orbit · Scroll to zoom</span>
-          </div>
           <div className="map-status">{status}</div>
           {layers.obis && (
             <div className="obis-legend">
@@ -397,37 +605,30 @@ export default function Explorer() {
               Draped on GEBCO for display; vehicle depth unavailable.
             </div>
           )}
-          <div className="truth-panel">
-            <div className="truth-header">
-              <span className="eyebrow">WHAT DO WE ACTUALLY KNOW?</span>
-              <span className="truth-state">
-                {truth === 0
-                  ? 'DIRECT ONLY'
-                  : truth === 100
-                    ? 'ALL SOURCE TYPES'
-                    : 'FILTERED'}
-              </span>
-            </div>
-            <div className="truth-labels">
-              <b>REALITY</b>
-              <span>INFERENCE</span>
-            </div>
-            <Slider
-              value={[truth]}
-              onValueChange={(v) => {
-                setTruth(Array.isArray(v) ? v[0] : v);
-                setLayers((l) => ({ ...l, provenance: true }));
-              }}
-              aria-label="Data provenance"
-            />
-            <p>
-              This control filters data provenance, not statistical confidence.
-            </p>
-          </div>
         </section>
-        <aside className="astra-panel">
+        <aside
+          id="astra-drawer"
+          className="astra-panel ocean-drawer"
+          aria-label="Astra exploration assistant"
+          hidden={drawer !== 'astra'}
+        >
+          <button
+            className="drawer-close"
+            aria-label="Close Astra"
+            onClick={closeDrawer}
+          >
+            <X size={18} />
+          </button>
+          <Image
+            unoptimized
+            className="astra-atmosphere"
+            src="/imagery/abyss-atmosphere.jpg"
+            alt=""
+            width="1536"
+            height="1024"
+          />
           <div className="panel-heading">
-            <Sparkles size={18} />
+            <OpenAILogo size={18} />
             <h2>Astra</h2>
             <span className="mode-chip">
               {connected
@@ -565,8 +766,106 @@ export default function Explorer() {
             <ChevronRight size={17} />
           </button>
         </aside>
+        <div className="expedition-bar">
+          <button
+            className="expedition-toggle"
+            aria-expanded={journeysOpen}
+            aria-controls="expedition-dock"
+            onClick={() => setJourneysOpen((v) => !v)}
+          >
+            <Waves size={16} />
+            <span>
+              {journeysOpen ? 'Hide expeditions' : 'Choose an expedition'}
+            </span>
+            <ChevronDown size={14} />
+          </button>
+          <a href="#next-dives">
+            Compare next dives <ChevronDown size={13} />
+          </a>
+        </div>
+        <section
+          id="expedition-dock"
+          className="explore-ribbon"
+          aria-label="Ways to explore"
+          hidden={!journeysOpen}
+        >
+          <div className="ribbon-intro">
+            <span className="eyebrow">DIVE INTO THE UNKNOWN</span>
+            <h2>Where will you dive?</h2>
+            <p>Three ways to follow your curiosity.</p>
+          </div>
+          <button
+            className="journey-card journey-rov"
+            onClick={() => explore('rov')}
+          >
+            <Image
+              unoptimized
+              className="journey-art"
+              src="/imagery/abyss-rov.jpg"
+              alt=""
+              width="1536"
+              height="1024"
+            />
+            <span className="journey-icon">
+              <Route size={18} />
+            </span>
+            <div>
+              <small>01 / FOLLOW THE DIVE</small>
+              <strong>Follow a robot’s journey</strong>
+              <span>Replay four recorded dive paths</span>
+            </div>
+            <ArrowUpRight size={18} />
+          </button>
+          <button
+            className="journey-card journey-life"
+            onClick={() => explore('obis')}
+          >
+            <Image
+              unoptimized
+              className="journey-art"
+              src="/imagery/abyss-corals.jpg"
+              alt=""
+              width="1536"
+              height="1024"
+            />
+            <span className="journey-icon">
+              <Fish size={18} />
+            </span>
+            <div>
+              <small>02 / TRACES OF LIFE</small>
+              <strong>Find traces of life</strong>
+              <span>Browse real photos & public records</span>
+            </div>
+            <ArrowUpRight size={18} />
+          </button>
+          <button
+            className="journey-card journey-frontier"
+            onClick={() => explore('discover')}
+          >
+            <Image
+              unoptimized
+              className="journey-art"
+              src="/imagery/abyss-ridge.jpg"
+              alt=""
+              width="1536"
+              height="1024"
+            />
+            <span className="journey-icon">
+              <ScanSearch size={18} />
+            </span>
+            <div>
+              <small>03 / THE NEXT DISCOVERY</small>
+              <strong>Explore the unknown</strong>
+              <span>Compare places to look next</span>
+            </div>
+            <ArrowUpRight size={18} />
+          </button>
+          <p className="imagery-note">
+            AI concept imagery · not field observations
+          </p>
+        </section>
       </div>
-      <section className="candidate-section">
+      <section className="candidate-section" id="next-dives">
         <div className="candidate-heading">
           <div className="eyebrow">WHERE SHOULD WE LOOK NEXT?</div>
           <span>Exploration heuristic · not scientific value</span>
@@ -631,6 +930,18 @@ export default function Explorer() {
           Public-data gaps do not prove an absence of life or prior exploration.
         </span>
       </footer>
+      <ReferenceGallery
+        open={photosOpen}
+        onOpenChange={setPhotosOpen}
+        locationId={photoLocationId}
+        onLocate={(id) => {
+          setPhotosOpen(false);
+          setPhotosVisible(true);
+          setFocused(false);
+          setJourneysOpen(false);
+          setPhotoFocus((p) => ({ id, key: (p?.key ?? 0) + 1 }));
+        }}
+      />
       <Dialog open={sourceOpen} onOpenChange={setSourceOpen}>
         <DialogContent className="evidence-dialog">
           <DialogTitle>Evidence, sources & limitations</DialogTitle>
@@ -638,6 +949,11 @@ export default function Explorer() {
             Fixed local snapshots, retrieved 8 September 2026. No scientific
             data is labeled live.
           </DialogDescription>
+          <p>
+            Decorative ROV, coral, ridge and ocean images are AI-generated
+            concepts, not observations. The interactive terrain and evidence
+            layers use the datasets below.
+          </p>
           {sources.map((s) => (
             <article className="source-entry" key={s.id}>
               <div className="eyebrow">{s.provider} · SNAPSHOT</div>
@@ -655,6 +971,45 @@ export default function Explorer() {
               </div>
             </article>
           ))}
+          <article className="source-entry">
+            <div className="eyebrow">FATHOMNET · REFERENCE IMAGES</div>
+            <h3>{referenceImages.length} original NOAA images</h3>
+            <p>
+              NOAA Ocean Exploration, via FathomNet. Original PNGs are
+              unchanged. All annotation labels are unverified. Images share{' '}
+              {referenceLocations.length} registered positions; location
+              precision is unavailable.
+            </p>
+            <p>
+              These reference images are separate from OBIS occurrence counts
+              and exploration scores. They do not establish species presence at
+              an exact point or explain habitat causes.
+            </p>
+            <div className="source-links">
+              <a href={imageLicenseUrl} target="_blank" rel="noreferrer">
+                Images: CC BY-NC-ND 4.0 ↗
+              </a>
+              <a href={annotationLicenseUrl} target="_blank" rel="noreferrer">
+                Annotations: CC BY-NC 4.0 ↗
+              </a>
+              <a
+                href="https://www.fathomnet.org/datause"
+                target="_blank"
+                rel="noreferrer"
+              >
+                FathomNet data use ↗
+              </a>
+            </div>
+            <button
+              className="text-button"
+              onClick={() => {
+                setSourceOpen(false);
+                openPhotos();
+              }}
+            >
+              Open reference gallery <ArrowUpRight size={14} />
+            </button>
+          </article>
           <a
             href="/data/snapshot/obis/dataset_licenses_and_citations.json"
             target="_blank"
@@ -751,6 +1106,18 @@ export default function Explorer() {
         }}
       >
         <DialogContent className="evidence-dialog">
+          <figure className="dive-concept">
+            <Image
+              unoptimized
+              src="/imagery/abyss-rov.jpg"
+              alt="AI concept of an underwater exploration robot"
+              width="1536"
+              height="1024"
+            />
+            <figcaption>
+              AI concept illustration · not a photograph of this dive
+            </figcaption>
+          </figure>
           <DialogTitle>{track?.properties.dive_id}</DialogTitle>
           <DialogDescription>
             NOAA EX1702 recorded ROV activity

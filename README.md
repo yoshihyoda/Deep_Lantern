@@ -55,4 +55,4 @@ node --import tsx scripts/smoke-codex.ts
 
 See [architecture](docs/architecture.md), [sources](docs/data-sources.md), [scientific integrity](docs/scientific-integrity.md), [development record](docs/built-with-astra.md), and [validation](docs/validation.md).
 
-Optional FathomNet, protected areas, and true mid-turn steering are not included. Changing depth stops the current request and recomputes candidates. Sending another message starts a new constrained request; it is not advertised as API mid-turn steering.
+The FathomNet reference gallery contains 24 original NOAA images with unverified annotation labels and three shared registered locations; it remains separate from OBIS occurrence counts and exploration scores. See [reference image provenance](docs/fathomnet-data.md) and [visuals and swimming controls](docs/visual-assets.md). Protected areas and true mid-turn steering are not included. Changing depth stops the current request and recomputes candidates. Sending another message starts a new constrained request; it is not advertised as API mid-turn steering.

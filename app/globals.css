@@ -1543,3 +1543,2275 @@ a {
   font-weight: 500;
   background: #132b37;
 }
+
+/* Expedition workspace: the data map stays the primary working surface. */
+.abyss-app {
+  background: #06111d;
+}
+.topbar {
+  height: 68px;
+  background: #07131f;
+  padding: 0 28px;
+}
+.brand strong {
+  font-size: 16px;
+  letter-spacing: 0.13em;
+}
+.brand > span {
+  letter-spacing: 0.07em;
+  font-size: 13px;
+}
+.explore-ribbon {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 1fr);
+  gap: 14px;
+  padding: 20px 26px;
+  background: #081723;
+  border-bottom: 1px solid #233a47;
+}
+.ribbon-intro {
+  padding: 4px 10px 0 0;
+}
+.ribbon-intro .eyebrow {
+  color: #6ecabe;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+.ribbon-intro h2 {
+  font-size: clamp(17px, 1.5vw, 24px);
+  font-weight: 500;
+  margin: 8px 0 5px;
+  letter-spacing: 0.01em;
+}
+.ribbon-intro p {
+  color: #9db5c1;
+  font-size: 13px;
+}
+.journey-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 112px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 20px 16px;
+  overflow: hidden;
+  border: 1px solid #30505c;
+  border-radius: 10px;
+  background: #102c3a;
+  color: #fff;
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.journey-card:hover {
+  border-color: #81e6d5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #0005;
+}
+.journey-card > div {
+  flex: 1;
+}
+.journey-card small {
+  font-size: 10px;
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.07em;
+  color: #b1e4df;
+  display: block;
+}
+.journey-card strong {
+  font-size: 16px;
+  font-weight: 550;
+  display: block;
+  margin: 7px 0 5px;
+}
+.journey-card div > span {
+  font-size: 12px;
+  color: #d1e3e6;
+}
+.journey-card > svg {
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+.journey-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: #9bf0df;
+  background: #071c2799;
+  border: 1px solid #88c9c144;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.journey-life {
+  background-color: #203145;
+  border-color: #3a475e;
+}
+.journey-frontier {
+  background-color: #203337;
+}
+.workspace {
+  grid-template-columns: 238px minmax(0, 1fr) 330px;
+  height: max(700px, calc(100dvh - 370px));
+  min-height: 700px;
+}
+.layers-panel {
+  padding: 24px 19px;
+  overflow: auto;
+  background: #091722;
+}
+.layers-panel h2 {
+  font-size: 20px;
+  margin: 14px 0 10px;
+}
+.panel-intro {
+  font-size: 14px;
+  color: #9fb9c6;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.layer {
+  padding: 16px 0;
+  gap: 10px;
+}
+.layer label {
+  font-size: 14px;
+}
+.layer small {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.layer [data-slot='switch'] {
+  flex-shrink: 0;
+}
+.layers-panel > .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.09em;
+}
+.truth-panel {
+  position: static;
+  margin: 22px 0 0;
+  padding: 14px 13px;
+  background: #102631;
+  border-color: #2a4853;
+  border-radius: 8px;
+}
+.truth-header .eyebrow {
+  font-size: 12px;
+}
+.truth-labels {
+  font-size: 12px;
+  letter-spacing: 0;
+  margin: 17px 0;
+}
+.truth-panel p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 13px;
+}
+.truth-state {
+  display: none;
+}
+.legend {
+  margin-top: 24px;
+}
+.legend p {
+  font-size: 13px;
+}
+.legend small {
+  font-size: 12px;
+}
+.source-summary {
+  margin-top: 26px;
+}
+.source-summary .big-stat {
+  font-size: 27px;
+}
+.source-summary small,
+.source-summary p {
+  font-size: 12px;
+}
+.ocean-panel {
+  min-height: 700px;
+  background: radial-gradient(
+    ellipse at 50% 34%,
+    #163a4c,
+    #081c2c 58%,
+    #04101d
+  );
+}
+.map-heading {
+  left: 24px;
+  top: 27px;
+  padding: 0;
+}
+.map-heading h1 {
+  font-size: clamp(22px, 2vw, 32px);
+  margin: 9px 0;
+  letter-spacing: -0.04em;
+  font-weight: 450;
+  text-shadow: 0 2px 18px #021321;
+}
+.map-heading h1 span {
+  display: block;
+  font-size: 13px;
+  margin-top: 6px;
+  color: #b1d3da;
+  letter-spacing: 0.05em;
+}
+.map-heading .eyebrow {
+  color: #83bbca;
+  font-size: 11px;
+}
+.map-heading p {
+  font-size: 11px;
+}
+.map-tools {
+  right: 17px;
+  top: 80px;
+  gap: 7px;
+}
+.map-tools button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-color: #3e6272;
+  border-radius: 8px;
+  background: #071b28dd;
+  backdrop-filter: blur(12px);
+}
+.map-view-switch {
+  position: absolute;
+  top: 24px;
+  right: 17px;
+  z-index: 6;
+  display: flex;
+  padding: 4px;
+  background: #071a29e8;
+  border: 1px solid #335465;
+  border-radius: 8px;
+}
+.map-view-switch button {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: #95b6c5;
+  transition: background 0.2s;
+}
+.map-view-switch button[aria-pressed='true'] {
+  color: #cafff1;
+  background: #284c54;
+}
+.map-compass {
+  top: 222px;
+  right: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #acd1db;
+  opacity: 0.8;
+  transform-origin: center 38px;
+  pointer-events: none;
+}
+.map-scale {
+  bottom: 64px;
+  left: 22px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+.map-status {
+  bottom: auto;
+  top: 159px;
+  left: 24px;
+  font-size: 10px;
+  color: #88aebb;
+  pointer-events: none;
+}
+.track-legend {
+  left: 24px;
+  top: 185px;
+  bottom: auto;
+  width: 240px;
+  font-size: 11px;
+  line-height: 1.7;
+  pointer-events: none;
+}
+.obis-legend {
+  left: 24px;
+  top: 239px;
+  bottom: auto;
+  font-size: 12px;
+  pointer-events: none;
+}
+.map-pins {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+.map-pins button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+  background: #0a2635e8;
+  border: 1px solid #8fbcc8;
+  border-radius: 7px;
+  min-width: 32px;
+  padding: 5px 8px;
+  color: #d4f0f0;
+  font-size: 13px;
+  box-shadow: 0 3px 14px #02101ca8;
+}
+.map-pins button[aria-pressed='true'] {
+  background: #312b1d;
+  border-color: #ffc277;
+  color: #ffce86;
+}
+.map-pins button span {
+  display: none;
+  font-size: 11px;
+  margin-left: 8px;
+}
+.map-pins button:hover span,
+.map-pins button:focus-visible span {
+  display: inline;
+}
+.map-console {
+  position: absolute;
+  bottom: 65px;
+  left: 18px;
+  right: 64px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 7;
+  pointer-events: none;
+}
+.map-console > section {
+  pointer-events: auto;
+  background: #071d2bef;
+  border: 1px solid #365965;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px #020a1480;
+  backdrop-filter: blur(18px);
+  padding: 15px;
+  min-width: 0;
+}
+.console-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 13px;
+}
+.console-title .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #91c6cc;
+}
+.console-title button {
+  display: grid;
+  place-items: center;
+  color: #9dbec8;
+  border-radius: 4px;
+  padding: 3px;
+}
+.console-title button:hover {
+  color: white;
+  background: #315464;
+}
+.live-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #91f6d8;
+}
+.track-player {
+  flex: 1 1 320px;
+  max-width: 410px;
+}
+.track-tabs {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.track-tabs button {
+  font-family: var(--font-geist-mono), monospace;
+  flex: 1;
+  font-size: 11px;
+  background: #102f3d;
+  border: 1px solid #31505c;
+  padding: 8px 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.track-tabs button[aria-pressed='true'] {
+  border-color: #71dfc9;
+  color: #a2ffe7;
+  background: #1c464a;
+}
+.track-tabs i {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #87e6d2;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.track-tabs .not-bottom {
+  background: #ffbf77;
+}
+.playback-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.playback-row > [data-slot='slider'] {
+  flex: 1;
+  min-width: 45px;
+}
+.playback-row output {
+  font-size: 12px;
+  color: #a8d9d5;
+  font-family: var(--font-geist-mono), monospace;
+  min-width: 33px;
+}
+.playback-row .play-button {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #88e4ce;
+  color: #06242b;
+  flex-shrink: 0;
+}
+.player-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 11px;
+  gap: 8px;
+  color: #8eb9c0;
+  margin: 12px 0;
+}
+.player-meta button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #b6e5df;
+}
+.track-player > small,
+.map-inspector > small {
+  font-size: 11px;
+  color: #98b7c4;
+  line-height: 1.7;
+  display: block;
+}
+.player-instruction {
+  font-size: 13px;
+  color: #c0dadd;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.map-inspector {
+  flex: 1 1 260px;
+  max-width: 315px;
+  margin-left: auto;
+}
+.map-inspector .coordinates {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  margin: 9px 0 13px;
+  color: #97b4c2;
+}
+.map-inspector > p {
+  font-size: 12px;
+  color: #c1dedc;
+  line-height: 1.7;
+}
+.map-inspector > small {
+  margin-top: 13px;
+  border-top: 1px solid #28434e;
+  padding-top: 10px;
+}
+.inspect-depth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #b5d5dc;
+}
+.inspect-depth strong {
+  font-size: 25px;
+  font-weight: 450;
+  letter-spacing: -0.03em;
+  color: #eafaf8;
+}
+.inspect-depth strong span {
+  font-size: 14px;
+  color: #b3d3d8;
+}
+.inspect-count {
+  font-size: 31px;
+  color: #d9c7ff;
+  font-weight: 450;
+  letter-spacing: -0.04em;
+  margin-bottom: 15px;
+}
+.inspect-count > span {
+  font-size: 12px;
+  margin-left: 9px;
+  color: #b5a9d2;
+}
+.tid-code {
+  font-family: var(--font-geist-mono), monospace;
+  margin-left: 7px;
+  font-size: 10px;
+  color: #86a1af;
+}
+.map-readout {
+  position: absolute;
+  bottom: 21px;
+  left: 22px;
+  right: 15px;
+  z-index: 6;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #b5d8dd;
+  font-size: 11px;
+  font-family: var(--font-geist-mono), monospace;
+  pointer-events: none;
+}
+.map-readout b {
+  color: #e1f4f1;
+  margin-left: 8px;
+  font-weight: 450;
+}
+.map-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  color: #8cbac4;
+  font-size: 14px;
+}
+.map-loading small {
+  font-size: 12px;
+}
+.loading-orbit {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #254e5b;
+  border-top-color: #87e6d2;
+  animation: loading-spin 1.8s linear infinite;
+}
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.astra-panel {
+  padding: 24px 21px;
+  background: #0a1925;
+}
+.astra-panel h3 {
+  font-size: 26px;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  font-weight: 450;
+  margin: 22px 0 9px;
+}
+.astra-panel > p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.mode-chip {
+  font-size: 10px;
+  color: #a8d1c6;
+  background: #112d31;
+  border-color: #32514e;
+}
+.quick-prompt {
+  min-height: 45px;
+  font-size: 13px;
+  margin-top: 8px;
+  padding: 11px 10px;
+  border-radius: 8px;
+  border-color: #2a4655;
+  background: #102733;
+}
+.prompt-number {
+  font-size: 11px;
+}
+.depth-control {
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.depth-control input {
+  font-size: 14px;
+  width: 76px;
+  padding: 7px;
+}
+.depth-control span {
+  font-size: 12px;
+}
+.chat-input {
+  padding: 8px;
+  border-radius: 9px;
+  background: #06131f;
+}
+.chat-input input {
+  font-size: 13px;
+}
+.message {
+  font-size: 14px;
+  line-height: 1.85;
+}
+.message-label,
+.tool-log {
+  font-size: 11px;
+}
+.chat-messages {
+  max-height: 300px;
+}
+.brief-peek .eyebrow {
+  font-size: 10px;
+}
+.brief-peek strong {
+  font-size: 12px;
+}
+.candidate-section {
+  padding: 23px 26px 25px;
+  background: #071522;
+}
+.candidate-heading .eyebrow {
+  color: #74cbbb;
+  font-size: 11px;
+}
+.candidate-heading .eyebrow > span {
+  font-size: 15px;
+  color: #e2efed;
+  letter-spacing: 0.04em;
+  padding-left: 12px;
+}
+.candidate-heading > span {
+  font-size: 11px;
+}
+.candidate-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 18px;
+  border-radius: 10px;
+  min-height: 160px;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.candidate-card:hover {
+  transform: translateY(-3px);
+}
+.candidate-card strong {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 13px;
+}
+.candidate-card p {
+  font-size: 12px;
+}
+.candidate-metrics {
+  font-size: 12px;
+  margin-top: 16px;
+}
+.candidate-top .candidate-depth {
+  font-size: 12px;
+}
+.candidate-letter {
+  border-radius: 5px;
+}
+.vote-card {
+  background: #12333c;
+  border-color: #395a61;
+  border-radius: 10px;
+  padding: 18px;
+}
+.vote-card .eyebrow {
+  font-size: 11px;
+}
+.vote-card > strong {
+  font-size: 34px;
+}
+.vote-card > strong span {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+.vote-card p,
+.vote-card small {
+  font-size: 12px;
+}
+.bottom-bar {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.terrain-canvas canvas:focus-visible {
+  outline: 2px solid #91e9d7;
+  outline-offset: -3px;
+}
+@media (min-width: 1800px) {
+  .workspace {
+    grid-template-columns: 270px minmax(0, 1fr) 380px;
+  }
+  .journey-card {
+    min-height: 132px;
+  }
+  .journey-card strong {
+    font-size: 20px;
+  }
+  .ribbon-intro h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1250px) {
+  .workspace {
+    grid-template-columns: 205px minmax(0, 1fr) 280px;
+  }
+  .layers-panel,
+  .astra-panel {
+    padding: 20px 15px;
+  }
+  .explore-ribbon {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 17px 20px;
+  }
+  .ribbon-intro {
+    display: none;
+  }
+  .journey-card {
+    padding: 16px 13px;
+    min-height: 106px;
+  }
+  .journey-icon {
+    display: none;
+  }
+  .journey-card strong {
+    font-size: 15px;
+  }
+  .map-console {
+    right: 16px;
+    flex-wrap: wrap;
+  }
+  .map-console > section {
+    padding: 12px;
+  }
+  .map-inspector {
+    max-width: 300px;
+  }
+  .track-player:has(+ .map-inspector) {
+    display: none;
+  }
+  .map-view-switch {
+    top: 154px;
+    right: 16px;
+  }
+  .map-tools {
+    top: 24px;
+  }
+  .map-compass {
+    top: 211px;
+  }
+  .map-heading h1 {
+    font-size: 24px;
+  }
+  .map-heading {
+    left: 20px;
+  }
+  .map-status,
+  .track-legend,
+  .obis-legend {
+    left: 20px;
+  }
+  .astra-panel h3 {
+    font-size: 23px;
+  }
+  .quick-prompt {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1020px) {
+  .workspace {
+    grid-template-columns: 190px minmax(0, 1fr);
+    height: auto;
+  }
+  .ocean-panel {
+    min-height: 720px;
+  }
+  .astra-panel {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+    border-top: 1px solid #29434e;
+  }
+  .astra-panel h3,
+  .astra-panel > p {
+    grid-column: 1;
+    margin: 0;
+  }
+  .panel-heading,
+  .chat-messages,
+  .tool-log,
+  .chat-input,
+  .integrity-note {
+    grid-column: 1/-1;
+  }
+  .quick-prompts {
+    grid-column: 2;
+    grid-row: 2/5;
+    margin: 0;
+  }
+  .depth-control {
+    margin: 0;
+  }
+  .brief-peek {
+    margin: 0;
+    padding-top: 10px;
+  }
+  .candidate-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .candidate-heading {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 850px) {
+  .topbar {
+    height: 60px;
+    padding: 0 17px;
+  }
+  .header-actions .text-button {
+    font-size: 12px;
+  }
+  .brand strong {
+    font-size: 13px;
+  }
+  .brand svg {
+    width: 21px;
+  }
+  .explore-ribbon {
+    gap: 8px;
+    padding: 12px;
+  }
+  .journey-card {
+    min-height: 122px;
+    padding: 12px 10px;
+    align-items: flex-end;
+    border-radius: 8px;
+  }
+  .journey-card strong {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 6px 0 0;
+  }
+  .journey-card small {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .journey-card div > span,
+  .journey-card > svg {
+    display: none;
+  }
+  .workspace {
+    display: flex;
+    flex-direction: column;
+  }
+  .ocean-panel {
+    order: 0;
+    min-height: 690px;
+  }
+  .layers-panel {
+    order: 1;
+    display: block;
+    padding: 21px 20px;
+    border-top: 1px solid #2b4853;
+  }
+  .layers-panel > .eyebrow,
+  .layers-panel h2,
+  .panel-intro,
+  .source-summary {
+    display: none;
+  }
+  .layer {
+    display: inline-flex;
+    width: 50%;
+    padding: 13px 8px 13px 0;
+    border: 0;
+    vertical-align: top;
+  }
+  .layer label {
+    font-size: 13px;
+  }
+  .layer small {
+    font-size: 11px;
+  }
+  .truth-panel {
+    margin: 12px 0;
+  }
+  .legend {
+    margin: 18px 0 0;
+  }
+  .legend p {
+    display: flex;
+  }
+  .astra-panel {
+    order: 2;
+    display: flex;
+    gap: 0;
+    padding: 24px 20px;
+  }
+  .astra-panel h3 {
+    margin: 20px 0 8px;
+  }
+  .astra-panel .quick-prompts {
+    margin: 15px 0;
+  }
+  .quick-prompt {
+    font-size: 14px;
+  }
+  .depth-control {
+    margin: 15px 0;
+  }
+  .brief-peek {
+    margin-top: 18px;
+  }
+  .map-heading h1 {
+    font-size: 24px;
+  }
+  .map-scale {
+    display: none;
+  }
+  .map-console {
+    left: 12px;
+    right: 12px;
+    bottom: 52px;
+  }
+  .track-player,
+  .map-inspector {
+    max-width: none;
+  }
+  .map-readout {
+    left: 16px;
+    font-size: 10px;
+    bottom: 19px;
+  }
+  .map-status {
+    font-size: 10px;
+  }
+  .track-legend {
+    top: 183px;
+  }
+  .obis-legend {
+    top: 240px;
+  }
+  .candidate-section {
+    padding: 22px 15px;
+  }
+  .candidate-row {
+    gap: 10px;
+  }
+  .candidate-card {
+    padding: 14px;
+    min-height: 200px;
+  }
+  .candidate-card strong {
+    font-size: 14px;
+  }
+  .candidate-top {
+    gap: 7px;
+  }
+  .candidate-top > svg {
+    display: none;
+  }
+  .candidate-metrics {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .candidate-metrics .score {
+    margin-left: 0;
+  }
+  .candidate-heading .eyebrow {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .candidate-heading .eyebrow > span {
+    padding-left: 0;
+  }
+  .vote-card {
+    padding: 14px;
+  }
+  .vote-card > strong span {
+    display: block;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-card,
+  .candidate-card {
+    transition: none;
+  }
+  .loading-orbit {
+    animation: none;
+  }
+}
+
+@media (min-width: 851px) {
+  .layers-panel {
+    display: block;
+    order: 0;
+  }
+  .astra-panel {
+    order: 0;
+  }
+}
+@media (max-width: 850px) {
+  .layers-panel {
+    display: block;
+  }
+  .layers-panel .panel-intro {
+    display: none;
+  }
+  .journey-card strong {
+    font-size: 14px;
+  }
+}
+.record-browse {
+  position: absolute;
+  top: 285px;
+  left: 24px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.record-browse > span {
+  font-size: 10px;
+  color: #b8acd4;
+}
+.record-browse button {
+  padding: 8px 10px;
+  border: 1px solid #65587e;
+  border-radius: 6px;
+  background: #152333ec;
+  color: #e0d3ff;
+  font-size: 11px;
+}
+.record-browse button:hover {
+  border-color: #c4a9f0;
+}
+.record-browse button span {
+  margin-left: 12px;
+}
+/* Generated editorial images are decoration, separate from the data layers. */
+.explore-ribbon {
+  padding-bottom: 10px;
+  row-gap: 10px;
+}
+.journey-card {
+  min-height: 150px;
+  align-items: flex-end;
+  padding: 20px;
+}
+.journey-art {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  transition: transform 0.65s ease;
+}
+.journey-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(0deg, #04121de8 0%, #04121d55 70%, #04121d11),
+    linear-gradient(90deg, #04121d66, transparent);
+}
+.journey-card:hover .journey-art {
+  transform: scale(1.05);
+}
+.journey-card small {
+  color: #bde4e0;
+  text-shadow: 0 1px 8px #000;
+}
+.journey-card strong {
+  font-weight: 500;
+  text-shadow: 0 2px 12px #000;
+}
+.journey-card > div > span {
+  color: #b9d3da;
+}
+.journey-icon {
+  width: 29px;
+  height: 29px;
+  margin-bottom: 22px;
+}
+.journey-card > svg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.imagery-note {
+  grid-column: 1/-1;
+  text-align: right;
+  color: #8ea7b3;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+.ribbon-intro {
+  padding-top: 13px;
+}
+.astra-panel {
+  position: relative;
+  isolation: isolate;
+}
+.astra-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% top;
+  opacity: 0.48;
+  pointer-events: none;
+}
+.astra-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #07152033, #071520d9 55%, #071520);
+  pointer-events: none;
+}
+.dive-concept {
+  margin: -8px -8px 5px;
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
+}
+.dive-concept img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  object-position: center 38%;
+}
+.dive-concept figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 13px 10px;
+  background: linear-gradient(transparent, #071520);
+  font-size: 11px;
+  color: #b9cdd6;
+}
+@media (max-width: 1250px) {
+  .journey-card {
+    padding: 17px;
+    min-height: 150px;
+  }
+  .journey-card strong {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .journey-card {
+    min-height: 157px;
+    padding: 12px 10px;
+  }
+  .journey-art {
+    object-position: 72% center;
+  }
+  .journey-card strong {
+    font-size: 14px;
+  }
+  .journey-card::after {
+    background: linear-gradient(0deg, #04121dfa 0%, #04121d80 65%, #04121d10);
+  }
+  .journey-icon {
+    display: none;
+  }
+  .imagery-note {
+    font-size: 10px;
+    text-align: left;
+  }
+  .astra-atmosphere {
+    height: 440px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-card:hover .journey-art {
+    transform: none;
+  }
+}
+
+/* Immersive expedition: one continuous ocean, with optional evidence drawers. */
+.immersive-app {
+  background: #03131c;
+}
+.immersive-app .topbar {
+  height: 70px;
+  min-height: 70px;
+  padding: 0 30px;
+  background: #06151bf5;
+  border-bottom: 1px solid #72cfc51c;
+}
+.immersive-app .brand {
+  gap: 13px;
+}
+.immersive-app .brand strong {
+  font-size: 16px;
+  letter-spacing: 0.13em;
+}
+.immersive-app .brand > span {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.immersive-app .header-actions {
+  gap: 9px;
+}
+.immersive-app .snapshot-badge {
+  display: none;
+}
+.header-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid #56808038;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #c1dbdc;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.header-tool:hover,
+.header-tool[aria-expanded='true'] {
+  background: #173d43;
+  border-color: #74cbb875;
+}
+.header-tool.astra-launch {
+  color: #b6f2e2;
+  background: #1a3d3e60;
+}
+.connection-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #788e98;
+}
+.connection-dot.connected {
+  background: #8eedc4;
+  box-shadow: 0 0 10px #9cebc787;
+}
+.immersive-app .workspace {
+  position: relative;
+  display: block;
+  height: calc(100dvh - 70px);
+  min-height: 760px;
+  overflow: hidden;
+  border-bottom: 1px solid #466367;
+}
+.immersive-app .ocean-panel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  background: #03151e;
+}
+.immersive-app .terrain-canvas {
+  position: absolute;
+  inset: 0;
+}
+.immersive-app .terrain-canvas::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #03131c88,
+    transparent 26%,
+    transparent 65%,
+    #03131caa
+  );
+}
+.immersive-app .terrain-canvas canvas {
+  touch-action: none;
+}
+.immersive-app .map-heading {
+  top: 38px;
+  left: 34px;
+  z-index: 4;
+  max-width: calc(100% - 430px);
+}
+.immersive-app .map-heading .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: #97c8c9;
+}
+.immersive-app .map-heading h1 {
+  font-size: clamp(30px, 3.7vw, 54px);
+  line-height: 1.1;
+  font-weight: 350;
+  letter-spacing: -0.045em;
+  margin: 13px 0 14px;
+  color: #edf5ec;
+}
+.immersive-app .map-heading h1 span {
+  font-size: 13px;
+  margin-top: 14px;
+  color: #a4c5c7;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.immersive-app .map-heading p {
+  font-size: 10px;
+  color: #88abaa;
+  letter-spacing: 0.08em;
+}
+.immersive-app .map-view-switch {
+  top: 38px;
+  right: 34px;
+  border-radius: 30px;
+  padding: 5px;
+  background: #091f28ba;
+  backdrop-filter: blur(20px);
+  border-color: #6caaa647;
+  box-shadow: 0 5px 30px #01090f33;
+}
+.immersive-app .map-view-switch button {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 15px;
+  font-size: 11px;
+}
+.immersive-app .map-view-switch button[aria-pressed='true'] {
+  background: #b9e1d4;
+  color: #0a302e;
+  box-shadow: 0 1px 10px #a8e9d31c;
+}
+.water-controls {
+  position: absolute;
+  top: 96px;
+  right: 36px;
+  z-index: 6;
+  display: flex;
+  gap: 6px;
+}
+.water-controls button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 10px;
+  font-size: 10px;
+  color: #d0e3dd;
+  border-radius: 20px;
+  background: #08212ba3;
+  border: 1px solid #70a79e45;
+  backdrop-filter: blur(15px);
+}
+.water-controls button[aria-pressed='false'] {
+  color: #92a9ae;
+  border-color: #465e633f;
+}
+.water-controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.immersive-app .map-tools {
+  top: 166px;
+  right: 36px;
+  gap: 9px;
+}
+.immersive-app .map-tools button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border-color: #79b1aa3a;
+  background: #061c25b3;
+  color: #c7e8df;
+}
+.immersive-app .map-tools button:hover {
+  background: #204a50;
+}
+.immersive-app .map-compass {
+  top: 330px;
+  right: 40px;
+  opacity: 0.65;
+  font-size: 10px;
+}
+.immersion-note {
+  position: absolute;
+  left: 34px;
+  top: 206px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #c2dfd3;
+  font:
+    9px var(--font-geist-mono),
+    monospace;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+}
+.immersion-note > span:last-child {
+  color: #9ab8bb;
+  font-family: var(--font-geist-sans), sans-serif;
+  letter-spacing: 0.02em;
+  padding-left: 8px;
+  border-left: 1px solid #a3c4c544;
+}
+.immersive-app .map-scale {
+  left: 34px;
+  bottom: 119px;
+  font-size: 10px;
+  color: #a4c5c7;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+}
+.immersive-app .map-readout {
+  left: 34px;
+  bottom: 95px;
+  font-size: 10px;
+  color: #accfc8;
+  right: 90px;
+}
+.immersive-app .map-status {
+  top: auto;
+  bottom: 17px;
+  left: 34px;
+  font-size: 9px;
+  color: #759698;
+}
+.immersive-app .track-legend {
+  top: 242px;
+  left: 34px;
+  right: auto;
+  max-width: 320px;
+  font-size: 10px;
+  color: #a0c8c9;
+  background: #09222b7a;
+  border-radius: 5px;
+  padding: 8px 10px;
+  backdrop-filter: blur(10px);
+}
+.immersive-app .obis-legend {
+  top: 308px;
+  left: 34px;
+  max-width: 310px;
+  font-size: 10px;
+}
+.immersive-app .record-browse {
+  top: 345px;
+  left: 34px;
+}
+.immersive-app .map-console {
+  left: 34px;
+  right: 90px;
+  bottom: 166px;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.immersive-app .map-console > section {
+  flex: 0 1 auto;
+  background: #06212be6;
+  border: 1px solid #6a9c9848;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px #010b1155;
+  max-height: 330px;
+  overflow: auto;
+}
+.immersive-app .track-player {
+  width: 360px;
+  max-width: 360px;
+}
+.immersive-app .map-inspector {
+  width: 340px;
+  max-width: 340px;
+}
+.immersive-app .journeys-open .map-console {
+  bottom: 300px;
+}
+.immersive-app .journeys-open .map-scale {
+  bottom: 282px;
+}
+.immersive-app .journeys-open .map-readout {
+  bottom: 258px;
+}
+.immersive-app .map-pins button {
+  backdrop-filter: blur(12px);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  box-shadow:
+    0 0 0 5px #71b8bb0f,
+    0 2px 20px #04171c;
+  font-size: 11px;
+  background: #12313aad;
+  border-color: #7facaa80;
+}
+.immersive-app .map-pins button:hover,
+.immersive-app .map-pins button:focus-visible {
+  width: auto;
+  border-radius: 20px;
+  padding: 0 12px;
+}
+.immersive-app .map-pins button[aria-pressed='true'] {
+  color: #f1d19b;
+  background: #3c352bd9;
+  border-color: #d7b574;
+}
+.immersive-app .ocean-drawer {
+  position: absolute;
+  top: 18px;
+  bottom: 30px;
+  z-index: 30;
+  width: 334px;
+  padding: 26px 24px;
+  overflow: auto;
+  border: 1px solid #79aaa747;
+  border-radius: 18px;
+  background: #08212aee;
+  backdrop-filter: blur(28px);
+  box-shadow: 0 16px 70px #0007;
+  scrollbar-width: thin;
+}
+.immersive-app .ocean-drawer[hidden],
+.immersive-app .explore-ribbon[hidden] {
+  display: none;
+}
+.immersive-app .layers-panel {
+  left: 18px;
+  display: block;
+}
+.immersive-app .astra-panel {
+  right: 18px;
+  display: flex;
+}
+.immersive-app .ocean-drawer h2 {
+  font-size: 23px;
+  letter-spacing: -0.035em;
+}
+.immersive-app .layer {
+  display: flex;
+  width: 100%;
+  padding: 14px 0;
+  border-bottom: 1px solid #75a3a21c;
+}
+.immersive-app .layer label {
+  font-size: 13px;
+}
+.immersive-app .layer small {
+  font-size: 11px;
+}
+.immersive-app .source-summary,
+.immersive-app .panel-intro {
+  display: block;
+}
+.immersive-app .drawer-close {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #bfd8d5;
+  background: #17394080;
+  z-index: 2;
+}
+.immersive-app .drawer-close:hover {
+  background: #345958;
+}
+.immersive-app .panel-heading {
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-right: 18px;
+}
+.immersive-app .panel-heading h2 {
+  font-size: 23px;
+}
+.immersive-app .mode-chip {
+  font-size: 8px;
+  padding: 4px 6px;
+}
+.immersive-app .astra-panel h3 {
+  font-size: 26px;
+  margin: 25px 0 9px;
+}
+.immersive-app .astra-atmosphere {
+  height: 100%;
+  opacity: 0.6;
+}
+.immersive-app .chat-messages {
+  min-height: 0;
+}
+.immersive-app .expedition-bar {
+  position: absolute;
+  bottom: 43px;
+  left: 34px;
+  right: 34px;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.expedition-toggle,
+.expedition-bar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbd7d2;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+}
+.expedition-toggle {
+  border-radius: 25px;
+  padding: 10px 14px;
+  background: #17383f80;
+  border: 1px solid #86b3a93a;
+  backdrop-filter: blur(15px);
+}
+.expedition-toggle[aria-expanded='true'] > svg:last-child {
+  transform: rotate(180deg);
+}
+.immersive-app .explore-ribbon {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 85px;
+  z-index: 8;
+  display: grid;
+  grid-template-columns: 0.85fr repeat(3, 1fr);
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  align-items: end;
+}
+.immersive-app .ribbon-intro {
+  padding: 0 15px 30px 0;
+}
+.immersive-app .ribbon-intro .eyebrow {
+  color: #90b9b3;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+.immersive-app .ribbon-intro h2 {
+  font-size: 25px;
+  font-weight: 350;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  margin: 10px 0;
+  color: #e0eade;
+}
+.immersive-app .ribbon-intro p {
+  font-size: 11px;
+  color: #94b7b5;
+}
+.immersive-app .journey-card {
+  min-height: 142px;
+  height: 142px;
+  border: 1px solid #94c0b44a;
+  border-radius: 12px;
+  padding: 17px;
+  background: #102630;
+  box-shadow: 0 12px 35px #02101733;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+.immersive-app .journey-card:hover {
+  transform: translateY(-4px);
+  border-color: #bce4cd;
+}
+.immersive-app .journey-card .journey-icon {
+  display: none;
+}
+.immersive-app .journey-card strong {
+  font-size: 17px;
+  font-weight: 450;
+  letter-spacing: -0.02em;
+}
+.immersive-app .journey-card small {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+.immersive-app .journey-card > div > span {
+  font-size: 10px;
+  margin-top: 5px;
+  color: #acc9c8;
+}
+.immersive-app .journey-card::after {
+  background: linear-gradient(0deg, #041820fa, #04182055 65%, transparent);
+}
+.immersive-app .imagery-note {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 8px;
+  color: #8daaa9;
+}
+.immersive-app .candidate-section {
+  padding: 38px 34px;
+  background: linear-gradient(180deg, #081b24, #071720);
+  scroll-margin-top: 15px;
+}
+.immersive-app .candidate-card {
+  background: #10293499;
+  border-color: #80ada32f;
+  border-radius: 14px;
+}
+.immersive-app .candidate-card.selected {
+  border-color: #bc9d61;
+  background: linear-gradient(140deg, #3b362847, #10252e);
+}
+.immersive-app .vote-card {
+  border-radius: 14px;
+}
+.immersive-app .footer {
+  background: #06151d;
+}
+.immersive-app.is-focused .map-heading,
+.immersive-app.is-focused .map-scale,
+.immersive-app.is-focused .map-readout,
+.immersive-app.is-focused .map-console,
+.immersive-app.is-focused .track-legend,
+.immersive-app.is-focused .obis-legend,
+.immersive-app.is-focused .record-browse,
+.immersive-app.is-focused .expedition-bar,
+.immersive-app.is-focused .explore-ribbon,
+.immersive-app.is-focused .map-pins {
+  display: none;
+}
+.immersive-app.is-focused .immersion-note {
+  top: auto;
+  bottom: 40px;
+}
+@media (max-width: 1050px) {
+  .immersive-app .brand > span {
+    display: none;
+  }
+  .immersive-app .explore-ribbon {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .immersive-app .ribbon-intro {
+    display: none;
+  }
+  .immersive-app .map-heading h1 {
+    font-size: 39px;
+  }
+  .immersive-app .map-console {
+    gap: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .immersive-app .topbar {
+    height: 64px;
+    min-height: 64px;
+    padding: 0 15px;
+    gap: 12px;
+  }
+  .immersive-app .brand {
+    gap: 8px;
+  }
+  .immersive-app .brand > svg {
+    width: 22px;
+  }
+  .immersive-app .brand strong {
+    font-size: 12px;
+    letter-spacing: 0.09em;
+  }
+  .immersive-app .header-actions {
+    gap: 6px;
+  }
+  .header-tool {
+    padding: 9px;
+    border-radius: 50%;
+  }
+  .header-tool span,
+  .header-tool .connection-dot {
+    display: none;
+  }
+  .immersive-app .topbar .text-button {
+    font-size: 0;
+    padding: 8px;
+  }
+  .immersive-app .workspace {
+    height: calc(100dvh - 64px);
+    min-height: 780px;
+  }
+  .immersive-app .map-heading {
+    top: 27px;
+    left: 20px;
+    max-width: calc(100% - 40px);
+  }
+  .immersive-app .map-heading h1 {
+    font-size: 36px;
+    margin: 11px 0;
+  }
+  .immersive-app .map-heading h1 span {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+  .immersive-app .map-heading .eyebrow {
+    font-size: 8px;
+  }
+  .immersive-app .map-heading p {
+    font-size: 9px;
+  }
+  .immersive-app .map-view-switch {
+    top: 179px;
+    left: 20px;
+    right: auto;
+    padding: 4px;
+  }
+  .immersive-app .map-view-switch button {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+  .water-controls {
+    top: 228px;
+    left: 20px;
+    right: auto;
+    gap: 5px;
+  }
+  .water-controls button {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+  .immersive-app .map-tools {
+    top: 183px;
+    right: 16px;
+  }
+  .immersive-app .map-tools button {
+    width: 32px;
+    height: 32px;
+  }
+  .immersive-app .map-compass {
+    top: 322px;
+    right: 20px;
+  }
+  .immersion-note {
+    top: 145px;
+    left: 20px;
+    font-size: 8px;
+    gap: 7px;
+    letter-spacing: 0.06em;
+  }
+  .immersion-note > span:last-child {
+    font-size: 8px;
+    padding-left: 5px;
+    letter-spacing: 0;
+  }
+  .immersive-app .map-scale {
+    display: none;
+  }
+  .immersive-app .map-readout {
+    bottom: 96px;
+    left: 20px;
+    right: 20px;
+    font-size: 9px;
+  }
+  .immersive-app .journeys-open .map-readout {
+    bottom: 282px;
+  }
+  .immersive-app .map-readout b {
+    display: block;
+    margin: 4px 0 0;
+  }
+  .immersive-app .map-status {
+    left: 20px;
+    bottom: 15px;
+    font-size: 8px;
+  }
+  .immersive-app .expedition-bar {
+    left: 20px;
+    right: 20px;
+    bottom: 39px;
+    gap: 8px;
+  }
+  .expedition-toggle,
+  .expedition-bar a {
+    font-size: 9px;
+    gap: 6px;
+  }
+  .expedition-toggle {
+    padding: 9px 11px;
+  }
+  .immersive-app .explore-ribbon {
+    left: 20px;
+    right: 20px;
+    bottom: 95px;
+    gap: 8px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .immersive-app .journey-card {
+    padding: 12px 9px;
+    min-height: 159px;
+    height: 159px;
+    border-radius: 9px;
+  }
+  .immersive-app .journey-card strong {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .immersive-app .journey-card small {
+    font-size: 7px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .immersive-app .journey-card > div > span {
+    display: none;
+  }
+  .immersive-app .journey-card > svg {
+    top: 9px;
+    right: 8px;
+    width: 14px;
+  }
+  .immersive-app .journey-art {
+    object-position: 67% center;
+  }
+  .immersive-app .imagery-note {
+    font-size: 7px;
+  }
+  .immersive-app .track-legend {
+    top: 275px;
+    left: 20px;
+    max-width: calc(100% - 80px);
+    font-size: 9px;
+  }
+  .immersive-app .obis-legend {
+    top: 343px;
+    left: 20px;
+    font-size: 9px;
+    max-width: calc(100% - 70px);
+  }
+  .immersive-app .record-browse {
+    top: 375px;
+    left: 20px;
+    gap: 5px;
+  }
+  .immersive-app .record-browse > span {
+    font-size: 9px;
+  }
+  .immersive-app .record-browse button {
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+  .immersive-app .map-console {
+    left: 20px;
+    right: 20px;
+    bottom: 130px;
+    flex-direction: column;
+    align-items: stretch;
+    max-height: 290px;
+    overflow-y: auto;
+    border-radius: 12px;
+  }
+  .immersive-app .map-console > section {
+    flex-shrink: 0;
+    padding: 12px;
+    width: 100%;
+    max-width: none;
+  }
+  .immersive-app .journeys-open .map-console {
+    bottom: 308px;
+    max-height: 210px;
+  }
+  .immersive-app .ocean-drawer {
+    top: 10px;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    padding: 26px 22px;
+    border-radius: 15px;
+  }
+  .immersive-app .candidate-section {
+    padding: 27px 20px;
+  }
+  .immersive-app .candidate-row {
+    grid-template-columns: 1fr;
+  }
+  .immersive-app .candidate-card {
+    min-height: 180px;
+  }
+  .immersive-app .candidate-top > svg {
+    display: block;
+  }
+  .immersive-app .candidate-metrics .score {
+    margin-left: auto;
+  }
+  .immersive-app.is-focused .map-view-switch {
+    top: 28px;
+  }
+  .immersive-app.is-focused .water-controls {
+    top: 80px;
+  }
+  .immersive-app.is-focused .map-tools {
+    top: 150px;
+  }
+  .immersive-app.is-focused .map-compass {
+    top: 290px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersive-app *,
+  .immersive-app *::before,
+  .immersive-app *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .immersive-app .journey-card:hover {
+    transform: none;
+  }
+}
+
+/* Dive view: first-person swimming, with an explicit mouse-capture gesture. */
+.swim-panel {
+  position: absolute;
+  top: 149px;
+  right: 92px;
+  z-index: 8;
+  width: 255px;
+  padding: 11px 13px;
+  border-radius: 12px;
+  border: 1px solid #87b7ac3b;
+  background: #09232bcb;
+  backdrop-filter: blur(16px);
+  color: #bad4ce;
+}
+.swim-start {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #d5f3e8;
+  margin-bottom: 9px;
+}
+.swim-start:hover {
+  color: white;
+}
+.swim-start:disabled {
+  opacity: 0.4;
+}
+.swim-panel p {
+  font-size: 10px;
+  margin: 5px 0;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+.swim-panel p > span {
+  margin: 0 3px;
+  color: #76918f;
+}
+.swim-panel kbd {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  color: #e1ece4;
+}
+.swim-panel .swim-status {
+  display: block;
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 6px;
+  color: #88b0a7;
+}
+.swim-panel[data-active='true'] {
+  border-color: #8de3ba65;
+}
+.swim-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.85;
+  filter: drop-shadow(0 1px 3px #00151e);
+}
+.swim-crosshair i {
+  position: absolute;
+  background: #d5eee3;
+  border-radius: 1px;
+}
+.swim-crosshair i:first-child {
+  height: 1px;
+  width: 18px;
+  top: 8px;
+  left: 0;
+}
+.swim-crosshair i:last-child {
+  width: 1px;
+  height: 18px;
+  left: 8px;
+  top: 0;
+}
+.immersive-app.is-focused .swim-panel {
+  top: auto;
+  bottom: 83px;
+  left: 34px;
+  right: auto;
+}
+@media (max-width: 700px) {
+  .swim-panel {
+    top: 273px;
+    left: 20px;
+    right: auto;
+    width: min(255px, calc(100% - 85px));
+    padding: 10px 12px;
+  }
+  .immersive-app .ocean-panel:has(.swim-panel) .track-legend {
+    top: 405px;
+  }
+  .immersive-app .ocean-panel:has(.swim-panel) .obis-legend {
+    top: 473px;
+  }
+  .immersive-app .ocean-panel:has(.swim-panel) .record-browse {
+    top: 505px;
+  }
+  .immersive-app.is-focused .swim-panel {
+    top: auto;
+    bottom: 85px;
+    left: 20px;
+  }
+}
+
+/* Real source photographs remain distinct from occurrence-count overlays. */
+.map-heading-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.photo-gallery-launch {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 1px solid #e2b0c242;
+  background: #312332a8;
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  color: #efc9d6;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.photo-gallery-launch:hover {
+  background: #513042d9;
+  border-color: #e2b0c280;
+}
+.photo-gallery-launch span {
+  font-family: var(--font-geist-mono), monospace;
+  color: #baa0b2;
+  font-size: 9px;
+}
+.photo-layer-link {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #e3b4c5;
+}
+.photo-map-pins {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+}
+.photo-map-pins button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e2a7c5a1;
+  border-radius: 10px;
+  padding: 7px 9px;
+  color: #fbdce9;
+  background: #382438d9;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 3px 15px #04171c80;
+  pointer-events: auto;
+}
+.photo-map-pins b {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: var(--font-geist-mono), monospace;
+}
+.photo-map-pins span {
+  display: none;
+  text-align: left;
+  font-size: 11px;
+  padding-left: 3px;
+}
+.photo-map-pins small {
+  display: block;
+  color: #c4a5bb;
+  font-size: 8px;
+}
+.photo-map-pins button:hover span,
+.photo-map-pins button:focus-visible span {
+  display: block;
+}
+.immersive-app.is-focused .photo-map-pins {
+  display: none;
+}
+@media (max-width: 700px) {
+  .map-heading-top {
+    gap: 12px;
+  }
+  .photo-gallery-launch {
+    font-size: 9px;
+    padding: 4px 8px;
+    gap: 5px;
+  }
+}
