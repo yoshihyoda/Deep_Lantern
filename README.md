@@ -1,5 +1,8 @@
 # DEEP LANTERN
 
+<img width="3420" height="2048" alt="CleanShot 2026-09-08 at 5 04 30 PM@2x" src="https://github.com/user-attachments/assets/431b056e-d40e-4642-a0eb-e86267697f69" />
+
+
 _Explore the ocean through real data._
 
 A working American Samoa exploration workspace built from verified GEBCO 2026, NOAA EX1702, and OBIS snapshots. The map distinguishes source provenance from public observation coverage; an exploration heuristic proposes three spatially separated candidates.
