@@ -1,4 +1,4 @@
-# DEEP LANTERN
+# DEEP LANTERN (This project was for GPT-6 Astra Hackathon)
 
 <img width="3420" height="2048" alt="CleanShot 2026-09-08 at 5 04 30 PM@2x" src="https://github.com/user-attachments/assets/431b056e-d40e-4642-a0eb-e86267697f69" />
 
